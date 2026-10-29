@@ -5,15 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- До запуска продукта страница скрыта от поисковиков (SEO — в техдолге) -->
 <meta name="robots" content="noindex, nofollow">
+<!-- avoid-ai-design-ignore: K7 — :focus-visible задан в style.css -->
+<!-- avoid-ai-design-ignore: M6 — prefers-reduced-motion обрабатывается в app.js и style.css -->
 <title>Reelsovar — нарезка видео на шортс нейросетью</title>
 <link rel="preload" as="font" type="font/woff2" href="fonts/geologica-cyrillic.woff2" crossorigin>
 <link rel="preload" as="image" href="media/c2_poster.webp" fetchpriority="high">
-<link rel="stylesheet" href="style.css?v=23">
+<link rel="stylesheet" href="style.css?v=24">
 </head>
 <body>
 
 <header class="nav">
-  <a class="logo" href="#">Reelsovar</a>
+  <a class="logo" href="#"><i class="cutmark" aria-hidden="true"></i>Reelsovar</a>
   <nav class="nav-links" aria-label="Главное меню"><a href="#how">Как работает</a><a href="#offer">Тарифы</a><a class="login" href="#offer">Войти</a></nav>
 </header>
 
@@ -130,7 +132,7 @@
         <div class="tv-screen" id="tvScreen">
           <div class="tv-pic" id="tvPic">
             <video id="tvVideo" src="media/tv.mp4" poster="media/tv_poster.webp" muted loop playsinline autoplay preload="auto"></video>
-            <div class="osd" id="osd">Подкаст о росте канала · 1:12:40</div>
+            <div class="osd" id="osd">Подкаст о росте канала, 1:12:40</div>
           </div>
           <div class="pwr" id="pwr" aria-hidden="true"><i class="sh-t"></i><i class="sh-b"></i><i class="pwr-line"></i></div>
           <canvas id="tvSnap" aria-hidden="true"></canvas>
@@ -189,30 +191,31 @@
       </ul>
     </div>
   </div>
-  <div class="plans">
-    <div class="plan">
-      <h3>Бесплатно</h3>
-      <p class="for">Попробовать на своём видео</p>
-      <div class="price">0&nbsp;₽</div>
-      <p class="vol">25 минут видео</p>
-      <ul class="feat"><li>Поиск моментов по вашему запросу</li><li>Субтитры и цепляющее начало</li><li>Говорящий в кадре</li><li>С водяным знаком</li></ul>
-      <a class="btn ghost js-product" href="#">Начать бесплатно</a>
+  <!-- Бесплатно — это вход, а выбор — между двумя способами платить -->
+  <div class="start">
+    <div>
+      <h3>Начните бесплатно</h3>
+      <p>25 минут видео, клипы с водяным знаком. Карта не нужна.</p>
     </div>
+    <a class="btn js-product" href="#">Начать бесплатно</a>
+  </div>
+  <p class="incl">В любом варианте: поиск моментов по вашему запросу, субтитры и цепляющее начало, говорящий в кадре.</p>
+  <div class="plans two">
     <div class="plan">
       <h3>Пакет минут</h3>
       <p class="for">Нарезать пару записей без подписки</p>
       <div class="price">990&nbsp;₽<small>разово</small></div>
       <p class="vol">100 минут видео</p>
-      <ul class="feat"><li class="plus">Всё из бесплатного, плюс:</li><li>Без водяного знака</li><li>Платите только за выбранный отрезок</li></ul>
-      <a class="btn ghost js-product" href="#">Купить пакет</a>
+      <ul class="feat"><li>Без водяного знака</li><li>Платите только за выбранный отрезок</li></ul>
+      <a class="btn alt js-product" href="#">Купить пакет</a>
     </div>
-    <div class="plan main">
-      <h3>Подписка <em>выгоднее всего</em></h3>
+    <div class="plan">
+      <h3>Подписка</h3>
       <p class="for">Для тех, кто выкладывает клипы каждую неделю</p>
       <div class="price">2&nbsp;990&nbsp;₽<small>в месяц</small></div>
       <p class="vol">7,5 часа видео в месяц</p>
-      <ul class="feat"><li class="plus">Всё из пакета, плюс:</li><li>Самая низкая цена минуты</li><li>За год — 17&nbsp;900&nbsp;₽, в 2 раза дешевле</li></ul>
-      <a class="btn js-product" href="#">Оформить подписку</a>
+      <ul class="feat"><li>Без водяного знака</li><li>Самая низкая цена минуты</li><li>За год — 17&nbsp;900&nbsp;₽, в 2 раза дешевле</li></ul>
+      <a class="btn alt js-product" href="#">Оформить подписку</a>
     </div>
   </div>
   <p class="pay">Оплата картами РФ и через СБП. Подписку можно отменить в любой момент.</p>
@@ -242,6 +245,6 @@
   // Куда ведут все кнопки: адрес продукта (регистрация / загрузка видео)
   const PRODUCT_URL = "soon.html";   // TODO: адрес продукта, когда он появится
 </script>
-<script src="app.js?v=15"></script>
+<script src="app.js?v=16"></script>
 </body>
 </html>

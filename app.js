@@ -126,7 +126,7 @@ function build() {
     const ar = c.width / c.height, sw = Math.min(vw, vh * ar), sh = sw / ar;   // как object-fit: cover
     ctx.drawImage(v, (vw - sw) / 2, (vh - sh) / 2, sw, sh, 0, 0, c.width, c.height);
   };
-  let STEP_T = [0, 99, 99, 99], OSD_T = [[0, 'Подкаст о росте канала · 1:12:40']], END_T = 99, OFF_T = 99, PLAY_T = 99;
+  let STEP_T = [0, 99, 99, 99], OSD_T = [[0, 'Подкаст о росте канала, 1:12:40']], END_T = 99, OFF_T = 99, PLAY_T = 99;
   const osd = $('#osd'), tvVideo = $('#tvVideo');
   tl = gsap.timeline({
     defaults: { ease: 'none' },
@@ -242,7 +242,7 @@ function build() {
   tl.to({}, { duration: .6 });
 
   STEP_T = [0, T2, T3, T4];
-  OSD_T = [[0, 'Подкаст о росте канала · 1:12:40'], [T2, 'Ищу самые сильные моменты…'], [T3, '']];
+  OSD_T = [[0, 'Подкаст о росте канала, 1:12:40'], [T2, 'Ищу самые сильные моменты…'], [T3, '']];
   END_T = E + .5; OFF_T = T3 + .2; PLAY_T = M + .9; SNAP_AT = SNAP_T - .02;
 }
 
