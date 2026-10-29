@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Reelsovar — выбор моментов (макет интерфейса)</title>
+<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f5f5f3;--card:#fff;--ink:#141414;--mute:#6e6e6a;--soft:#9b9b96;--line:#e6e6e2;--sel:#141414;--hit:#2fd27a;
+  --sans:"Geologica",system-ui,sans-serif;--mono:"IBM Plex Mono",ui-monospace,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1440px;height:900px;overflow:hidden;background:var(--bg);font-family:var(--sans);color:var(--ink);-webkit-font-smoothing:antialiased}
+.top{height:60px;display:flex;align-items:center;gap:20px;padding:0 28px;border-bottom:1px solid var(--line);background:var(--card)}
+.logo{font-weight:700;font-size:18px;letter-spacing:-.04em}
+.crumb{color:var(--mute);font-size:14px}.crumb b{color:var(--ink);font-weight:500}
+.top .sp{flex:1}
+.bal{font-size:13px;color:var(--mute)}.bal b{color:var(--ink);font-weight:500}
+.ava{width:30px;height:30px;border-radius:50%;background:#d9d9d4}
+.main{display:grid;grid-template-columns:1fr 520px;height:calc(900px - 60px - 72px)}
+.left{padding:24px 28px;display:flex;flex-direction:column;gap:18px;min-width:0}
+.player{position:relative;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#000}
+.player img{width:100%;height:100%;object-fit:cover;display:block}
+.player .tc{position:absolute;left:14px;bottom:12px;font:500 12px var(--mono);color:#fff;background:#0009;padding:3px 7px;border-radius:5px}
+.player .win{position:absolute;top:0;bottom:0;left:28.2%;width:31.6%;box-shadow:0 0 0 2000px #0007;border-left:1.5px solid #fff;border-right:1.5px solid #fff}
+.player .win span{position:absolute;top:10px;left:50%;transform:translateX(-50%);font:500 11px var(--mono);color:#fff;background:#0009;padding:2px 6px;border-radius:4px;white-space:nowrap}
+.tl-head{display:flex;justify-content:space-between;font-size:13px;color:var(--mute)}
+.tl{position:relative;height:44px;border-radius:8px;background:#e9e9e6;overflow:hidden}
+.tl i{position:absolute;top:0;bottom:0;background:#c9c9c4}
+.tl i.on{background:var(--ink)}
+.tl .ph{position:absolute;top:-4px;bottom:-4px;width:2px;background:var(--hit);left:19.4%}
+.tl-axis{display:flex;justify-content:space-between;font:400 11px var(--mono);color:var(--soft);margin-top:-10px}
+.ask{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 8px 8px 14px}
+.ask label{font-size:13px;color:var(--mute);white-space:nowrap}
+.ask input{flex:1;border:0;outline:0;font:400 15px var(--sans);color:var(--ink);background:transparent}
+.ask button{border:1px solid var(--line);background:var(--bg);font:500 13px var(--sans);padding:8px 12px;border-radius:7px}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chips span{font-size:12.5px;padding:5px 10px;border-radius:99px;border:1px solid var(--line);color:var(--mute);background:var(--card)}
+.right{border-left:1px solid var(--line);background:var(--card);display:flex;flex-direction:column;min-height:0}
+.r-head{padding:20px 22px 12px;display:flex;align-items:baseline;justify-content:space-between}
+.r-head h2{font-weight:600;font-size:19px;letter-spacing:-.02em}
+.r-head span{font-size:13px;color:var(--mute)}
+.list{list-style:none;overflow:hidden;padding:0 12px}
+.m{display:grid;grid-template-columns:22px 50px 1fr 44px;gap:12px;align-items:start;padding:12px 10px;border-radius:10px}
+.m+.m{border-top:1px solid var(--line)}
+.m.sel{background:#f3f3f0}
+.m+.m.sel,.m.sel+.m{border-top-color:transparent}
+.cb{width:20px;height:20px;border-radius:5px;border:1.5px solid #c4c4bf;margin-top:2px;display:grid;place-items:center}
+.sel .cb{background:var(--sel);border-color:var(--sel)}
+.sel .cb::after{content:"";width:9px;height:5px;border:2px solid #fff;border-top:0;border-right:0;transform:rotate(-45deg) translate(1px,-1px)}
+.th{width:50px;aspect-ratio:9/16;border-radius:6px;overflow:hidden;background:#000}
+.th img{width:100%;height:100%;object-fit:cover;display:block}
+.q{font-weight:500;font-size:14.5px;line-height:1.3;letter-spacing:-.01em}
+.why{font-size:13px;color:var(--mute);margin-top:4px;line-height:1.35}
+.t{font:400 11.5px var(--mono);color:var(--soft);margin-top:6px}
+.sc{font-weight:600;font-size:20px;letter-spacing:-.03em;text-align:right;line-height:1}
+.sc small{display:block;font:400 10px var(--mono);color:var(--soft);margin-top:4px;letter-spacing:0}
+.m:not(.sel) .sc{color:#8a8a85}
+.bar{height:72px;display:flex;align-items:center;gap:18px;padding:0 28px;border-top:1px solid var(--line);background:var(--card)}
+.bar .sum{font-size:15px}.bar .sum b{font-weight:600}
+.bar .opt{font-size:13px;color:var(--mute)}
+.bar .sp{flex:1}
+.go{border:0;background:var(--ink);color:#fff;font:500 15px var(--sans);padding:13px 22px;border-radius:8px}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="logo">Reelsovar</div>
+  <div class="crumb">Мои записи / <b>Подкаст о росте канала</b> · 1:12:40</div>
+  <div class="sp"></div>
+  <div class="bal">Осталось <b>18 из 25 мин</b></div>
+  <div class="ava"></div>
+</header>
+
+<div class="main">
+  <section class="left">
+    <div class="player">
+      <img src="../media/strip/h7.jpg" alt="">
+      <div class="win"><span>9:16 · говорящий в кадре</span></div>
+      <div class="tc">14:02 / 1:12:40</div>
+    </div>
+    <div>
+      <div class="tl-head"><span>Вся запись</span><span>14 моментов</span></div>
+      <div class="tl" style="margin-top:8px">
+        <i class="on" style="left:1.9%;width:.8%"></i><i class="on" style="left:19.4%;width:.9%"></i><i style="left:30.6%;width:.9%"></i>
+        <i style="left:37%;width:.6%"></i><i style="left:44.8%;width:.6%"></i><i style="left:53.3%;width:.7%"></i>
+        <i style="left:59%;width:.6%"></i><i style="left:64.9%;width:.6%"></i><i style="left:70%;width:.5%"></i>
+        <i class="on" style="left:76.1%;width:.7%"></i><i style="left:82%;width:.6%"></i><i style="left:87.4%;width:.5%"></i>
+        <i style="left:91.5%;width:.6%"></i><i style="left:96%;width:.5%"></i>
+        <div class="ph"></div>
+      </div>
+      <div class="tl-axis" style="margin-top:6px"><span>0:00</span><span>18:00</span><span>36:00</span><span>54:00</span><span>1:12:40</span></div>
+    </div>
+    <div class="ask">
+      <label>Что искать</label>
+      <input value="самые полезные советы и личные истории">
+      <button>Найти ещё</button>
+    </div>
+    <div class="chips"><span>где гость спорит</span><span>смешные моменты</span><span>цифры и факты</span><span>советы</span></div>
+  </section>
+
+  <aside class="right">
+    <div class="r-head"><h2>Найденные моменты</h2><span>по силе</span></div>
+    <ul class="list">
+      <li class="m sel"><i class="cb"></i><div class="th"><img src="../media/strip/h1.jpg" style="object-position:90% 50%" alt=""></div>
+        <div><div class="q">«Я три года делал подкаст в пустоту»</div><div class="why">Личная история в первой фразе</div><div class="t">01:24–01:58 · 34 с</div></div><div class="sc">93<small>/100</small></div></li>
+      <li class="m sel"><i class="cb"></i><div class="th"><img src="../media/strip/h7.jpg" style="object-position:41% 50%" alt=""></div>
+        <div><div class="q">«Почему 90% подкастов не растут — и дело не в звуке»</div><div class="why">Спор с привычным мнением</div><div class="t">14:02–14:43 · 41 с</div></div><div class="sc">88<small>/100</small></div></li>
+      <li class="m sel"><i class="cb"></i><div class="th"><img src="../media/strip/h11.jpg" style="object-position:94% 50%" alt=""></div>
+        <div><div class="q">«Один совет, который сэкономил мне год»</div><div class="why">Конкретный совет за 30 секунд</div><div class="t">55:20–55:49 · 29 с</div></div><div class="sc">81<small>/100</small></div></li>
+      <li class="m"><i class="cb"></i><div class="th"><img src="../media/strip/s5.jpg" style="object-position:45% 50%" alt=""></div>
+        <div><div class="q">«Мы потеряли половину аудитории за месяц»</div><div class="why">Неожиданный поворот</div><div class="t">22:15–22:52 · 37 с</div></div><div class="sc">76<small>/100</small></div></li>
+      <li class="m"><i class="cb"></i><div class="th"><img src="../media/strip/s9.jpg" style="object-position:60% 50%" alt=""></div>
+        <div><div class="q">«Как мы нашли первого спонсора»</div><div class="why">История с понятным результатом</div><div class="t">38:40–39:12 · 32 с</div></div><div class="sc">72<small>/100</small></div></li>
+      <li class="m"><i class="cb"></i><div class="th"><img src="../media/strip/s12.jpg" style="object-position:50% 50%" alt=""></div>
+        <div><div class="q">«Микрофон за три тысячи против студийного»</div><div class="why">Сравнение, которое хочется досмотреть</div><div class="t">47:05–47:33 · 28 с</div></div><div class="sc">64<small>/100</small></div></li>
+    </ul>
+  </aside>
+</div>
+
+<footer class="bar">
+  <div class="sum"><b>Выбрано 3 момента</b> · 1 мин 44 с</div>
+  <div class="opt">Вертикально · субтитры · цепляющее начало</div>
+  <div class="sp"></div>
+  <button class="go">Нарезать 3 клипа</button>
+</footer>
+</body>
+</html>
