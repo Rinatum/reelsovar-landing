@@ -531,10 +531,6 @@ h1 span{display:block}
 .btn.ink{background:var(--ink);color:#fff}
 .btn.ink:hover{background:#000;color:#fff}
 
-/* Подписи «пример» */
-.ex{position:absolute;font-size:12px;font-weight:500;color:#4a4a46;background:#ffffffd9;padding:3px 8px;border-radius:6px}
-.hero-vis .ex{left:0;bottom:-4%;background:none;padding:0;color:#6b6b66}
-.vis .ex{left:10px;top:10px;z-index:2}
 
 /* Тарифы: один язык — белые карточки */
 .plans.two{border-top:0;gap:clamp(14px,1.4vw,22px)}
