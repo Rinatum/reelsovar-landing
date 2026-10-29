@@ -247,8 +247,9 @@ function build() {
 }
 
 // Плавная прокрутка колесом на десктопе
+let lenis = null;
 if (!matchMedia('(pointer: coarse)').matches && !matchMedia('(prefers-reduced-motion: reduce)').matches && window.Lenis) {
-  const lenis = new Lenis({ lerp: .12, wheelMultiplier: .9 });
+  lenis = new Lenis({ lerp: .12, wheelMultiplier: .9 });
   lenis.on('scroll', ScrollTrigger.update);
   gsap.ticker.add(tt => lenis.raf(tt * 1000));
   gsap.ticker.lagSmoothing(0);
@@ -274,3 +275,19 @@ document.querySelectorAll('form.drop').forEach(f => f.addEventListener('submit',
   const v = f.querySelector('input').value.trim();
   location.href = PRODUCT_URL + (v ? (PRODUCT_URL.includes('?') ? '&' : '?') + 'url=' + encodeURIComponent(v) : '');
 }));
+
+// Ссылки на разделы (#how, #offer…) — плавно, с поправкой на фиксированную шапку
+const NAV_H = 64;
+document.addEventListener('click', e => {
+  const a = e.target.closest('a[href^="#"]');
+  if (!a || a.classList.contains('js-product')) return;
+  const id = a.getAttribute('href').slice(1);
+  const el = id ? document.getElementById(id) : (a.classList.contains('logo') ? document.body : null);   // логотип — наверх
+  if (!el) return;
+  e.preventDefault();
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const top = el.getBoundingClientRect().top + scrollY - (id === 'how' ? 0 : NAV_H);   // сцена закрепляется под шапкой сама
+  if (lenis) lenis.scrollTo(top, { duration: 1.1, immediate: reduce });
+  else scrollTo({ top, behavior: reduce ? 'auto' : 'smooth' });
+  history.replaceState(null, '', id ? '#' + id : location.pathname);
+});
