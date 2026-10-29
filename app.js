@@ -83,7 +83,7 @@ function build() {
   const pGap = mobile ? 12 : Math.max(28, A.w * .045);
   let pW = mobile ? (S.w - 32 - 2 * pGap) / 3 : Math.min(270, A.w * .25);
   const pTopMin = lY + lH + (mobile ? 18 : 34);
-  const room = S.h - pTopMin - (mobile ? 78 : 120);
+  const room = S.h - pTopMin - (mobile ? 96 : 150);   // снизу место под оценку и подпись
   const hOf = w => (w * .93) / SCREEN_AR + w * .07;   // высота корпуса по ширине (рамка 3,5% с каждой стороны)
   if (hOf(pW) > room) pW = room / ((.93 / SCREEN_AR) + .07);
   const pH = hOf(pW);
@@ -92,6 +92,7 @@ function build() {
   const bez = pW * .035;
   const scr = phones.map((p, i) => {
     Object.assign(p.style, { left: pX0 + i * (pW + pGap) + 'px', top: pY + 'px', width: pW + 'px', height: pH + 'px' });
+    p.style.setProperty('--bz', bez + 'px');   // для «выключенного» экрана внутри корпуса
     const s = $('.screen', p);
     const sw = pW - 2 * bez, sh = pH - 2 * bez;
     Object.assign(s.style, { left: bez + 'px', top: bez + 'px', width: sw + 'px', height: sh + 'px', borderRadius: getComputedStyle($('.bezel', p)).borderRadius });
@@ -226,19 +227,18 @@ function build() {
         clipPath: `inset(0% ${(rf * 100).toFixed(3)}% 0% ${(lf * 100).toFixed(3)}% round ${rad.toFixed(1)}px)` });
     };
     const at = M + i * .12;
-    tl.to(st, { p: 1, duration: .9, ease: 'power3.inOut', onUpdate: draw }, at)
-      .to($('.screen', phones[i]), { opacity: 1, duration: .25 }, at + 1.0)
-      .to(f, { opacity: 0, duration: .2 }, at + 1.15)
-      .to([$('.bezel', phones[i]), $('.cam', phones[i])], { opacity: 1, duration: .35 }, at + .95);
+    // корпуса телефонов появляются сразу, кадр летит в уже стоящий телефон и с ходу становится клипом
+    tl.to([$('.bezel', phones[i]), $('.cam', phones[i])], { opacity: 1, duration: .3 }, M - .15 + i * .05)
+      .to(st, { p: 1, duration: .9, ease: 'power3.inOut', onUpdate: draw }, at)
+      .to($('.screen', phones[i]), { opacity: 1, duration: .2 }, at + .85)
+      .to(f, { opacity: 0, duration: .15 }, at + .95)
+      .to($('.hook', phones[i]), { opacity: 1, duration: .2 }, at + .9)
+      .to($$('.subs span', phones[i]), { opacity: 1, duration: .06, stagger: .06 }, at + .95);
   });
 
   // Хук, субтитры по словам, оценка и причина — итоговая картинка
-  const E = M + 1.45;
-  phones.forEach((p, i) => {
-    tl.to($('.hook', p), { opacity: 1, duration: .2 }, E + i * .08)
-      .to($$('.subs span', p), { opacity: 1, duration: .08, stagger: .08 }, E + .1 + i * .08);
-  });
-  tl.to('.meta', { opacity: 1, duration: .3, stagger: .08 }, E + .2);
+  const E = M + 1.3;
+  tl.to('.meta', { opacity: 1, duration: .3, stagger: .08 }, E);
   tl.to({}, { duration: .6 });
 
   STEP_T = [0, T2, T3, T4];
