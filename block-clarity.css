@@ -1,0 +1,44 @@
+/* v46: readable context, one pain-intro cluster, four distinct value rows. */
+.pains-sec{align-items:start;row-gap:0!important}
+.pains-sec>.pain-intro{grid-column:1;grid-row:1;display:flex;flex-direction:column;align-items:flex-start;gap:24px;min-width:0}
+.pains-sec .pain-intro .sec-title{margin:0!important}
+.pains-sec .pain-intro .bridge{font-size:clamp(25px,2.25vw,34px);line-height:1.3;letter-spacing:-.025em;font-weight:500;max-width:17em;margin:0!important;padding:0;border:0;color:var(--ink);grid-column:auto;grid-row:auto}
+.pains-sec .pain-intro .cut-identity{grid-column:auto;grid-row:auto;margin:5px 0 0;padding:0;align-self:stretch;max-width:460px;width:100%;gap:14px}
+.pains-sec .pain-grid{grid-column:2!important;grid-row:1!important;align-self:start}
+.pains-sec .cut-output{transform:none}
+.hero-context{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;align-items:start;gap:32px;border-top:1px solid var(--line);padding-top:21px;width:100%}
+.hero .hero-context .hero-detail{display:block;position:static;font-size:18px;line-height:1.5;letter-spacing:-.015em;font-weight:500;color:var(--ink);padding:0;border:0;max-width:none;margin:0}
+.hero .hero-context .audience-line{display:block;position:static;font-size:16px;line-height:1.6;color:var(--mute);opacity:1;max-width:31em;margin:0;align-self:center}
+.hero .hero-audience{font-size:16px;line-height:1.6;opacity:1;max-width:35em;margin:20px 0 0;padding-top:16px;border-top:1px solid color-mix(in srgb,currentColor 35%,transparent)}
+.benefits.value-band{grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);align-items:start;gap:clamp(40px,5vw,76px)}
+.benefit-intro h2{font-size:clamp(29px,2.65vw,40px);line-height:1.18;max-width:16em;letter-spacing:-.025em}
+.benefit-sign{width:250px;margin-top:30px}
+.benefits.value-band .benefit-list{display:flex;flex-direction:column;gap:0;min-width:0}
+.benefits.value-band .benefit-list article{display:grid;grid-template-columns:42px minmax(0,.95fr) minmax(0,1.05fr);align-items:start;column-gap:18px;row-gap:12px;border:0;border-top:1px solid color-mix(in srgb,var(--benefit-ink) 30%,transparent);padding:23px 0;margin:0;min-width:0;background:none}
+.benefits.value-band .benefit-list article:first-child{padding-top:0;border-top:0}
+.benefit-emblem{display:block;width:42px;height:42px;stroke:var(--benefit-accent);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.benefits.value-band .benefit-list h3{font-size:20px;font-weight:500;line-height:1.35;letter-spacing:-.02em;margin:0;max-width:19em;text-wrap:pretty}
+.benefits.value-band .benefit-list p{font-size:16px;line-height:1.6;margin:0;max-width:30em;opacity:1;color:var(--benefit-ink);text-wrap:pretty}
+.benefit-brand{font-weight:600}.benefit-package{display:block;font-variant-numeric:tabular-nums;margin-bottom:7px}.benefit-package strong{font-weight:600;white-space:nowrap}
+@media(max-width:1100px) and (min-width:701px){
+ .benefits.value-band{display:block!important}.benefit-intro{display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:40px;align-items:center;margin-bottom:38px}.benefit-intro h2{max-width:24em;font-size:32px;margin:0}.benefit-sign{margin:0;width:240px}
+ .benefits.value-band .benefit-list article{grid-template-columns:44px minmax(0,.85fr) minmax(0,1.15fr);gap:24px}.benefits.value-band .benefit-list h3{font-size:21px}.benefits.value-band .benefit-list p{font-size:17px}
+}
+@media(max-width:700px){
+ .pains-sec>.pain-intro{gap:19px;margin:0 0 28px}.pains-sec .pain-intro .sec-title{margin:0!important}.pains-sec .pain-intro .bridge{font-size:25px;line-height:1.32;max-width:17em;margin:0!important}.pains-sec .pain-intro .cut-identity{margin:4px 0 0;max-width:420px}.pains-sec .pain-grid{margin-top:0}
+ .hero .hero-context{display:block;padding-top:18px;margin-top:0;border-top:1px solid var(--line)}.hero .hero-context .hero-detail{font-size:17px;line-height:1.5}.hero .hero-context .hero-detail br{display:initial}.hero .hero-context .audience-line{font-size:16px;line-height:1.55;margin:15px 0 0;max-width:32em}.hero .hero-audience{font-size:16px;line-height:1.55;max-width:32em;padding-top:15px}
+ .benefits.value-band{display:block!important;padding-top:38px!important;padding-bottom:38px!important}.benefit-intro{margin-bottom:30px}.benefit-intro h2{font-size:29px;line-height:1.2;max-width:19em;margin:0}.benefit-sign{width:210px;margin:24px 0 0}
+ .benefits.value-band .benefit-list{display:flex;gap:0}.benefits.value-band .benefit-list article{grid-template-columns:38px minmax(0,1fr);column-gap:17px;row-gap:10px;padding:23px 0;align-items:start}.benefits.value-band .benefit-list article:first-child{padding-top:23px;border-top:1px solid color-mix(in srgb,var(--benefit-ink) 30%,transparent)}
+ .benefit-emblem{grid-column:1;grid-row:1/span 2;width:38px;height:38px}.benefits.value-band .benefit-list h3{grid-column:2;font-size:20px;line-height:1.35;max-width:24em}.benefits.value-band .benefit-list p{grid-column:2;font-size:16px;line-height:1.6;max-width:32em}.benefit-package{margin-bottom:7px}
+}
+@media(max-width:360px){.pains-sec .pain-intro .bridge{font-size:23px}.hero .hero-context .hero-detail{font-size:16px}.benefit-intro h2{font-size:26px}.benefits.value-band .benefit-list article{grid-template-columns:32px minmax(0,1fr);gap:10px 14px}.benefit-emblem{width:32px;height:32px}.benefits.value-band .benefit-list h3{font-size:19px}.benefits.value-band .benefit-list p{font-size:16px}}
+
+/* Refined: the player and its context read as one workbench. */
+.hero{row-gap:29px}.hero-context{border-top-color:#ccd3c0}.benefit-emblem{stroke-width:1.7}
+
+/* Package data is a distinct role, never buried in ordinary body copy. */
+.benefit-amount,.benefit-price{display:block}.benefit-package strong{font-size:24px;line-height:1.25;letter-spacing:-.025em;font-weight:600}.benefit-price{margin-top:6px}.benefit-price strong{font-size:26px}.benefit-brand{font-weight:600}
+@media(max-width:360px){.benefit-package strong{font-size:22px}.benefit-price strong{font-size:24px}}
+
+/* Manual playback remains available with reduced motion. */
+.motion-reduced .hero-motion{display:block}

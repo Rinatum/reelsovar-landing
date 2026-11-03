@@ -9,134 +9,76 @@
 <!-- avoid-ai-design-ignore: M6 — prefers-reduced-motion обрабатывается в app.js и style.css -->
 <title>Reelsovar — нарезка видео на шортс нейросетью</title>
 <link rel="preload" as="font" type="font/woff2" href="fonts/geologica-cyrillic.woff2" crossorigin>
-<link rel="preload" as="image" href="media/c2_poster.webp" fetchpriority="high">
-<link rel="stylesheet" href="style.css?v=27">
+<link rel="preload" as="image" href="media/examples/full-biz-hr-m01/poster.jpg" fetchpriority="high">
+<link rel="stylesheet" href="style.css?v=32">
+<link rel="stylesheet" href="direction.css?v=9">
+<link rel="stylesheet" href="refined.css?v=1">
+<link rel="stylesheet" href="cohesion.css?v=4">
+<link rel="stylesheet" href="pain-typography.css?v=45">
+<link rel="stylesheet" href="block-clarity.css?v=46">
+<link rel="stylesheet" href="finish.css?v=47">
 </head>
 <body>
 
 <header class="nav">
   <a class="logo" href="#"><i class="cutmark" aria-hidden="true"></i>Reelsovar</a>
-  <nav class="nav-links" aria-label="Главное меню"><a href="#how">Как работает</a><a href="#offer">Тарифы</a><a class="login js-product" href="#">Войти</a></nav>
+  <nav class="nav-links" aria-label="Главное меню"><a href="#how">Как работает</a><a href="#examples">Примеры</a><a href="#offer">Тарифы</a><a class="login js-product" href="#">Войти</a></nav>
 </header>
 
 <main>
-<!-- Первый экран -->
-<section class="hero" id="top">
-  <div class="hero-text">
-    <div class="eyebrow">Для блогеров, экспертов и онлайн-школ. Нейросеть для нарезки видео на Shorts, Reels и VK&nbsp;Клипы</div>
-    <h1>Одно длинное видео — до&nbsp;20 коротких хитов.</h1>
-    <p class="lead">Загрузите подкаст, стрим или вебинар. Reelsovar найдёт моменты, которые цепляют зрителя, и&nbsp;сам нарежет из них вертикальные клипы.</p>
-    <form class="drop">
-      <input type="text" aria-label="Ссылка на видео" placeholder="Ссылка на YouTube, VK Видео или RuTube">
-      <button type="submit" class="btn">Нарезать своё видео</button>
-    </form>
-    <div class="note">25 минут бесплатно, без карты. Можно <a class="js-product" href="#">загрузить файл</a>.</div>
-  </div>
-  <!-- Результат: три клипа из одной записи -->
-  <div class="hero-vis" role="img" aria-label="Три вертикальных клипа из одной записи">
-    <div class="hphone i p1"><div class="hscr"><video src="media/c1.mp4" poster="media/c1_poster.webp" muted loop playsinline autoplay preload="metadata"></video>
-      <div class="hhook">«Я три года делал подкаст в&nbsp;пустоту»</div><div class="hsubs">а потом вырезал одну фразу</div></div></div>
-    <div class="hphone p p2"><div class="hscr"><video src="media/c2.mp4" poster="media/c2_poster.webp" muted loop playsinline autoplay preload="metadata"></video>
-      <div class="hhook">Почему 90% подкастов не&nbsp;растут</div><div class="hsubs">и дело не в звуке</div></div></div>
-    <div class="hphone h p3"><div class="hscr"><video src="media/c3.mp4" poster="media/c3_poster.webp" muted loop playsinline autoplay preload="metadata"></video>
-      <div class="hhook">Один совет, который сэкономил мне&nbsp;год</div><div class="hsubs">выкладывайте каждый день</div></div></div>
-  </div>
-</section>
+<section class="hero" id="top"><div class="hero-text"><h1>Одно длинное видео —<br> до 20 коротких рилсов.</h1><p class="lead">Загрузите подкаст, стрим или вебинар. Reelsovar найдёт моменты, которые цепляют зрителя, и сам нарежет из них вертикальные клипы.</p><a class="btn js-product" href="soon.html">Нарезать своё видео</a><div class="note">25 минут исходного видео. Без карты.</div></div><div class="hero-vis moment-desk"><div class="desk-heading"><span class="desk-mark" aria-hidden="true"></span><b>Момент найден</b><span>Реальные примеры</span></div><div class="desk-body"><div class="desk-film"><video class="hero-loop is-active" data-clip="full-biz-hr-m01" muted loop playsinline preload="metadata" src="media/examples/full-biz-hr-m01/final.mp4" poster="media/examples/full-biz-hr-m01/poster.jpg" aria-hidden="false" aria-label="Готовый клип"></video><video class="hero-loop " data-clip="full-biz-cafe-m01" muted loop playsinline preload="none" src="media/examples/full-biz-cafe-m01/final.mp4" poster="media/examples/full-biz-cafe-m01/poster.jpg" aria-hidden="true" aria-label="Готовый клип"></video><video class="hero-loop " data-clip="full-biz-fonts-m03" muted loop playsinline preload="none" src="media/examples/full-biz-fonts-m03/final.mp4" poster="media/examples/full-biz-fonts-m03/poster.jpg" aria-hidden="true" aria-label="Готовый клип"></video><span class="desk-range">26:15 — 27:06</span></div><div class="moment-choices" role="group" aria-label="Выберите пример клипа"><p class="choice-hint">Нажмите на историю</p><button class="moment-choice" type="button" aria-pressed="true" data-clip="full-biz-hr-m01" data-range="26:15 — 27:06" data-label="История бизнеса"><span class="choice-type">История бизнеса</span><span class="choice-quote">Офис заправлял машины до утра</span><span class="choice-time">50 с</span></button><button class="moment-choice" type="button" aria-pressed="false" data-clip="full-biz-cafe-m01" data-range="45:02 — 45:35" data-label="Разговор о ресторанах"><span class="choice-type">Разговор о ресторанах</span><span class="choice-quote">Год без выходных и за продуктами — на автобусе</span><span class="choice-time">33 с</span></button><button class="moment-choice" type="button" aria-pressed="false" data-clip="full-biz-fonts-m03" data-range="07:14 — 07:39" data-label="Дизайн и обучение"><span class="choice-type">Дизайн и обучение</span><span class="choice-quote">Что должен давать короткий курс</span><span class="choice-time">25 с</span></button></div></div><div class="desk-timeline" aria-hidden="true"><span class="playback-time">00:00</span><div class="playback-track"><span></span></div><span class="playback-duration">00:50</span></div><div class="desk-footer"><button class="desk-sound" type="button" aria-pressed="false">Включить звук</button><button class="hero-motion" type="button" aria-pressed="false">Пауза</button></div></div><div class="hero-context"><p class="hero-detail">Вы выбираете моменты.<br>Сервис готовит клипы.</p><p class="audience-line">Для авторов подкастов, интервью и экспертных видео</p></div></section>
 
-<!-- Боль: три карточки, у каждой своя картинка -->
+
+
+
+
 <section class="pains-sec" id="pains">
-  <h2 class="sec-title">Знакомо?</h2>
-  <div class="cards c3" role="region" aria-label="Проблемы ручной нарезки" tabindex="0">
-    <article class="card">
-      <div class="vis">
-        <div class="rec">
-          <div class="rec-top"><span>Запись</span><span>1:12:40</span></div>
-          <div class="rec-bar"><i class="rec-hit"><b>40 секунд</b></i><i class="rec-play"></i></div>
-          <div class="rec-axis"><span>0:00</span><span>36:00</span><span>1:12:40</span></div>
-        </div>
-      </div>
-      <h3>Пересматриваете всю запись ради сорока удачных секунд?</h3>
-    </article>
-    <article class="card">
-      <div class="vis">
-        <div class="guess">
-          <figure><img src="media/strip/s3.jpg" alt="" loading="lazy"><b>?</b></figure>
-          <figure><img src="media/strip/s6.jpg" alt="" loading="lazy"><b>?</b></figure>
-          <figure><img src="media/strip/s10.jpg" alt="" loading="lazy"><b>?</b></figure>
-        </div>
-      </div>
-      <h3>Выбираете моменты на глаз и не знаете, какой зайдёт?</h3>
-    </article>
-    <article class="card">
-      <div class="vis">
-        <dl class="receipt">
-          <div><dt>Монтаж клипов</dt><dd>1 видео</dd></div>
-          <div><dt>Ожидание</dt><dd>несколько дней</dd></div>
-          <div class="tot"><dt>Итого</dt><dd>5–15 тыс. ₽</dd></div>
-        </dl>
-      </div>
-      <h3>Ждёте монтажёра несколько дней и платите 5–15 тысяч за видео?</h3>
-    </article>
-  </div>
-  <p class="bridge">Теперь всю эту работу сделает нейросеть — быстрее и дешевле.</p>
-</section>
-
-<!-- Выгоды: главная фраза и четыре карточки -->
-<section class="benefits" id="benefits">
-  <h2 class="main-benefit">Контент на неделю вперёд: короткие хиты из одной длинной записи — без&nbsp;монтажа.</h2>
-  <div class="cards c4" role="region" aria-label="Что даёт Reelsovar" tabindex="0">
-    <article class="card">
-      <div class="vis"><div class="speed"><s>1:12:40</s><span>→</span><b>минуты</b></div></div>
-      <h3>Несколько минут вместо часов работы</h3>
-      <p>Reelsovar сам просматривает запись целиком и находит сильные моменты.</p>
-    </article>
-    <article class="card">
-      <div class="vis"><div class="cmp">
-        <div><span>Монтажёр</span><i style="width:100%"></i></div>
-        <div><span>Reelsovar</span><i class="us" style="width:10%"></i></div>
-      </div></div>
-      <h3>В 10 раз дешевле монтажёра</h3>
-      <p>Экономия до 15 тысяч на каждом видео.</p>
-    </article>
-    <article class="card">
-      <div class="vis dark"><div class="mini-phone"><video src="media/c3.mp4" poster="media/c3_poster.webp" muted loop playsinline autoplay preload="none"></video><span class="mh">Один совет, который сэкономил мне&nbsp;год</span><span class="ms">выкладывайте каждый день</span></div></div>
-      <h3>Можно выкладывать сразу</h3>
-      <p>Говорящий в кадре, субтитры на месте, цепляющее начало — правки не нужны.</p>
-    </article>
-    <article class="card">
-      <div class="vis ui"><div class="ui-crop"></div></div>
-      <h3>Есть монтажёр? Reelsovar станет его личным помощником</h3>
-      <p>Найдёт сильные моменты и нарежет клипы — ему останется лишь проверить результат.</p>
-    </article>
+<div class="pain-intro"><h2 class="sec-title">Знакомо?</h2><p class="bridge">Теперь всю эту работу сделает нейросеть — быстрее и дешевле.</p><div class="cut-identity" aria-hidden="true"><div class="cut-source"><span>Вся запись</span><svg viewBox="0 0 360 76" fill="none"><path d="M0 38H360"/><path d="M8 30v16m10-22v28m10-15v2m10-25v48m10-35v22m10-30v38m10-21v4m10-29v54m10-38v22m10-30v38m10-24v10m10-36v62m10-39v16m10-24v32m10-40v48m10-29v10m10-18v26m10-12v4m10-27v48m10-33v18m10-26v34m10-15v3m10-32v60m10-37v14m10-22v30m10-34v38m10-25v12m10-18v24m10-11v3m10-27v50m10-37v24m10-30v36m10-23v10m10-15v20m10-14v8"/></svg><i></i></div><div class="cut-output"><span>Тот самый момент</span><b>Выбрать.<br>Оставить главное.</b><svg viewBox="0 0 160 40" fill="none"><path d="M8 14v12m10-19v26m10-29v32m10-21v10m10-15v20m10-27v34m10-23v12m10-17v22m10-26v30m10-18v6m10-12v18m10-24v30m10-20v10m10-16v22m10-13v4"/></svg></div></div></div>
+<div class="pain-grid"><article class="pain-card"><div class="pain-art pain-timeline" aria-hidden="true"><span>Вся запись</span><div><i></i></div><span>Нужные 40 секунд</span></div><h3>Пересматриваете всю запись ради сорока удачных секунд?</h3><p>Снова пересматриваете видео целиком, чтобы найти, что выложить.</p></article>
+    <article class="pain-card"><div class="pain-art pain-choice" aria-hidden="true"><span>Этот?</span><span>Или этот?</span><span>А может, этот?</span></div><h3>Выбираете моменты на глаз и не знаете, какой зайдёт?</h3><p>Выбираете на глаз и тратите время на эпизоды, которые не складываются в историю.</p></article>
+    <article class="pain-card"><div class="pain-art pain-edit" aria-hidden="true"><span>Выбрать</span><span>Обрезать</span><span>Субтитры</span></div><h3>Ждёте монтажёра несколько дней и платите 5–15 тысяч за видео?</h3><p>После съёмки остаются монтаж, вертикальный кадр и проверка каждой строки.</p></article>
   </div>
 </section>
 
-<!-- Продукт: как это работает. Анимация идёт по шагам и останавливается на итоговой картинке -->
-<section class="stage-wrap" id="how">
+<section class="benefits value-band" id="benefits" aria-labelledby="benefits-title"><div class="benefit-intro"><h2 id="benefits-title">Контент на неделю вперёд: короткие рилсы из одной длинной записи — без ручного монтажа.</h2><svg class="benefit-sign" viewBox="0 0 320 132" fill="none" aria-hidden="true"><path class="recording-lines" d="M0 30H165M0 66H165M0 102H165"/><path class="selected-lines" d="M66 30H128M66 66H128M66 102H128"/><path class="cut-brackets" d="M76 10H60V122H76M118 10H134V122H118"/><path class="travel-line" d="M146 66H195M184 55L195 66L184 77"/><rect class="finished-clip" x="218" y="10" width="62" height="112" rx="5"/><path class="caption-lines" d="M230 85H269M238 94H261"/></svg></div><div class="benefit-list"><article><svg class="benefit-emblem" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M6 11H42M6 23H42M6 35H42" opacity=".35"/><path d="M19 11H31M19 23H31M19 35H31"/><path d="M16 5H12V41H16M34 5H38V41H34"/></svg><h3>Несколько минут вместо часов работы</h3><p><strong class="benefit-brand">Reelsovar</strong> сам просматривает запись целиком и находит сильные моменты.</p></article><article><svg class="benefit-emblem" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="8" y="8" width="27" height="32" rx="2"/><path d="M15 5H40V34M15 17H28M15 24H28M15 31H23"/></svg><h3>Пакет минут вместо оплаты каждого клипа</h3><p><span class="benefit-package"><span class="benefit-amount"><strong>100 минут</strong> исходного видео</span> <span class="benefit-price">— <strong>990 ₽.</strong></span></span> Без подписки.</p></article><article><svg class="benefit-emblem" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="13" y="4" width="23" height="40" rx="3"/><path d="M18 31H31M20 36H29M20 10H29"/></svg><h3>Готовый кадр и субтитры</h3><p>Говорящий в кадре, субтитры на месте — проверьте результат перед публикацией.</p></article><article><svg class="benefit-emblem" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M8 8H39V37H22M14 16H31M14 23H26"/><path d="M8 29L20 40L15 42L12 47L8 29Z"/></svg><h3>Есть монтажёр? <strong class="benefit-brand">Reelsovar</strong> станет его личным помощником</h3><p>Найдёт сильные моменты и нарежет клипы — ему останется лишь проверить результат.</p></article></div></section>
+
+<section class="examples-section" id="examples" aria-labelledby="examples-title"><div class="examples-heading"><div><h2 id="examples-title">Клипы из реальных записей</h2></div></div><div class="real-examples" tabindex="0" role="region" aria-label="Примеры клипов"><article class="real-example" data-example="full-audience-02-m01"><div class="clip-caption"><span>История из интервью</span><span>31 с</span></div><div class="example-player"><video muted loop playsinline preload="auto" poster="media/examples/full-audience-02-m01/poster.jpg" src="media/examples/full-audience-02-m01/final.mp4" aria-label="Хотел два сэндвича, заказал три и съел все"></video></div><h3>Хотел два сэндвича, заказал три и съел все</h3></article><article class="real-example" data-example="full-biz-cafe-m03"><div class="clip-caption"><span>Бизнес-подкаст</span><span>48 с</span></div><div class="example-player"><video muted loop playsinline preload="auto" poster="media/examples/full-biz-cafe-m03/poster.jpg" src="media/examples/full-biz-cafe-m03/final.mp4" aria-label="Почему он не доверяет консультантам без бизнеса"></video></div><h3>Почему он не доверяет консультантам без бизнеса</h3></article><article class="real-example" data-example="full-audience-01-m04"><div class="clip-caption"><span>Подкаст</span><span>16 с</span></div><div class="example-player"><video muted loop playsinline preload="auto" poster="media/examples/full-audience-01-m04/poster.jpg" src="media/examples/full-audience-01-m04/final.mp4" aria-label="«Два деда пришли на подкаст»: разговор про GTA 6"></video></div><h3>«Два деда пришли на подкаст»: разговор про GTA 6</h3></article></div></section>
+
+<section class="product-section" id="how" aria-labelledby="how-title">
+<div class="product-heading"><div><h2 id="how-title">Как это работает</h2></div></div>
+<div class="workflow-grid live-workflow" tabindex="0" role="region" aria-label="Четыре шага обработки видео">
+<article class="workflow-card"><div class="workflow-label"><span>1</span><h3>Добавьте запись или пришлите ссылку</h3></div><div class="work-screen"><div class="work-toolbar"><b>Reelsovar</b><span>Запись добавлена</span></div><div class="import-receipt"><span class="import-tab">Ссылка на видео</span><span class="import-alternative">или загрузка файла</span><div class="sample-input-label">Ссылка добавлена<div class="sample-url">https://www.youtube.com/watch?v=np2Az44NJMY</div></div><span class="import-success">✓ Видео загружено по ссылке</span></div><div class="recording-panel"><img class="recording-cover" src="media/examples/full-audience-01-m03/source-thumb.jpg" alt="Кадр из интервью Игоря Бедерова и Сергея Трухачева" loading="lazy"><div class="recording-info"><span class="file-kind">YouTube / 1:54:19</span><h4>Ты сядешь за Пробив Данных в 2026 – Игорь Бедеров и Сергей Трухачев</h4><p class="source-address">youtube.com/watch?v=np2Az44NJMY</p><div class="recording-status"><span>Запись разобрана</span><b>23 момента </b></div></div></div></div><p>Добавьте ссылку на видео или загрузите файл.</p></article>
+<article class="workflow-card"><div class="workflow-label"><span>2</span><h3>Выберите только нужные моменты</h3></div><div class="work-screen"><div class="work-toolbar"><b>Моменты записи</b><span id="pick-count" aria-live="polite">Выбрано 2 из 23</span></div><div class="moment-sort"><span>По виральности ↓</span><small>Баллы / 100</small></div><div class="moment-workspace"><div class="moment-list-column"><div class="moment-picker"><div class="pick-row selected" data-clip="full-audience-01-m05"><span class="sample-check" aria-hidden="true">✓</span><img src="media/examples/full-audience-01-m05/poster.jpg" alt="" loading="lazy"><span class="pick-copy"><b>Как мошенники используют актуальные новости</b><small>07:05 — 07:40 <span>· 35 с</span></small><span class="virality-score">95/100</span></span></div><div class="pick-row selected" data-clip="full-audience-01-m02"><span class="sample-check" aria-hidden="true">✓</span><img src="media/examples/full-audience-01-m02/poster.jpg" alt="" loading="lazy"><span class="pick-copy"><b>«Будет утечка — будем разбираться»</b><small>34:36 — 35:10 <span>· 35 с</span></small><span class="virality-score">93/100</span></span></div><div class="pick-row" data-clip="full-audience-01-m01"><span class="sample-check" aria-hidden="true"></span><img src="media/examples/full-audience-01-m01/poster.jpg" alt="" loading="lazy"><span class="pick-copy"><b>Как меня обманули с VPN в MAX</b><small>83:42 — 84:24 <span>· 42 с</span></small><span class="virality-score">93/100</span></span></div><div class="pick-row" data-clip="full-audience-01-m03"><span class="sample-check" aria-hidden="true"></span><img src="media/examples/full-audience-01-m03/poster.jpg" alt="" loading="lazy"><span class="pick-copy"><b>Бот для пробива не делает вас OSINT-специалистом</b><small>21:08 — 21:30 <span>· 21 с</span></small><span class="virality-score">92/100</span></span></div><div class="pick-row" data-clip="full-audience-01-m04"><span class="sample-check" aria-hidden="true"></span><img src="media/examples/full-audience-01-m04/poster.jpg" alt="" loading="lazy"><span class="pick-copy"><b>«Два деда пришли на подкаст»: разговор про GTA 6</b><small>112:24 — 112:40 <span>· 16 с</span></small><span class="virality-score">92/100</span></span></div></div><div class="demo-pagination"><span class="pages-desktop">1–5 из 23</span><span class="pages-mobile">1–3 из 23</span><span class="demo-pages" aria-label="Пример страниц подборки">1 <span>2</span> <span>3</span> <span>4</span> <span>5</span></span><span class="sample-next">Смотреть дальше</span></div></div><aside class="moment-search"><h4>Или найдите свою тему</h4><p>Укажите, какие моменты хотите найти в записи.</p><div class="sample-query">про взлом хакером</div><span class="sample-action">Найти моменты</span></aside></div></div></article>
+<article class="workflow-card"><div class="workflow-label"><span>3</span><h3>Проверьте оформление</h3></div><div class="work-screen"><div class="work-toolbar"><b>Редактор клипа</b><span>9:16 / субтитры</span></div><div id="clip-inspector"><div class="inspector-select">Выбранный момент<div class="sample-select">«Будет утечка — будем разбираться»</div></div><div class="inspector-panel"><img src="media/examples/full-audience-01-m02/poster.jpg" loading="lazy" alt="Вертикальный кадр клипа"><div class="inspector-details"><dl class="clip-settings"><div><dt>Виральность</dt><dd>93/100</dd></div><div><dt>Формат</dt><dd>9:16</dd></div><div><dt>Субтитры</dt><dd>Встроены</dd></div><div><dt>Длительность</dt><dd>35 с</dd></div></dl><span class="transcript-label">Начало расшифровки</span><p class="inspector-transcript">Я безопаснику задал вопрос одной из компаний, которая подверглась серьезной утечке. Говорю: &quot;Вы как-то пытаетесь бороться с этим, противодействовать?&quot; Он: &quot;Нам деньги не выделяют. Там нам посчитали, мы офигели от цены.…</p></div></div></div></div><p>Проверьте кадр и субтитры.</p></article>
+<article class="workflow-card"><div class="workflow-label"><span>4</span><h3>Получите готовые клипы</h3></div><div class="work-screen"><div class="work-toolbar"><b>Готовые клипы</b><span id="result-count" aria-live="polite">2 видео</span></div><div id="workflow-results" class="workflow-results"><article class="result-clip" data-clip="full-audience-01-m05"><video controls playsinline preload="none" poster="media/examples/full-audience-01-m05/poster.jpg" src="media/examples/full-audience-01-m05/final.mp4" aria-label="Как мошенники используют актуальные новости"></video><h4>Как мошенники используют актуальные новости</h4><span class="result-score">Виральность 95/100</span></article><article class="result-clip" data-clip="full-audience-01-m02"><video controls playsinline preload="none" poster="media/examples/full-audience-01-m02/poster.jpg" src="media/examples/full-audience-01-m02/final.mp4" aria-label="«Будет утечка — будем разбираться»"></video><h4>«Будет утечка — будем разбираться»</h4><span class="result-score">Виральность 93/100</span></article></div><div class="workflow-export" aria-label="Действия с готовыми клипами"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></svg>Скачать клипы</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V3m-5 5 5-5 5 5M4 13v8h16v-8"/></svg>Опубликовать</span></div></div><p>Получите выбранные клипы с субтитрами.</p></article>
+</div>
+</section>
+
+<section class="story-section" id="story" aria-labelledby="story-title">
+<div class="demo-scene">
   <div class="stage" id="stage">
 
     <div class="howcol" id="howCol">
-      <h2>Как это работает</h2>
+      <h2 id="story-title">Выберите моменты.<br>Получите клипы.</h2>
       <ol class="steps">
-        <li class="on cur"><b>Вставьте ссылку или загрузите файл</b><span>YouTube, VK Видео, RuTube или запись с компьютера.</span></li>
-        <li><b>Скажите, что искать, или доверьтесь нейросети</b><span>Например, «где гость спорит» или «самые полезные советы».</span></li>
-        <li><b>Выберите моменты</b><span>Reelsovar покажет до 20 сильных моментов и объяснит, почему каждый зайдёт. Отметьте нужные.</span></li>
-        <li><b>Скачайте клипы</b><span>Нарезаются только выбранные моменты: вертикальные, с субтитрами, говорящий в кадре.</span></li>
+        <li class="on cur"><b>Длинная запись</b><span>Подкаст, интервью или вебинар.</span></li>
+        <li><b>Сильные моменты</b><span>Нейросеть предлагает фрагменты записи.</span></li>
+        <li><b>Ваш выбор</b><span>В нарезку попадёт только то, что вы отметили.</span></li>
+        <li><b>Готовые клипы</b><span>Вертикальный кадр, субтитры и цепляющее начало.</span></li>
       </ol>
-      <a class="btn js-product" href="#">Нарезать своё видео</a>
-      <p class="demo-note">Клипы, фразы и оценки здесь — пример разбора.</p>
+
     </div>
 
     <div class="tv laptop" id="tv">
       <div class="lid">
         <div class="tv-screen" id="tvScreen">
           <div class="tv-pic" id="tvPic">
-            <video id="tvVideo" src="media/tv.mp4" poster="media/tv_poster.webp" muted loop playsinline autoplay preload="auto"></video>
-            <div class="osd" id="osd">Подкаст о росте канала, 1:12:40</div>
+            <video id="tvVideo" src="media/examples/animation-talks/source-demo.mp4" poster="media/examples/animation-talks/source-poster.jpg" muted loop playsinline preload="none"></video>
+            <div class="osd" id="osd">Интервью о тренировках</div>
           </div>
           <div class="pwr" id="pwr" aria-hidden="true"><i class="sh-t"></i><i class="sh-b"></i><i class="pwr-line"></i></div>
           <canvas id="tvSnap" aria-hidden="true"></canvas>
-          <img class="ui-shot" id="tvUI" src="media/ui_moments_1440.webp" srcset="media/ui_moments_1440.webp 1440w, media/ui_moments.webp 2880w" sizes="(max-width:700px) 92vw, 56vw" alt="" loading="lazy">
+          <img class="ui-shot" id="tvUI" src="media/examples/animation-talks/interface.png?v=36" alt="Выбор моментов из интервью" loading="lazy">
         </div>
       </div>
       <div class="base"></div>
@@ -155,85 +97,35 @@
 
     <div class="flyers" id="flyers"></div>
 
-    <!-- Телефоны -->
-    <div class="phones" id="phones">
-      <div class="phone iphone" data-clip="1">
-        <div class="screen"><video muted loop playsinline preload="none" poster="media/c1_poster.webp" data-src="media/c1.mp4"></video>
-          <div class="hook">«Я три года делал подкаст в&nbsp;пустоту»</div>
-          <div class="subs"><span>а</span> <span>потом</span> <span>вырезал</span> <span>одну</span> <span>фразу</span></div></div>
-        <div class="meta"><b>93</b>Личная история в первой фразе<small>с 01:24, 34 с</small></div>
-      </div>
-      <div class="phone pixel" data-clip="2">
-        <div class="screen"><video muted loop playsinline preload="none" poster="media/c2_poster.webp" data-src="media/c2.mp4"></video>
-          <div class="hook">Почему 90% подкастов не&nbsp;растут</div>
-          <div class="subs"><span>и</span> <span>дело</span> <span>не</span> <span>в</span> <span>звуке</span></div></div>
-        <div class="meta"><b>88</b>Спор с привычным мнением<small>с 14:02, 41 с</small></div>
-      </div>
-      <div class="phone huawei" data-clip="3">
-        <div class="screen"><video muted loop playsinline preload="none" poster="media/c3_poster.webp" data-src="media/c3.mp4"></video>
-          <div class="hook">Один совет, который сэкономил мне&nbsp;год</div>
-          <div class="subs"><span>выкладывайте</span> <span>каждый</span> <span>день</span></div></div>
-        <div class="meta"><b>81</b>Конкретный совет за 30 секунд<small>с 55:20, 29 с</small></div>
-      </div>
-    </div>
+<div class="phones" id="phones"><div class="phone iphone" data-clip="1"><div class="screen"><video muted playsinline preload="none" poster="assets/story-start-0.png" data-src="media/examples/full-audience-02-m04/preview.mp4"></video><div class="hook"></div><div class="subs"><span></span></div></div><div class="meta"></div></div><div class="phone pixel" data-clip="2"><div class="screen"><video muted playsinline preload="none" poster="assets/story-start-1.png" data-src="media/examples/full-audience-02-m02/preview.mp4"></video><div class="hook"></div><div class="subs"><span></span></div></div><div class="meta"></div></div></div>
   </div>
+</div>
+
 </section>
 
-<section class="offer" id="offer">
-  <div class="offer-head">
-    <h2>Нарежьте первое видео бесплатно</h2>
-    <div class="get">
-      <h3>Что вы получаете</h3>
-      <ul>
-        <li>Короткие хиты из одной длинной записи — за несколько минут</li>
-        <li>В 10 раз дешевле монтажёра</li>
-        <li>Клипы можно сразу выкладывать в Shorts, Reels и VK&nbsp;Клипы</li>
-      </ul>
-    </div>
+<section class="offer offer-simple" id="offer" aria-labelledby="offer-title">
+  <div class="offer-summary">
+    <h2 id="offer-title">Короткие рилсы из длинной записи — без ручного монтажа.</h2>
+    <p>Найдите сильные моменты, выберите нужные и получите вертикальные клипы с субтитрами.</p>
   </div>
-  <!-- Бесплатно — это вход, а выбор — между двумя способами платить -->
-  <div class="start">
-    <div>
-      <h3>Начните бесплатно</h3>
-      <p>25 минут видео, клипы с водяным знаком. Карта не нужна.</p>
-    </div>
-    <a class="btn js-product" href="#">Начать бесплатно</a>
+  <div class="single-price">
+    <div class="price-heading"><h3>100 минут видео</h3><p>Пакет без подписки</p></div>
+    <div class="package-price">990&nbsp;₽<span>разово</span></div>
+    <ul class="package-features"><li>Без водяного знака</li><li>Выбор предложенных моментов</li><li>Субтитры и вертикальный кадр</li><li>Минуты считаются по обрабатываемому исходнику</li></ul>
   </div>
-  <p class="incl">В любом варианте: поиск моментов по вашему запросу, субтитры и цепляющее начало, говорящий в кадре.</p>
-  <div class="plans two">
-    <div class="plan">
-      <h3>Пакет минут</h3>
-      <p class="for">Нарезать пару записей без подписки</p>
-      <div class="price">990&nbsp;₽<small>разово</small></div>
-      <p class="vol">100 минут видео</p>
-      <ul class="feat"><li>Без водяного знака</li><li>Платите только за выбранный отрезок</li></ul>
-      <a class="btn alt js-product" href="#">Купить пакет</a>
-    </div>
-    <div class="plan">
-      <h3>Подписка</h3>
-      <p class="for">Для тех, кто выкладывает клипы каждую неделю</p>
-      <div class="price">2&nbsp;990&nbsp;₽<small>в месяц</small></div>
-      <p class="vol">7,5 часа видео в месяц</p>
-      <ul class="feat"><li>Без водяного знака</li><li>Самая низкая цена минуты</li><li>За год — 17&nbsp;900&nbsp;₽, в 2 раза дешевле</li></ul>
-      <a class="btn ink js-product" href="#">Оформить подписку</a>
-    </div>
-  </div>
-  <p class="pay">Оплата картами РФ и через СБП. Подписку можно отменить в любой момент.</p>
-  <div class="final">
-    <p>Вставьте ссылку и войдите через Яндекс, VK или почту. Пока вы входите, нейросеть уже смотрит видео — через несколько минут увидите сильные моменты.</p>
-    <form class="drop">
-      <input type="text" aria-label="Ссылка на видео" placeholder="Ссылка на YouTube, VK Видео или RuTube">
-      <button type="submit" class="btn">Нарезать своё видео</button>
-    </form>
-    <div class="note">25 минут бесплатно, без карты.</div>
+  <div class="offer-action">
+    <h3>Нарежьте первое видео бесплатно</h3>
+    <p>Загрузите видео, выберите моменты и оцените первые клипы.<br class="desktop-break"> Карта не нужна.</p>
+    <a class="btn js-product" href="soon.html">Нарезать своё видео</a>
   </div>
 </section>
-
 </main>
+
+
 
 <footer class="foot">
   <p class="foot-about">Reelsovar — нейросеть для нарезки видео на Shorts, Reels и VK&nbsp;Клипы</p>
-  <nav aria-label="Разделы"><a href="#how">Как работает</a><a href="#offer">Тарифы</a><a class="js-product" href="#">Войти</a></nav>
+  <nav aria-label="Разделы"><a href="#how">Как работает</a><a href="#examples">Примеры</a><a href="#offer">Тарифы</a><a class="js-product" href="#">Войти</a></nav>
   <nav aria-label="Документы"><a href="#">Оферта</a><a href="#">Политика обработки персональных данных</a><a href="#">Контакты</a><!-- TODO: документы, контакты, реквизиты --></nav>
 </footer>
 
@@ -244,6 +136,8 @@
   // Куда ведут все кнопки: адрес продукта (регистрация / загрузка видео)
   const PRODUCT_URL = "soon.html";   // TODO: адрес продукта, когда он появится
 </script>
-<script src="app.js?v=19"></script>
+<script src="app.js?v=47"></script>
+<script src="media.js?v=46"></script>
+<script src="refined.js?v=1"></script>
 </body>
 </html>
