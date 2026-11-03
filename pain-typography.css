@@ -1,0 +1,17 @@
+/* A single framed reading surface keeps problem and explanation inseparable.
+   Copy and markup are intentionally untouched. Load after cohesion.css. */
+.pains-sec .pain-grid{overflow:hidden;border:1px solid var(--pain-rule);background:var(--pain-paper);border-radius:var(--pain-radius);padding:0;box-shadow:none}
+.pains-sec .pain-card,.pains-sec .pain-card+.pain-card,.pains-sec .pain-card:first-child{display:grid;grid-template-columns:1fr;align-items:start;gap:11px;border:0;border-bottom:1px solid var(--pain-rule);border-radius:0;padding:25px 24px;margin:0;background:transparent;box-shadow:none}
+.pains-sec .pain-card:last-child{border-bottom:0}
+.pains-sec .pain-card h3{font-size:19px;line-height:1.35;letter-spacing:-.02em;font-weight:600;color:var(--pain-heading);margin:2px 0 0;max-width:30em;text-wrap:pretty}
+.pains-sec .pain-card p{font-size:17px;line-height:1.55;letter-spacing:-.01em;font-weight:400;color:var(--pain-copy);margin:0;max-width:29em;text-wrap:pretty;opacity:1}
+.pains-sec .pain-card .pain-art{display:none}
+.pains-sec .bridge{font-weight:500;max-width:32em;text-wrap:pretty}
+@media(max-width:1100px) and (min-width:701px){.pains-sec .pain-card,.pains-sec .pain-card+.pain-card,.pains-sec .pain-card:first-child{grid-template-columns:1fr;gap:10px;padding:21px}.pains-sec .pain-card h3{font-size:15px;max-width:none}.pains-sec .pain-card h3 br{display:none}.pains-sec .pain-card p{font-size:17px}}
+@media(max-width:700px){.pains-sec .pain-card,.pains-sec .pain-card+.pain-card,.pains-sec .pain-card:first-child{grid-template-columns:1fr;gap:10px;padding:21px 20px}.pains-sec .pain-card h3{font-size:17px;line-height:1.4;max-width:none;margin:0}.pains-sec .pain-card h3 br{display:none}.pains-sec .pain-card p{font-size:16px;line-height:1.55;letter-spacing:-.01em;max-width:32em}.pains-sec .bridge{font-size:16px;line-height:1.55;margin-top:23px}}
+@media(max-width:360px){.pains-sec .pain-card,.pains-sec .pain-card+.pain-card,.pains-sec .pain-card:first-child{padding:19px 17px}.pains-sec .pain-card p{font-size:16px;line-height:1.6}.pains-sec .pain-card h3{font-size:17px}}
+
+/* Refined: pale editor sheet, graphite text, precise quiet dividers. */
+.pains-sec{--pain-paper:#fcfdf8;--pain-copy:#4c5543;--pain-heading:#252922;--pain-rule:#bfc8b3;--pain-radius:12px}
+
+@media(min-width:701px){.pains-sec .sec-title{grid-row:1}.pains-sec .cut-identity{grid-row:1;margin-top:92px;align-self:start}.pains-sec .pain-grid{grid-row:1}.pains-sec .bridge{grid-row:2}}
