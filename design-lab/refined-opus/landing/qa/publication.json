@@ -1,5 +1,5 @@
 {
-  "url": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/",
+  "url": "https://rinatum.github.io/reelsovar-landing/",
   "checks": [
     {
       "name": "Published entry returns 200",
@@ -30,17 +30,17 @@
       "ok": true,
       "data": [
         {
-          "time": 1.963205,
+          "time": 1.960044,
           "ready": 4,
           "paused": false
         },
         {
-          "time": 1.963046,
+          "time": 1.959943,
           "ready": 4,
           "paused": false
         },
         {
-          "time": 1.963038,
+          "time": 1.959832,
           "ready": 4,
           "paused": false
         }

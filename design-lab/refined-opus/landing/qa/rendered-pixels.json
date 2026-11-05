@@ -1,8 +1,8 @@
 [
   {
     "sample": "hero",
-    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-audience-01-m02/preview.mp4",
-    "pixel_delta": 5.302466666666667,
+    "src": "https://rinatum.github.io/reelsovar-landing/media/examples/full-audience-01-m02/preview.mp4",
+    "pixel_delta": 5.8928,
     "moving": true,
     "crop": [
       811,
@@ -13,8 +13,8 @@
   },
   {
     "sample": "hero",
-    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-audience-01-m05/preview.mp4",
-    "pixel_delta": 15.667229254571026,
+    "src": "https://rinatum.github.io/reelsovar-landing/media/examples/full-audience-01-m05/preview.mp4",
+    "pixel_delta": 11.220534458509142,
     "moving": true,
     "crop": [
       1014,
@@ -25,8 +25,8 @@
   },
   {
     "sample": "hero",
-    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-audience-01-m04/preview.mp4",
-    "pixel_delta": 76.84066666666666,
+    "src": "https://rinatum.github.io/reelsovar-landing/media/examples/full-audience-01-m04/preview.mp4",
+    "pixel_delta": 27.387266666666665,
     "moving": true,
     "crop": [
       1218,
@@ -37,8 +37,8 @@
   },
   {
     "sample": "gallery-0",
-    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-hr-m01/preview.mp4",
-    "pixel_delta": 17.3757343550447,
+    "src": "https://rinatum.github.io/reelsovar-landing/media/examples/full-biz-hr-m01/preview.mp4",
+    "pixel_delta": 18.49661558109834,
     "moving": true,
     "crop": [
       558,
@@ -49,8 +49,8 @@
   },
   {
     "sample": "gallery-0",
-    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/assets/examples/full-stream-02-m03/preview.mp4",
-    "pixel_delta": 9.452540272614621,
+    "src": "https://rinatum.github.io/reelsovar-landing/assets/examples/full-stream-02-m03/preview.mp4",
+    "pixel_delta": 8.46914498141264,
     "moving": true,
     "crop": [
       705,
@@ -61,7 +61,7 @@
   },
   {
     "sample": "gallery-0",
-    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-cafe-m01/preview.mp4",
+    "src": "https://rinatum.github.io/reelsovar-landing/media/examples/full-biz-cafe-m01/preview.mp4",
     "pixel_delta": 7.701532567049809,
     "moving": true,
     "crop": [
@@ -73,7 +73,7 @@
   },
   {
     "sample": "gallery-0",
-    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/anime-01-hook-demons/preview.mp4",
+    "src": "https://rinatum.github.io/reelsovar-landing/media/examples/anime-01-hook-demons/preview.mp4",
     "pixel_delta": 4.05351617440225,
     "moving": true,
     "crop": [
@@ -85,7 +85,7 @@
   },
   {
     "sample": "gallery-0",
-    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-startup-m02/preview.mp4",
+    "src": "https://rinatum.github.io/reelsovar-landing/media/examples/full-biz-startup-m02/preview.mp4",
     "pixel_delta": 8.011673699015471,
     "moving": true,
     "crop": [
@@ -97,8 +97,8 @@
   },
   {
     "sample": "gallery-1",
-    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/assets/examples/full-stream-02-m03/preview.mp4",
-    "pixel_delta": 10.739310829817159,
+    "src": "https://rinatum.github.io/reelsovar-landing/assets/examples/full-stream-02-m03/preview.mp4",
+    "pixel_delta": 12.241561181434598,
     "moving": true,
     "crop": [
       446,
@@ -109,8 +109,8 @@
   },
   {
     "sample": "gallery-1",
-    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-cafe-m01/preview.mp4",
-    "pixel_delta": 8.30434227330779,
+    "src": "https://rinatum.github.io/reelsovar-landing/media/examples/full-biz-cafe-m01/preview.mp4",
+    "pixel_delta": 9.427969348659003,
     "moving": true,
     "crop": [
       558,
@@ -121,8 +121,8 @@
   },
   {
     "sample": "gallery-1",
-    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/anime-01-hook-demons/preview.mp4",
-    "pixel_delta": 5.238847583643123,
+    "src": "https://rinatum.github.io/reelsovar-landing/media/examples/anime-01-hook-demons/preview.mp4",
+    "pixel_delta": 4.681660470879802,
     "moving": true,
     "crop": [
       705,
@@ -133,8 +133,8 @@
   },
   {
     "sample": "gallery-1",
-    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-audience-02-m01/preview.mp4",
-    "pixel_delta": 9.76992337164751,
+    "src": "https://rinatum.github.io/reelsovar-landing/media/examples/full-audience-02-m01/preview.mp4",
+    "pixel_delta": 10.919093231162195,
     "moving": true,
     "crop": [
       852,
@@ -145,8 +145,8 @@
   },
   {
     "sample": "gallery-1",
-    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-fonts-m03/preview.mp4",
-    "pixel_delta": 6.387482419127989,
+    "src": "https://rinatum.github.io/reelsovar-landing/media/examples/full-biz-fonts-m03/preview.mp4",
+    "pixel_delta": 6.3919127988748246,
     "moving": true,
     "crop": [
       964,
@@ -157,8 +157,8 @@
   },
   {
     "sample": "gallery-2",
-    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-audience-02-m01/preview.mp4",
-    "pixel_delta": 17.352320675105485,
+    "src": "https://rinatum.github.io/reelsovar-landing/media/examples/full-audience-02-m01/preview.mp4",
+    "pixel_delta": 17.149156118143463,
     "moving": true,
     "crop": [
       446,
@@ -169,8 +169,8 @@
   },
   {
     "sample": "gallery-2",
-    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-fonts-m03/preview.mp4",
-    "pixel_delta": 8.93109833971903,
+    "src": "https://rinatum.github.io/reelsovar-landing/media/examples/full-biz-fonts-m03/preview.mp4",
+    "pixel_delta": 9.69463601532567,
     "moving": true,
     "crop": [
       558,
@@ -181,8 +181,8 @@
   },
   {
     "sample": "gallery-2",
-    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/auto-01-hook-mileage/preview.mp4",
-    "pixel_delta": 42.638166047087985,
+    "src": "https://rinatum.github.io/reelsovar-landing/media/examples/auto-01-hook-mileage/preview.mp4",
+    "pixel_delta": 42.5861833952912,
     "moving": true,
     "crop": [
       705,
@@ -193,7 +193,7 @@
   },
   {
     "sample": "gallery-2",
-    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-audience-01-m05/preview.mp4",
+    "src": "https://rinatum.github.io/reelsovar-landing/media/examples/full-audience-01-m05/preview.mp4",
     "pixel_delta": 10.138122605363984,
     "moving": true,
     "crop": [
@@ -205,8 +205,8 @@
   },
   {
     "sample": "gallery-2",
-    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-marketing-m02/preview.mp4",
-    "pixel_delta": 10.900140646976089,
+    "src": "https://rinatum.github.io/reelsovar-landing/media/examples/full-biz-marketing-m02/preview.mp4",
+    "pixel_delta": 11.071659634317863,
     "moving": true,
     "crop": [
       964,
@@ -217,8 +217,8 @@
   },
   {
     "sample": "gallery-3",
-    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-audience-01-m05/preview.mp4",
-    "pixel_delta": 5.049226441631505,
+    "src": "https://rinatum.github.io/reelsovar-landing/media/examples/full-audience-01-m05/preview.mp4",
+    "pixel_delta": 5.228481012658228,
     "moving": true,
     "crop": [
       446,
@@ -229,8 +229,8 @@
   },
   {
     "sample": "gallery-3",
-    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-marketing-m02/preview.mp4",
-    "pixel_delta": 14.447701149425287,
+    "src": "https://rinatum.github.io/reelsovar-landing/media/examples/full-biz-marketing-m02/preview.mp4",
+    "pixel_delta": 10.866794380587484,
     "moving": true,
     "crop": [
       558,
@@ -241,8 +241,8 @@
   },
   {
     "sample": "gallery-3",
-    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-cg-m02/preview.mp4",
-    "pixel_delta": 8.158674101610904,
+    "src": "https://rinatum.github.io/reelsovar-landing/media/examples/full-biz-cg-m02/preview.mp4",
+    "pixel_delta": 8.227013630731102,
     "moving": true,
     "crop": [
       705,
@@ -253,8 +253,8 @@
   },
   {
     "sample": "gallery-3",
-    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-audience-03-m01/preview.mp4",
-    "pixel_delta": 10.461238825031929,
+    "src": "https://rinatum.github.io/reelsovar-landing/media/examples/full-audience-03-m01/preview.mp4",
+    "pixel_delta": 14.386590038314177,
     "moving": true,
     "crop": [
       852,
@@ -265,8 +265,8 @@
   },
   {
     "sample": "gallery-3",
-    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-startup-m02/preview.mp4",
-    "pixel_delta": 14.891350210970465,
+    "src": "https://rinatum.github.io/reelsovar-landing/media/examples/full-biz-startup-m02/preview.mp4",
+    "pixel_delta": 22.412447257383963,
     "moving": true,
     "crop": [
       964,
@@ -277,8 +277,8 @@
   },
   {
     "sample": "pipeline-0",
-    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-cafe-m01/preview.mp4",
-    "pixel_delta": 7.183440860215054,
+    "src": "https://rinatum.github.io/reelsovar-landing/media/examples/full-biz-cafe-m01/preview.mp4",
+    "pixel_delta": 7.566881720430107,
     "moving": true,
     "crop": [
       565,
@@ -289,8 +289,8 @@
   },
   {
     "sample": "pipeline-0",
-    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/assets/examples/full-biz-cafe-m02/preview.mp4",
-    "pixel_delta": 8.632043010752687,
+    "src": "https://rinatum.github.io/reelsovar-landing/assets/examples/full-biz-cafe-m02/preview.mp4",
+    "pixel_delta": 8.633118279569892,
     "moving": true,
     "crop": [
       705,
@@ -301,8 +301,8 @@
   },
   {
     "sample": "pipeline-0",
-    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-cafe-m03/preview.mp4",
-    "pixel_delta": 10.496989247311829,
+    "src": "https://rinatum.github.io/reelsovar-landing/media/examples/full-biz-cafe-m03/preview.mp4",
+    "pixel_delta": 11.289784946236558,
     "moving": true,
     "crop": [
       845,
@@ -313,8 +313,8 @@
   },
   {
     "sample": "pipeline-1",
-    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-audience-02-m01/preview.mp4",
-    "pixel_delta": 8.523870967741935,
+    "src": "https://rinatum.github.io/reelsovar-landing/media/examples/full-audience-02-m01/preview.mp4",
+    "pixel_delta": 12.29279569892473,
     "moving": true,
     "crop": [
       565,
@@ -325,8 +325,8 @@
   },
   {
     "sample": "pipeline-1",
-    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-audience-02-m02/preview.mp4",
-    "pixel_delta": 18.85537634408602,
+    "src": "https://rinatum.github.io/reelsovar-landing/media/examples/full-audience-02-m02/preview.mp4",
+    "pixel_delta": 15.735698924731183,
     "moving": true,
     "crop": [
       705,
@@ -337,8 +337,8 @@
   },
   {
     "sample": "pipeline-1",
-    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-audience-02-m04/preview.mp4",
-    "pixel_delta": 16.905806451612904,
+    "src": "https://rinatum.github.io/reelsovar-landing/media/examples/full-audience-02-m04/preview.mp4",
+    "pixel_delta": 15.203978494623655,
     "moving": true,
     "crop": [
       845,
@@ -349,8 +349,8 @@
   },
   {
     "sample": "pipeline-2",
-    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-hr-m01/preview.mp4",
-    "pixel_delta": 18.683763440860215,
+    "src": "https://rinatum.github.io/reelsovar-landing/media/examples/full-biz-hr-m01/preview.mp4",
+    "pixel_delta": 19.066021505376344,
     "moving": true,
     "crop": [
       565,
@@ -361,8 +361,8 @@
   },
   {
     "sample": "pipeline-2",
-    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/assets/examples/full-biz-hr-m02/preview.mp4",
-    "pixel_delta": 16.838924731182797,
+    "src": "https://rinatum.github.io/reelsovar-landing/assets/examples/full-biz-hr-m02/preview.mp4",
+    "pixel_delta": 17.962473118279572,
     "moving": true,
     "crop": [
       705,
@@ -373,8 +373,8 @@
   },
   {
     "sample": "pipeline-2",
-    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-hr-m03/preview.mp4",
-    "pixel_delta": 10.551505376344087,
+    "src": "https://rinatum.github.io/reelsovar-landing/media/examples/full-biz-hr-m03/preview.mp4",
+    "pixel_delta": 11.259354838709678,
     "moving": true,
     "crop": [
       845,
@@ -385,7 +385,7 @@
   },
   {
     "sample": "pipeline-mobile",
-    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-cafe-m01/preview.mp4",
+    "src": "https://rinatum.github.io/reelsovar-landing/media/examples/full-biz-cafe-m01/preview.mp4",
     "pixel_delta": 7.03515625,
     "moving": true,
     "crop": [
@@ -397,7 +397,7 @@
   },
   {
     "sample": "pipeline-mobile",
-    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/assets/examples/full-biz-cafe-m02/preview.mp4",
+    "src": "https://rinatum.github.io/reelsovar-landing/assets/examples/full-biz-cafe-m02/preview.mp4",
     "pixel_delta": 8.095052083333334,
     "moving": true,
     "crop": [
@@ -409,7 +409,7 @@
   },
   {
     "sample": "pipeline-mobile",
-    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-cafe-m03/preview.mp4",
+    "src": "https://rinatum.github.io/reelsovar-landing/media/examples/full-biz-cafe-m03/preview.mp4",
     "pixel_delta": 10.393229166666666,
     "moving": true,
     "crop": [

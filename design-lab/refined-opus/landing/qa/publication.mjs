@@ -29,7 +29,7 @@ try{
  check('Published pipeline has three source/result pairs',await page.locator('.pipe-origin').count()===3&&await page.locator('.pipe-deck').count()===3);
  await mkdir('landing/shots/publication',{recursive:true});
  await page.screenshot({path:'landing/shots/publication/desktop.png',fullPage:true});
- for(const width of [1440,390,320]){await page.setViewportSize({width,height:900});const bounds=await page.evaluate(()=>({width:innerWidth,scroll:document.documentElement.scrollWidth}));check('No horizontal overflow '+width,bounds.scroll<=bounds.width,bounds);}
+ for(const width of [1440,390,320]){await page.setViewportSize({width,height:900});await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));const bounds=await page.evaluate(()=>({width:innerWidth,scroll:document.documentElement.scrollWidth}));check('No horizontal overflow '+width,bounds.scroll<=bounds.width,bounds);}
  await page.screenshot({path:'landing/shots/publication/mobile.png',fullPage:true});
  await page.goto(new URL('soon.html',root).href,{waitUntil:'domcontentloaded'});
  check('CTA destination works',await page.locator('h1').textContent()==='Reelsovar скоро откроется.');
