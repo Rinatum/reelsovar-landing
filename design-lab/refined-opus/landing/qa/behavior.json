@@ -1,0 +1,200 @@
+{
+  "results": [
+    {
+      "name": "Live results revealed during flight",
+      "ok": true,
+      "details": {
+        "timelineTime": 2.9,
+        "phase": "clips",
+        "frames": 3,
+        "live": [
+          {
+            "ready": 4,
+            "paused": false,
+            "time": 4.032029,
+            "w": 360,
+            "h": 640
+          },
+          {
+            "ready": 4,
+            "paused": false,
+            "time": 4.032023,
+            "w": 360,
+            "h": 640
+          },
+          {
+            "ready": 4,
+            "paused": false,
+            "time": 4.031771,
+            "w": 360,
+            "h": 640
+          }
+        ],
+        "clipCovers": true
+      }
+    },
+    {
+      "name": "Title stays readable after one run",
+      "ok": true,
+      "details": {
+        "progress": 1,
+        "time": 2.15,
+        "faces": [
+          "1",
+          "1",
+          "1",
+          "1"
+        ]
+      }
+    },
+    {
+      "name": "Twelve source recordings",
+      "ok": true,
+      "details": [
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-hr-m01/poster.jpg",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/assets/examples/full-stream-02-m03/poster.jpg",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-cafe-m01/poster.jpg",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/anime-01-hook-demons/poster.jpg",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-audience-02-m01/poster.jpg",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-fonts-m03/poster.jpg",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/auto-01-hook-mileage/poster.jpg",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-audience-01-m05/poster.jpg",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-marketing-m02/poster.jpg",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-cg-m02/poster.jpg",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-audience-03-m01/poster.jpg",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-startup-m02/poster.jpg"
+      ]
+    },
+    {
+      "name": "Genre Стрим",
+      "ok": true
+    },
+    {
+      "name": "Full clip Стрим",
+      "ok": true,
+      "details": {
+        "open": true,
+        "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/assets/examples/full-stream-02-m03/final.mp4",
+        "muted": false,
+        "controls": true,
+        "ready": 4,
+        "previewsPaused": true
+      }
+    },
+    {
+      "name": "Close preserves manual pause",
+      "ok": true
+    },
+    {
+      "name": "Genre Аниме",
+      "ok": true
+    },
+    {
+      "name": "Full clip Аниме",
+      "ok": true,
+      "details": {
+        "open": true,
+        "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/anime-01-hook-demons/final.mp4",
+        "muted": false,
+        "controls": true,
+        "ready": 4,
+        "previewsPaused": true
+      }
+    },
+    {
+      "name": "Close preserves manual pause",
+      "ok": true
+    },
+    {
+      "name": "Close resumes automatic drum",
+      "ok": true
+    },
+    {
+      "name": "Offscreen videos pause",
+      "ok": true
+    },
+    {
+      "name": "CTA destinations exist",
+      "ok": true,
+      "details": [
+        "#content",
+        "./",
+        "#how",
+        "#examples",
+        "#offer",
+        "soon.html",
+        "soon.html",
+        "soon.html",
+        "soon.html",
+        "#hero",
+        "#how",
+        "#examples",
+        "#offer",
+        "soon.html"
+      ]
+    },
+    {
+      "name": "Coming soon page",
+      "ok": true
+    },
+    {
+      "name": "Reduced motion has no autoplay",
+      "ok": true,
+      "details": {
+        "playing": 0,
+        "hero": 3,
+        "scene": 1
+      }
+    },
+    {
+      "name": "Mobile manual step 1",
+      "ok": true,
+      "details": {
+        "active": "0",
+        "visible": 1,
+        "picked": 2,
+        "outputs": 2,
+        "interactive": 0
+      }
+    },
+    {
+      "name": "Mobile manual step 2",
+      "ok": true,
+      "details": {
+        "active": "1",
+        "visible": 1,
+        "picked": 2,
+        "outputs": 2,
+        "interactive": 0
+      }
+    },
+    {
+      "name": "Mobile manual step 3",
+      "ok": true,
+      "details": {
+        "active": "2",
+        "visible": 1,
+        "picked": 2,
+        "outputs": 2,
+        "interactive": 0
+      }
+    },
+    {
+      "name": "Mobile manual step 4",
+      "ok": true,
+      "details": {
+        "active": "3",
+        "visible": 1,
+        "picked": 2,
+        "outputs": 2,
+        "interactive": 0
+      }
+    },
+    {
+      "name": "No runtime errors",
+      "ok": true,
+      "details": []
+    }
+  ],
+  "errors": []
+}

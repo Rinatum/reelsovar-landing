@@ -1,0 +1,125 @@
+{
+  "checks": [
+    {
+      "name": "Source keeps moving while result requests are blocked",
+      "ok": true,
+      "data": {
+        "phase": "buffering",
+        "paused": false,
+        "frames": 57,
+        "shown": false
+      }
+    },
+    {
+      "name": "Unready result posters are never flipped into view",
+      "ok": true,
+      "data": {
+        "phase": "buffering",
+        "paused": false,
+        "frames": 57,
+        "shown": false
+      }
+    },
+    {
+      "name": "All three results are already moving together at reveal",
+      "ok": true,
+      "data": [
+        {
+          "time": 1.810355,
+          "frames": 51,
+          "paused": false,
+          "opacity": "1"
+        },
+        {
+          "time": 1.793046,
+          "frames": 49,
+          "paused": false,
+          "opacity": "1"
+        },
+        {
+          "time": 1.792759,
+          "frames": 49,
+          "paused": false,
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "name": "No overflow 1440",
+      "ok": true,
+      "data": {
+        "width": 1440,
+        "scroll": 1430
+      }
+    },
+    {
+      "name": "No overflow 768",
+      "ok": true,
+      "data": {
+        "width": 768,
+        "scroll": 758
+      }
+    },
+    {
+      "name": "No overflow 390",
+      "ok": true,
+      "data": {
+        "width": 390,
+        "scroll": 380
+      }
+    },
+    {
+      "name": "No overflow 320",
+      "ok": true,
+      "data": {
+        "width": 320,
+        "scroll": 310
+      }
+    },
+    {
+      "name": "Reduced motion source choice 0",
+      "ok": true,
+      "data": {
+        "group": "0",
+        "playing": 0,
+        "cards": [
+          "1",
+          "1",
+          "1"
+        ]
+      }
+    },
+    {
+      "name": "Reduced motion source choice 1",
+      "ok": true,
+      "data": {
+        "group": "1",
+        "playing": 0,
+        "cards": [
+          "1",
+          "1",
+          "1"
+        ]
+      }
+    },
+    {
+      "name": "Reduced motion source choice 2",
+      "ok": true,
+      "data": {
+        "group": "2",
+        "playing": 0,
+        "cards": [
+          "1",
+          "1",
+          "1"
+        ]
+      }
+    },
+    {
+      "name": "No runtime errors",
+      "ok": true,
+      "data": []
+    }
+  ],
+  "errors": []
+}

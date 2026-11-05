@@ -1,0 +1,247 @@
+[
+  {
+    "sample": "hero",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-audience-01-m02/preview.mp4",
+    "fps": 25.25,
+    "dropped": 0,
+    "ok": true
+  },
+  {
+    "sample": "hero",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-audience-01-m05/preview.mp4",
+    "fps": 25.25,
+    "dropped": 0,
+    "ok": true
+  },
+  {
+    "sample": "hero",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-audience-01-m04/preview.mp4",
+    "fps": 25.25,
+    "dropped": 0,
+    "ok": true
+  },
+  {
+    "sample": "gallery-0",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-hr-m01/preview.mp4",
+    "fps": 25.5,
+    "dropped": 0,
+    "ok": true
+  },
+  {
+    "sample": "gallery-0",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/assets/examples/full-stream-02-m03/preview.mp4",
+    "fps": 25.5,
+    "dropped": 0,
+    "ok": true
+  },
+  {
+    "sample": "gallery-0",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-cafe-m01/preview.mp4",
+    "fps": 25.5,
+    "dropped": 0,
+    "ok": true
+  },
+  {
+    "sample": "gallery-0",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/anime-01-hook-demons/preview.mp4",
+    "fps": 24.55,
+    "dropped": 0,
+    "ok": true
+  },
+  {
+    "sample": "gallery-0",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-startup-m02/preview.mp4",
+    "fps": 25.5,
+    "dropped": 0,
+    "ok": true
+  },
+  {
+    "sample": "gallery-1",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/assets/examples/full-stream-02-m03/preview.mp4",
+    "fps": 25.55,
+    "dropped": 0,
+    "ok": true
+  },
+  {
+    "sample": "gallery-1",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-cafe-m01/preview.mp4",
+    "fps": 25.55,
+    "dropped": 0,
+    "ok": true
+  },
+  {
+    "sample": "gallery-1",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/anime-01-hook-demons/preview.mp4",
+    "fps": 25.55,
+    "dropped": 0,
+    "ok": true
+  },
+  {
+    "sample": "gallery-1",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-audience-02-m01/preview.mp4",
+    "fps": 25.55,
+    "dropped": 0,
+    "ok": true
+  },
+  {
+    "sample": "gallery-1",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-fonts-m03/preview.mp4",
+    "fps": 25.55,
+    "dropped": 0,
+    "ok": true
+  },
+  {
+    "sample": "gallery-2",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-audience-02-m01/preview.mp4",
+    "fps": 24.75,
+    "dropped": 0,
+    "ok": true
+  },
+  {
+    "sample": "gallery-2",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-fonts-m03/preview.mp4",
+    "fps": 24.72,
+    "dropped": 0,
+    "ok": true
+  },
+  {
+    "sample": "gallery-2",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/auto-01-hook-mileage/preview.mp4",
+    "fps": 24.72,
+    "dropped": 0,
+    "ok": true
+  },
+  {
+    "sample": "gallery-2",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-audience-01-m05/preview.mp4",
+    "fps": 24.71,
+    "dropped": 0,
+    "ok": true
+  },
+  {
+    "sample": "gallery-2",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-marketing-m02/preview.mp4",
+    "fps": 24.69,
+    "dropped": 0,
+    "ok": true
+  },
+  {
+    "sample": "gallery-3",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-audience-01-m05/preview.mp4",
+    "fps": 24.65,
+    "dropped": 0,
+    "ok": true
+  },
+  {
+    "sample": "gallery-3",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-marketing-m02/preview.mp4",
+    "fps": 24.65,
+    "dropped": 0,
+    "ok": true
+  },
+  {
+    "sample": "gallery-3",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-cg-m02/preview.mp4",
+    "fps": 24.65,
+    "dropped": 0,
+    "ok": true
+  },
+  {
+    "sample": "gallery-3",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-audience-03-m01/preview.mp4",
+    "fps": 24.65,
+    "dropped": 0,
+    "ok": true
+  },
+  {
+    "sample": "gallery-3",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-startup-m02/preview.mp4",
+    "fps": 24.65,
+    "dropped": 0,
+    "ok": true
+  },
+  {
+    "sample": "pipeline-0",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-cafe-m01/preview.mp4",
+    "fps": 24.73,
+    "dropped": 0,
+    "ok": true
+  },
+  {
+    "sample": "pipeline-0",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/assets/examples/full-biz-cafe-m02/preview.mp4",
+    "fps": 24.73,
+    "dropped": 0,
+    "ok": true
+  },
+  {
+    "sample": "pipeline-0",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-cafe-m03/preview.mp4",
+    "fps": 24.73,
+    "dropped": 0,
+    "ok": true
+  },
+  {
+    "sample": "pipeline-1",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-audience-02-m01/preview.mp4",
+    "fps": 24.9,
+    "dropped": 0,
+    "ok": true
+  },
+  {
+    "sample": "pipeline-1",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-audience-02-m02/preview.mp4",
+    "fps": 24.9,
+    "dropped": 0,
+    "ok": true
+  },
+  {
+    "sample": "pipeline-1",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-audience-02-m04/preview.mp4",
+    "fps": 24.9,
+    "dropped": 0,
+    "ok": true
+  },
+  {
+    "sample": "pipeline-2",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-hr-m01/preview.mp4",
+    "fps": 25.4,
+    "dropped": 0,
+    "ok": true
+  },
+  {
+    "sample": "pipeline-2",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/assets/examples/full-biz-hr-m02/preview.mp4",
+    "fps": 25.4,
+    "dropped": 0,
+    "ok": true
+  },
+  {
+    "sample": "pipeline-2",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-hr-m03/preview.mp4",
+    "fps": 24.43,
+    "dropped": 0,
+    "ok": true
+  },
+  {
+    "sample": "pipeline-mobile",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-cafe-m01/preview.mp4",
+    "fps": 24.16,
+    "dropped": 0,
+    "ok": true
+  },
+  {
+    "sample": "pipeline-mobile",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/assets/examples/full-biz-cafe-m02/preview.mp4",
+    "fps": 24.16,
+    "dropped": 0,
+    "ok": true
+  },
+  {
+    "sample": "pipeline-mobile",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-cafe-m03/preview.mp4",
+    "fps": 24.16,
+    "dropped": 0,
+    "ok": true
+  }
+]

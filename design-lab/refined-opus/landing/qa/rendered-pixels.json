@@ -1,0 +1,422 @@
+[
+  {
+    "sample": "hero",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-audience-01-m02/preview.mp4",
+    "pixel_delta": 5.302466666666667,
+    "moving": true,
+    "crop": [
+      811,
+      307,
+      831,
+      557
+    ]
+  },
+  {
+    "sample": "hero",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-audience-01-m05/preview.mp4",
+    "pixel_delta": 15.667229254571026,
+    "moving": true,
+    "crop": [
+      1014,
+      313,
+      1034,
+      550
+    ]
+  },
+  {
+    "sample": "hero",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-audience-01-m04/preview.mp4",
+    "pixel_delta": 76.84066666666666,
+    "moving": true,
+    "crop": [
+      1218,
+      307,
+      1238,
+      557
+    ]
+  },
+  {
+    "sample": "gallery-0",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-hr-m01/preview.mp4",
+    "pixel_delta": 17.3757343550447,
+    "moving": true,
+    "crop": [
+      558,
+      366,
+      578,
+      627
+    ]
+  },
+  {
+    "sample": "gallery-0",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/assets/examples/full-stream-02-m03/preview.mp4",
+    "pixel_delta": 9.452540272614621,
+    "moving": true,
+    "crop": [
+      705,
+      360,
+      725,
+      629
+    ]
+  },
+  {
+    "sample": "gallery-0",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-cafe-m01/preview.mp4",
+    "pixel_delta": 7.701532567049809,
+    "moving": true,
+    "crop": [
+      852,
+      366,
+      872,
+      627
+    ]
+  },
+  {
+    "sample": "gallery-0",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/anime-01-hook-demons/preview.mp4",
+    "pixel_delta": 4.05351617440225,
+    "moving": true,
+    "crop": [
+      964,
+      382,
+      984,
+      619
+    ]
+  },
+  {
+    "sample": "gallery-0",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-startup-m02/preview.mp4",
+    "pixel_delta": 8.011673699015471,
+    "moving": true,
+    "crop": [
+      446,
+      382,
+      466,
+      619
+    ]
+  },
+  {
+    "sample": "gallery-1",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/assets/examples/full-stream-02-m03/preview.mp4",
+    "pixel_delta": 10.739310829817159,
+    "moving": true,
+    "crop": [
+      446,
+      382,
+      466,
+      619
+    ]
+  },
+  {
+    "sample": "gallery-1",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-cafe-m01/preview.mp4",
+    "pixel_delta": 8.30434227330779,
+    "moving": true,
+    "crop": [
+      558,
+      366,
+      578,
+      627
+    ]
+  },
+  {
+    "sample": "gallery-1",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/anime-01-hook-demons/preview.mp4",
+    "pixel_delta": 5.238847583643123,
+    "moving": true,
+    "crop": [
+      705,
+      360,
+      725,
+      629
+    ]
+  },
+  {
+    "sample": "gallery-1",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-audience-02-m01/preview.mp4",
+    "pixel_delta": 9.76992337164751,
+    "moving": true,
+    "crop": [
+      852,
+      366,
+      872,
+      627
+    ]
+  },
+  {
+    "sample": "gallery-1",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-fonts-m03/preview.mp4",
+    "pixel_delta": 6.387482419127989,
+    "moving": true,
+    "crop": [
+      964,
+      382,
+      984,
+      619
+    ]
+  },
+  {
+    "sample": "gallery-2",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-audience-02-m01/preview.mp4",
+    "pixel_delta": 17.352320675105485,
+    "moving": true,
+    "crop": [
+      446,
+      382,
+      466,
+      619
+    ]
+  },
+  {
+    "sample": "gallery-2",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-fonts-m03/preview.mp4",
+    "pixel_delta": 8.93109833971903,
+    "moving": true,
+    "crop": [
+      558,
+      366,
+      578,
+      627
+    ]
+  },
+  {
+    "sample": "gallery-2",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/auto-01-hook-mileage/preview.mp4",
+    "pixel_delta": 42.638166047087985,
+    "moving": true,
+    "crop": [
+      705,
+      360,
+      725,
+      629
+    ]
+  },
+  {
+    "sample": "gallery-2",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-audience-01-m05/preview.mp4",
+    "pixel_delta": 10.138122605363984,
+    "moving": true,
+    "crop": [
+      852,
+      366,
+      872,
+      627
+    ]
+  },
+  {
+    "sample": "gallery-2",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-marketing-m02/preview.mp4",
+    "pixel_delta": 10.900140646976089,
+    "moving": true,
+    "crop": [
+      964,
+      382,
+      984,
+      619
+    ]
+  },
+  {
+    "sample": "gallery-3",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-audience-01-m05/preview.mp4",
+    "pixel_delta": 5.049226441631505,
+    "moving": true,
+    "crop": [
+      446,
+      382,
+      466,
+      619
+    ]
+  },
+  {
+    "sample": "gallery-3",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-marketing-m02/preview.mp4",
+    "pixel_delta": 14.447701149425287,
+    "moving": true,
+    "crop": [
+      558,
+      366,
+      578,
+      627
+    ]
+  },
+  {
+    "sample": "gallery-3",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-cg-m02/preview.mp4",
+    "pixel_delta": 8.158674101610904,
+    "moving": true,
+    "crop": [
+      705,
+      360,
+      725,
+      629
+    ]
+  },
+  {
+    "sample": "gallery-3",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-audience-03-m01/preview.mp4",
+    "pixel_delta": 10.461238825031929,
+    "moving": true,
+    "crop": [
+      852,
+      366,
+      872,
+      627
+    ]
+  },
+  {
+    "sample": "gallery-3",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-startup-m02/preview.mp4",
+    "pixel_delta": 14.891350210970465,
+    "moving": true,
+    "crop": [
+      964,
+      382,
+      984,
+      619
+    ]
+  },
+  {
+    "sample": "pipeline-0",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-cafe-m01/preview.mp4",
+    "pixel_delta": 7.183440860215054,
+    "moving": true,
+    "crop": [
+      565,
+      570,
+      585,
+      725
+    ]
+  },
+  {
+    "sample": "pipeline-0",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/assets/examples/full-biz-cafe-m02/preview.mp4",
+    "pixel_delta": 8.632043010752687,
+    "moving": true,
+    "crop": [
+      705,
+      570,
+      725,
+      725
+    ]
+  },
+  {
+    "sample": "pipeline-0",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-cafe-m03/preview.mp4",
+    "pixel_delta": 10.496989247311829,
+    "moving": true,
+    "crop": [
+      845,
+      570,
+      865,
+      725
+    ]
+  },
+  {
+    "sample": "pipeline-1",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-audience-02-m01/preview.mp4",
+    "pixel_delta": 8.523870967741935,
+    "moving": true,
+    "crop": [
+      565,
+      570,
+      585,
+      725
+    ]
+  },
+  {
+    "sample": "pipeline-1",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-audience-02-m02/preview.mp4",
+    "pixel_delta": 18.85537634408602,
+    "moving": true,
+    "crop": [
+      705,
+      570,
+      725,
+      725
+    ]
+  },
+  {
+    "sample": "pipeline-1",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-audience-02-m04/preview.mp4",
+    "pixel_delta": 16.905806451612904,
+    "moving": true,
+    "crop": [
+      845,
+      570,
+      865,
+      725
+    ]
+  },
+  {
+    "sample": "pipeline-2",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-hr-m01/preview.mp4",
+    "pixel_delta": 18.683763440860215,
+    "moving": true,
+    "crop": [
+      565,
+      570,
+      585,
+      725
+    ]
+  },
+  {
+    "sample": "pipeline-2",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/assets/examples/full-biz-hr-m02/preview.mp4",
+    "pixel_delta": 16.838924731182797,
+    "moving": true,
+    "crop": [
+      705,
+      570,
+      725,
+      725
+    ]
+  },
+  {
+    "sample": "pipeline-2",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-hr-m03/preview.mp4",
+    "pixel_delta": 10.551505376344087,
+    "moving": true,
+    "crop": [
+      845,
+      570,
+      865,
+      725
+    ]
+  },
+  {
+    "sample": "pipeline-mobile",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-cafe-m01/preview.mp4",
+    "pixel_delta": 7.03515625,
+    "moving": true,
+    "crop": [
+      75,
+      499,
+      95,
+      627
+    ]
+  },
+  {
+    "sample": "pipeline-mobile",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/assets/examples/full-biz-cafe-m02/preview.mp4",
+    "pixel_delta": 8.095052083333334,
+    "moving": true,
+    "crop": [
+      180,
+      499,
+      200,
+      627
+    ]
+  },
+  {
+    "sample": "pipeline-mobile",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-cafe-m03/preview.mp4",
+    "pixel_delta": 10.393229166666666,
+    "moving": true,
+    "crop": [
+      285,
+      499,
+      305,
+      627
+    ]
+  }
+]

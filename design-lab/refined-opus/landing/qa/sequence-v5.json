@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Long recording flies in from above",
+    "ok": true,
+    "data": {
+      "a": -116.409,
+      "z": 0
+    }
+  },
+  {
+    "name": "Automatic source sequence 1",
+    "ok": true,
+    "data": {
+      "source": "audience-02",
+      "deck": "audience-02"
+    }
+  },
+  {
+    "name": "Automatic source sequence 2",
+    "ok": true,
+    "data": {
+      "source": "biz-hr",
+      "deck": "biz-hr"
+    }
+  },
+  {
+    "name": "Automatic source sequence 0",
+    "ok": true,
+    "data": {
+      "source": "biz-cafe",
+      "deck": "biz-cafe"
+    }
+  }
+]

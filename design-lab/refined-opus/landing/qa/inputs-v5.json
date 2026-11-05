@@ -1,0 +1,154 @@
+{
+  "samples": [
+    {
+      "name": "wide-input",
+      "before": [
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/assets/pipeline/hero-wide.mp4",
+          "time": 0.5986,
+          "frames": 16,
+          "dropped": 10,
+          "paused": false,
+          "rect": {
+            "x": 733.5859375,
+            "y": 206.90625,
+            "w": 581.734375,
+            "h": 327.21875
+          }
+        }
+      ],
+      "after": [
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/assets/pipeline/hero-wide.mp4",
+          "time": 1.9155,
+          "frames": 42,
+          "dropped": 10,
+          "paused": false,
+          "rect": {
+            "x": 733.5859375,
+            "y": 206.90625,
+            "w": 581.734375,
+            "h": 327.21875
+          }
+        }
+      ]
+    },
+    {
+      "name": "original-0",
+      "before": [
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/assets/pipeline/cafe.mp4",
+          "time": 0.5817,
+          "frames": 16,
+          "dropped": 1,
+          "paused": false,
+          "rect": {
+            "x": 532,
+            "y": 192.28125,
+            "w": 366,
+            "h": 205.875
+          }
+        }
+      ],
+      "after": [
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/assets/pipeline/cafe.mp4",
+          "time": 1.5435,
+          "frames": 37,
+          "dropped": 1,
+          "paused": false,
+          "rect": {
+            "x": 532,
+            "y": 192.28125,
+            "w": 366,
+            "h": 205.875
+          }
+        }
+      ]
+    },
+    {
+      "name": "original-1",
+      "before": [
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/assets/pipeline/fitness.mp4",
+          "time": 0.506,
+          "frames": 17,
+          "dropped": 0,
+          "paused": false,
+          "rect": {
+            "x": 532,
+            "y": 192.28125,
+            "w": 366,
+            "h": 205.875
+          }
+        }
+      ],
+      "after": [
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/assets/pipeline/fitness.mp4",
+          "time": 1.4693,
+          "frames": 37,
+          "dropped": 0,
+          "paused": false,
+          "rect": {
+            "x": 532,
+            "y": 192.28125,
+            "w": 366,
+            "h": 205.875
+          }
+        }
+      ]
+    },
+    {
+      "name": "original-2",
+      "before": [
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/assets/pipeline/hr.mp4",
+          "time": 0.4957,
+          "frames": 15,
+          "dropped": 1,
+          "paused": false,
+          "rect": {
+            "x": 532,
+            "y": 192.28125,
+            "w": 366,
+            "h": 205.875
+          }
+        }
+      ],
+      "after": [
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/assets/pipeline/hr.mp4",
+          "time": 1.4717,
+          "frames": 36,
+          "dropped": 1,
+          "paused": false,
+          "rect": {
+            "x": 532,
+            "y": 192.28125,
+            "w": 366,
+            "h": 205.875
+          }
+        }
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "name": "wide-input",
+      "ok": true
+    },
+    {
+      "name": "original-0",
+      "ok": true
+    },
+    {
+      "name": "original-1",
+      "ok": true
+    },
+    {
+      "name": "original-2",
+      "ok": true
+    }
+  ]
+}

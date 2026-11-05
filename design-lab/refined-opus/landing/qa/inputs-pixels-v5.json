@@ -1,0 +1,50 @@
+[
+  {
+    "sample": "wide-input",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/assets/pipeline/hero-wide.mp4",
+    "pixel_delta": 3.1470849402080567,
+    "moving": true,
+    "crop": [
+      763,
+      223,
+      1286,
+      518
+    ]
+  },
+  {
+    "sample": "original-0",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/assets/pipeline/cafe.mp4",
+    "pixel_delta": 2.5896041496041495,
+    "moving": true,
+    "crop": [
+      550,
+      203,
+      880,
+      388
+    ]
+  },
+  {
+    "sample": "original-1",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/assets/pipeline/fitness.mp4",
+    "pixel_delta": 3.441987441987442,
+    "moving": true,
+    "crop": [
+      550,
+      203,
+      880,
+      388
+    ]
+  },
+  {
+    "sample": "original-2",
+    "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/assets/pipeline/hr.mp4",
+    "pixel_delta": 3.9636363636363634,
+    "moving": true,
+    "crop": [
+      550,
+      203,
+      880,
+      388
+    ]
+  }
+]

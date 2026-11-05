@@ -1,0 +1,4 @@
+# Demo media stays local; see MEDIA.md and README.md.
+/assets/
+/shots/
+/__pycache__/

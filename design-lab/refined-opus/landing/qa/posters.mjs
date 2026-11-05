@@ -1,0 +1,5 @@
+import{chromium}from'/usr/lib/node_modules/playwright-core/index.mjs';
+import{writeFile,copyFile,unlink}from'node:fs/promises';
+const b=await chromium.connectOverCDP('http://127.0.0.1:9222'),p=await b.contexts()[0].newPage();
+await copyFile('/home/grin/projects/reelsovar-drawio/outputs/landing-examples/business-2026-11-03/full-biz-fonts-m03/source.mp4','landing/assets/fonts-source.mp4');
+try{for(const name of ['cafe-01','fonts']){await p.goto(`http://127.0.0.1:8720/design-lab/refined-opus/landing/assets/${name}-source.mp4`);await p.waitForFunction(()=>document.querySelector('video')?.readyState>=2);const data=await p.evaluate(()=>{const v=document.querySelector('video');v.pause();const c=document.createElement('canvas');c.width=960;c.height=540;c.getContext('2d').drawImage(v,0,0,960,540);return c.toDataURL('image/jpeg',.9).split(',')[1]});await writeFile(`landing/assets/${name}-poster.jpg`,Buffer.from(data,'base64'));}}finally{await unlink('landing/assets/fonts-source.mp4');await p.close();await b.close()}
