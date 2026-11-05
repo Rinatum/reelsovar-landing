@@ -11,21 +11,21 @@
           {
             "ready": 4,
             "paused": false,
-            "time": 4.032029,
+            "time": 3.52059,
             "w": 360,
             "h": 640
           },
           {
             "ready": 4,
             "paused": false,
-            "time": 4.032023,
+            "time": 3.519786,
             "w": 360,
             "h": 640
           },
           {
             "ready": 4,
             "paused": false,
-            "time": 4.031771,
+            "time": 3.519776,
             "w": 360,
             "h": 640
           }
@@ -51,18 +51,18 @@
       "name": "Twelve source recordings",
       "ok": true,
       "details": [
-        "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-hr-m01/poster.jpg",
-        "http://127.0.0.1:8720/design-lab/refined-opus/landing/assets/examples/full-stream-02-m03/poster.jpg",
-        "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-cafe-m01/poster.jpg",
-        "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/anime-01-hook-demons/poster.jpg",
-        "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-audience-02-m01/poster.jpg",
-        "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-fonts-m03/poster.jpg",
-        "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/auto-01-hook-mileage/poster.jpg",
-        "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-audience-01-m05/poster.jpg",
-        "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-marketing-m02/poster.jpg",
-        "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-cg-m02/poster.jpg",
-        "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-audience-03-m01/poster.jpg",
-        "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/full-biz-startup-m02/poster.jpg"
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-hr-m01/poster.jpg",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/examples/full-stream-02-m03/poster.jpg",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cafe-m01/poster.jpg",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/anime-01-hook-demons/poster.jpg",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-02-m01/poster.jpg",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-fonts-m03/poster.jpg",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/auto-01-hook-mileage/poster.jpg",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-01-m05/poster.jpg",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-marketing-m02/poster.jpg",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cg-m02/poster.jpg",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-03-m01/poster.jpg",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-startup-m02/poster.jpg"
       ]
     },
     {
@@ -74,7 +74,7 @@
       "ok": true,
       "details": {
         "open": true,
-        "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/assets/examples/full-stream-02-m03/final.mp4",
+        "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/examples/full-stream-02-m03/final.mp4",
         "muted": false,
         "controls": true,
         "ready": 4,
@@ -94,7 +94,7 @@
       "ok": true,
       "details": {
         "open": true,
-        "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/media/examples/anime-01-hook-demons/final.mp4",
+        "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/anime-01-hook-demons/final.mp4",
         "muted": false,
         "controls": true,
         "ready": 4,

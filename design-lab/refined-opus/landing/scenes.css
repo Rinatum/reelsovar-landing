@@ -394,11 +394,11 @@ a{text-underline-offset:3px}
 .stage::after{content:'';position:absolute;z-index:-1;width:75%;height:60%;left:12%;bottom:-25%;border-radius:50%;background:radial-gradient(ellipse,rgba(249,219,83,.38),rgba(187,211,84,.09) 50%,transparent 74%);filter:blur(42px);pointer-events:none}
 .stage.paper::before{opacity:.09}
 .stage.paper::after{opacity:.55}
-#cut,#rf{--scene-bg:url(assets/audience-01-m01-poster.jpg)}
+#cut,#rf{--scene-bg:url(assets/pipeline/hero-wide.jpg)}
 #how-scene{--scene-bg:url(media/examples/full-audience-01-m02/source-thumb.jpg)}
 #drum{--scene-bg:url(media/examples/full-biz-hr-m01/poster.jpg)}
 #layers{--scene-bg:url(media/examples/full-audience-01-m02/source-thumb.jpg)}
-#title,#pain,#price{--scene-bg:url(assets/audience-01-m01-poster.jpg)}
+#title,#pain,#price{--scene-bg:url(assets/pipeline/hero-wide.jpg)}
 .cut-frame{border-radius:24px;box-shadow:0 0 0 1px #f8df7452,0 8px 48px #0006}
 .slice{border-radius:var(--card-radius)}
 .slice .face.front{border-radius:var(--card-radius);box-shadow:0 0 0 1px #f9db5359,0 0 24px #f9db5324;transform:none;backface-visibility:visible}

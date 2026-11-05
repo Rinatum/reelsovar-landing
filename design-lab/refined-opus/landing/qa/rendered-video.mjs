@@ -1,6 +1,6 @@
 import{chromium}from'/usr/lib/node_modules/playwright-core/index.mjs';import{writeFile,mkdir}from'node:fs/promises';
 const b=await chromium.connectOverCDP('http://127.0.0.1:9222'),p=await b.contexts()[0].newPage(),report={samples:[],checks:[],errors:[]};
-const root='http://127.0.0.1:8720/design-lab/refined-opus/landing/';await mkdir('landing/shots/live',{recursive:true});
+const root=process.env.LANDING_QA_URL||'http://127.0.0.1:8720/design-lab/refined-opus/landing/';await mkdir('landing/shots/live',{recursive:true});
 function check(name,ok,data){report.checks.push({name,ok,data});if(!ok)throw Error(name+': '+JSON.stringify(data))}
 p.on('pageerror',e=>report.errors.push(e.message));p.on('response',r=>{if(r.status()>=400)report.errors.push(r.status()+' '+r.url())});
 async function sample(name,selector,expected){

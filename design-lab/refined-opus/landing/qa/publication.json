@@ -1,0 +1,92 @@
+{
+  "url": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/",
+  "checks": [
+    {
+      "name": "Published entry returns 200",
+      "ok": true,
+      "data": 200
+    },
+    {
+      "name": "Published release is v5",
+      "ok": true,
+      "data": {
+        "version": "v5",
+        "sourceBranch": "feature/landing-motion-v5",
+        "mediaFiles": 88,
+        "mediaBytes": 91393920,
+        "authorization": "Owner authorized GitHub publication with a working landing on 2026-11-05."
+      }
+    },
+    {
+      "name": "All published files return success",
+      "ok": true,
+      "data": {
+        "count": 97,
+        "bad": []
+      }
+    },
+    {
+      "name": "Published hero has three moving results",
+      "ok": true,
+      "data": [
+        {
+          "time": 1.963205,
+          "ready": 4,
+          "paused": false
+        },
+        {
+          "time": 1.963046,
+          "ready": 4,
+          "paused": false
+        },
+        {
+          "time": 1.963038,
+          "ready": 4,
+          "paused": false
+        }
+      ]
+    },
+    {
+      "name": "Published gallery contains 12 sources",
+      "ok": true
+    },
+    {
+      "name": "Published pipeline has three source/result pairs",
+      "ok": true
+    },
+    {
+      "name": "No horizontal overflow 1440",
+      "ok": true,
+      "data": {
+        "width": 1440,
+        "scroll": 1430
+      }
+    },
+    {
+      "name": "No horizontal overflow 390",
+      "ok": true,
+      "data": {
+        "width": 390,
+        "scroll": 380
+      }
+    },
+    {
+      "name": "No horizontal overflow 320",
+      "ok": true,
+      "data": {
+        "width": 320,
+        "scroll": 310
+      }
+    },
+    {
+      "name": "CTA destination works",
+      "ok": true
+    },
+    {
+      "name": "No JS/HTTP failures",
+      "ok": true,
+      "data": []
+    }
+  ],
+  "errors": []
+}

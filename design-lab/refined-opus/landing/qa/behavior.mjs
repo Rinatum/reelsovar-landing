@@ -3,7 +3,7 @@ import{writeFile,stat}from'node:fs/promises';
 const b=await chromium.connectOverCDP('http://127.0.0.1:9222'),p=await b.contexts()[0].newPage();
 const results=[],errors=[];p.on('pageerror',e=>errors.push(e.message));
 function check(name,ok,details){results.push({name,ok,details});if(!ok)throw Error(name+': '+JSON.stringify(details))}
-const url='http://127.0.0.1:8720/design-lab/refined-opus/landing/';
+const url=process.env.LANDING_QA_URL||'http://127.0.0.1:8720/design-lab/refined-opus/landing/';
 try{
  await p.setViewportSize({width:1440,height:1000});await p.goto(url);await p.evaluate(()=>{window.__qaOwner='behavior-v5'});await p.waitForFunction(()=>window.gsap?.getById('cut')&&gsap.getById('title'));await p.waitForTimeout(3100);
  let native=await p.evaluate(async()=>{const t=gsap.getById('cut');t.time(2.9).pause();const v=[...document.querySelectorAll('#cut .slice video')];let frames=0;await Promise.all(v.map(x=>new Promise(r=>{if(!x.requestVideoFrameCallback){r();return}x.requestVideoFrameCallback(()=>{frames++;r()});setTimeout(r,500)})));return{timelineTime:t.time(),phase:document.querySelector('#cut').dataset.phase,frames,live:v.map(x=>({ready:x.readyState,paused:x.paused,time:x.currentTime,w:x.videoWidth,h:x.videoHeight})),clipCovers:[...document.querySelectorAll('.slice')].every(x=>x.classList.contains('is-clip'))}});
