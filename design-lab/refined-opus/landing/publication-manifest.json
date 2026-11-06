@@ -1,8 +1,8 @@
 {
   "repository": "https://github.com/Rinatum/reelsovar-landing",
   "visibility": "public",
-  "mediaCount": 92,
-  "mediaBytes": 94521782,
+  "mediaCount": 75,
+  "mediaBytes": 34047393,
   "files": [
     {
       "path": "assets/backdrops/cut-desktop.png",
@@ -130,11 +130,6 @@
       "sha256": "b4571cddc9b082eb8f430a8068fa55262e6f2e0eb2fe56154e753277dda616cf"
     },
     {
-      "path": "assets/examples/full-stream-02-m03/final.mp4",
-      "bytes": 2117830,
-      "sha256": "b4cff00fceb514b2a68dfc916df9479a6dbae37a43de42572312c42318cc8a9d"
-    },
-    {
       "path": "assets/examples/full-stream-02-m03/poster.jpg",
       "bytes": 37943,
       "sha256": "fb3772bab3cda252903ba0233ab7c8ff32e4605cb2819d02464a643806296fb6"
@@ -190,16 +185,6 @@
       "sha256": "f95a049e3f67e40d1eed439ded3e947c675c48e6452cd5d0bf9423ac6e7ed419"
     },
     {
-      "path": "assets/pipeline/provenance.json",
-      "bytes": 838,
-      "sha256": "4ced952546b5cb5ad78554567c578162339933fe790113a13cc030becbecc0b6"
-    },
-    {
-      "path": "media/examples/anime-01-hook-demons/final.mp4",
-      "bytes": 2385116,
-      "sha256": "5ce9fd9fd8b27aa2d0550c9ebf9b4515e0698d917e6b3a3ac577d924a07579ac"
-    },
-    {
       "path": "media/examples/anime-01-hook-demons/poster.jpg",
       "bytes": 30388,
       "sha256": "8036967a4e508a15faa856a11d0a6986cf57cad7ceae0e58d6f71a89cccb4664"
@@ -208,11 +193,6 @@
       "path": "media/examples/anime-01-hook-demons/preview.mp4",
       "bytes": 482684,
       "sha256": "7e54fc020555420b23ebb46a630653348e999c05af50d7039ea3ca147271d522"
-    },
-    {
-      "path": "media/examples/auto-01-hook-mileage/final.mp4",
-      "bytes": 6478870,
-      "sha256": "1bff5b6746f184db9f5f6c380514dffbaf3855e9aadcdc5a47959837a4ed403a"
     },
     {
       "path": "media/examples/auto-01-hook-mileage/poster.jpg",
@@ -228,11 +208,6 @@
       "path": "media/examples/full-audience-01-m01/poster.jpg",
       "bytes": 55366,
       "sha256": "515022b7834c6e2d2c1de629b19efc41cb4aa2a070bad25c055edb1171bda9e3"
-    },
-    {
-      "path": "media/examples/full-audience-01-m01/preview.mp4",
-      "bytes": 1479049,
-      "sha256": "48d310b3da8b837f3bee3db83a9eb5ca8c8c38675d49b3b0c17a61dd080d1edf"
     },
     {
       "path": "media/examples/full-audience-01-m01/source-thumb.jpg",
@@ -255,16 +230,6 @@
       "sha256": "da34fcb363f8314b5069516c2cfc1039620a385b2a20060af8824d7941cef798"
     },
     {
-      "path": "media/examples/full-audience-01-m03/poster.jpg",
-      "bytes": 35390,
-      "sha256": "9c7e6352cfb4f7df9c75c191eb857b4c099a4d3cadb57f5bc9ca2a5eff5fd20d"
-    },
-    {
-      "path": "media/examples/full-audience-01-m03/preview.mp4",
-      "bytes": 456223,
-      "sha256": "8998320d0715a44b16e0077c7054344fb970f2a483158f9be53ba08f5fe7a577"
-    },
-    {
       "path": "media/examples/full-audience-01-m03/source-thumb.jpg",
       "bytes": 16340,
       "sha256": "cf097b09c1b0962e136cd37149c2c2296f1ee9275c01416ed1630fa5d1946ca2"
@@ -285,11 +250,6 @@
       "sha256": "82eefb2031c30e3a2b178d9e7549ec5b1a25ebe43a53a9f94592c84b3daecc33"
     },
     {
-      "path": "media/examples/full-audience-01-m05/final.mp4",
-      "bytes": 6913185,
-      "sha256": "da7c3f835cf562034300a4f227efb22e4ac9b25b49c1f809566a8d2ce5606522"
-    },
-    {
       "path": "media/examples/full-audience-01-m05/poster.jpg",
       "bytes": 42469,
       "sha256": "45640597e1db7bcf54da70ef3735c220f362df65b3dd9de5d8b0094c3c3ec151"
@@ -303,11 +263,6 @@
       "path": "media/examples/full-audience-01-m05/source-thumb.jpg",
       "bytes": 18354,
       "sha256": "9655572df36a18e06facb4d74d1e82bd151259e01fef10e27179c8964b1cea21"
-    },
-    {
-      "path": "media/examples/full-audience-02-m01/final.mp4",
-      "bytes": 5594102,
-      "sha256": "fb1cc108a933293c7c681ce417edb2602cc36b38ff84a8f5ce1ae80f56026983"
     },
     {
       "path": "media/examples/full-audience-02-m01/poster.jpg",
@@ -340,11 +295,6 @@
       "sha256": "daca5d1acbeb157fc422b445c77d02b4a59a324750c4352180608c191c8bde45"
     },
     {
-      "path": "media/examples/full-audience-03-m01/final.mp4",
-      "bytes": 6538923,
-      "sha256": "81628ccc6cf7b20af5e62123f341522377a6503a9bf24327c8350791765825c5"
-    },
-    {
       "path": "media/examples/full-audience-03-m01/poster.jpg",
       "bytes": 32895,
       "sha256": "0ba11a7342aaa27b73394907e4dd1a931335775ed5fe1784b409ffdce1740e1e"
@@ -353,11 +303,6 @@
       "path": "media/examples/full-audience-03-m01/preview.mp4",
       "bytes": 1276747,
       "sha256": "b2b40459c5f35bb37f533b89650bc48f68560992df834c2aec2038588a446249"
-    },
-    {
-      "path": "media/examples/full-biz-cafe-m01/final.mp4",
-      "bytes": 4567148,
-      "sha256": "29459fdcd67ec1112a2933afd51b2f1d2b4fd271d881a0170f0f285832d3013a"
     },
     {
       "path": "media/examples/full-biz-cafe-m01/poster.jpg",
@@ -380,11 +325,6 @@
       "sha256": "983eec3d7e1d9faf01ac35dc2b35c5940e0ee94546c90a26afbf62c0560bab0f"
     },
     {
-      "path": "media/examples/full-biz-cg-m02/final.mp4",
-      "bytes": 4441660,
-      "sha256": "4b7b6260d165d3c78766940ffb23954454bcd2c028a99cd99b986705f623b73c"
-    },
-    {
       "path": "media/examples/full-biz-cg-m02/poster.jpg",
       "bytes": 39719,
       "sha256": "0d59adf9594c7fe1d1174c298be2fbbb22637b0b40d73c46839492e8c334e4d0"
@@ -393,11 +333,6 @@
       "path": "media/examples/full-biz-cg-m02/preview.mp4",
       "bytes": 755742,
       "sha256": "cd639f46a9939d4ef89ad6c6aa530544f3cf3521e7d42dbe26903dcc26df9ba8"
-    },
-    {
-      "path": "media/examples/full-biz-fonts-m03/final.mp4",
-      "bytes": 3631404,
-      "sha256": "6bcc0e616997c345c6b5bcdb31e570434d3ef22f154c73fe558ef8b3ce2df748"
     },
     {
       "path": "media/examples/full-biz-fonts-m03/poster.jpg",
@@ -435,11 +370,6 @@
       "sha256": "4dc0a6a8ec407e7b49654407e13dedb32cb9ff07a1187aad876028011c590049"
     },
     {
-      "path": "media/examples/full-biz-marketing-m02/final.mp4",
-      "bytes": 8980917,
-      "sha256": "ecf1cb83d1f033f9c2c4e6901d3762c07350a94c89bf3f986308b99c7e417816"
-    },
-    {
       "path": "media/examples/full-biz-marketing-m02/poster.jpg",
       "bytes": 71898,
       "sha256": "6770ea07cb0129d0aa9c3ca436b12513bd944b966529a4497b40036fe794c44b"
@@ -448,27 +378,25 @@
       "path": "media/examples/full-biz-marketing-m02/preview.mp4",
       "bytes": 1257573,
       "sha256": "699edd55c14d1063c47e272a4bb38337971041509fa5742570ef663aa1489da4"
-    },
-    {
-      "path": "media/examples/full-biz-startup-m02/final.mp4",
-      "bytes": 5835568,
-      "sha256": "36118669646a550470b31eda69feabea9208fe14bf83babf568cbc876575b274"
-    },
-    {
-      "path": "media/examples/full-biz-startup-m02/poster.jpg",
-      "bytes": 30323,
-      "sha256": "65cc42d72d9f2b70d8f42454105645b1e4736dd6c2b133fc17562aa7ceded173"
-    },
-    {
-      "path": "media/examples/full-biz-startup-m02/preview.mp4",
-      "bytes": 987843,
-      "sha256": "479b8e3b41f8e6c34f79a3a05c931c20fa01c1f415ce7375daba9e12b28ca6f8"
     }
   ],
-  "v6Additions": [
-    "assets/examples/full-audience-02-m03/poster.jpg",
-    "assets/examples/full-audience-02-m03/preview.mp4",
-    "assets/examples/full-audience-02-m05/poster.jpg",
-    "assets/examples/full-audience-02-m05/preview.mp4"
+  "v7Removed": [
+    "assets/examples/full-stream-02-m03/final.mp4",
+    "assets/pipeline/provenance.json",
+    "media/examples/anime-01-hook-demons/final.mp4",
+    "media/examples/auto-01-hook-mileage/final.mp4",
+    "media/examples/full-audience-01-m01/preview.mp4",
+    "media/examples/full-audience-01-m03/poster.jpg",
+    "media/examples/full-audience-01-m03/preview.mp4",
+    "media/examples/full-audience-01-m05/final.mp4",
+    "media/examples/full-audience-02-m01/final.mp4",
+    "media/examples/full-audience-03-m01/final.mp4",
+    "media/examples/full-biz-cafe-m01/final.mp4",
+    "media/examples/full-biz-cg-m02/final.mp4",
+    "media/examples/full-biz-fonts-m03/final.mp4",
+    "media/examples/full-biz-marketing-m02/final.mp4",
+    "media/examples/full-biz-startup-m02/final.mp4",
+    "media/examples/full-biz-startup-m02/poster.jpg",
+    "media/examples/full-biz-startup-m02/preview.mp4"
   ]
 }

@@ -13,11 +13,17 @@ manifest = json.loads((landing / 'media-manifest.json').read_text())['files']
 script = (landing / 'scenes.js').read_text()
 gallery = script.split('const CLIPS = [', 1)[1].split('];', 1)[0]
 full_ids = set(re.findall(r"\['([^']+)'", gallery))
-unused = {'assets/cafe-01-source.mp4', 'assets/cafe-01-poster.jpg',
-          'assets/examples/full-biz-cafe-m02/final.mp4'}
-selected = [item for item in manifest if item['path'] not in unused and
-            (not item['path'].endswith('/final.mp4') or
-             Path(item['path']).parent.name in full_ids)]
+# v7: only files the page actually requests. The gallery builds poster/preview paths from CLIPS and the
+# title film from audience-01 source thumbnails; there is no full-clip dialog any more, so no final.mp4.
+pages = ''.join((landing / n).read_text() for n in ['index.html', 'scenes.js', 'scenes.css', 'landing.css'])
+def used(path):
+    p = Path(path)
+    if path in pages:
+        return True
+    if p.parent.name in full_ids and p.name in ('preview.mp4', 'poster.jpg'):
+        return True
+    return p.name == 'source-thumb.jpg' and p.parent.name.startswith('full-audience-01-m')
+selected = [item for item in manifest if used(item['path'])]
 with tempfile.TemporaryDirectory(prefix='.pages-build-', dir=landing) as temp:
     stage = Path(temp)
     for name in ['index.html', 'soon.html', 'scenes.js', 'scenes.css', 'landing.css']:
@@ -42,11 +48,11 @@ with tempfile.TemporaryDirectory(prefix='.pages-build-', dir=landing) as temp:
         shutil.copy2(source, destination)
     (stage / '.nojekyll').touch()
     publication = {
-        'version': 'v6',
+        'version': 'v7',
         'sourceBranch': 'feature/landing-motion-v5',
         'mediaFiles': len(selected),
         'mediaBytes': sum(item['bytes'] for item in selected),
-        'authorization': 'Owner authorized GitHub publication with a working landing on 2026-11-05; v6 adds two more real results of the same fitness recording (2026-11-06).'
+        'authorization': 'Owner authorized GitHub publication with a working landing on 2026-11-05; v6 adds two more real results of the same fitness recording; v7 drops the full-clip dialog, so only previews/posters actually shown are published (2026-11-06).'
     }
     (stage / 'release.json').write_text(json.dumps(publication, ensure_ascii=False, indent=2) + '\n')
     if output.exists():

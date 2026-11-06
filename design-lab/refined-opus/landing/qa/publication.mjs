@@ -10,10 +10,10 @@ page.on('response',r=>{if(r.status()>=400)result.errors.push(r.status()+' '+r.ur
 async function files(dir,prefix=''){let all=[];for(const e of await readdir(dir,{withFileTypes:true})){const name=prefix+e.name;if(e.isDirectory())all.push(...await files(dir+'/'+e.name,name+'/'));else all.push(name)}return all;}
 try{
  await page.setViewportSize({width:1440,height:960});
- const response=await page.goto(root+'?release=v6',{waitUntil:'domcontentloaded'});
+ const response=await page.goto(root+'?release=v7',{waitUntil:'domcontentloaded'});
  check('Published entry returns 200',response.status()===200,response.status());
  const release=await page.evaluate(()=>fetch('release.json',{cache:'no-store'}).then(r=>r.json()));
- check('Published release is v6',release.version==='v6',release);
+ check('Published release is v7',release.version==='v7',release);
  const required=(await files('landing/site')).filter(p=>p!=='.nojekyll');
  const resources=await page.evaluate(async paths=>{let index=0,bad=[];await Promise.all(Array.from({length:6},async()=>{while(index<paths.length){const path=paths[index++];const r=await fetch(path,{method:'HEAD'});if(!r.ok)bad.push({path,status:r.status()});}}));return{count:paths.length,bad};},required);
  check('All published files return success',resources.bad.length===0,resources);
@@ -22,9 +22,9 @@ try{
  const times=await page.locator('.slice video').evaluateAll(vs=>vs.map(v=>v.currentTime));await page.waitForTimeout(600);
  const hero=await page.locator('.slice video').evaluateAll(vs=>vs.map(v=>({time:v.currentTime,ready:v.readyState,paused:v.paused})));
  check('Published hero has three moving results',hero.length===3&&hero.every((v,i)=>!v.paused&&v.ready>=2&&v.time>times[i]+.25),hero);
- await page.locator('#examples').scrollIntoViewIfNeeded();await page.waitForFunction(()=>document.querySelectorAll('.drum-item').length===12);
+ await page.locator('#examples').scrollIntoViewIfNeeded();await page.waitForFunction(()=>document.querySelectorAll('.drum-item').length===11);
  await page.waitForTimeout(2000);
- check('Published gallery contains 12 sources',await page.locator('.drum-item').count()===12);
+ check('Published gallery contains 11 sources',await page.locator('.drum-item').count()===11);
  await page.locator('#rf').scrollIntoViewIfNeeded();await page.waitForFunction(()=>document.querySelector('#rf').dataset.initialized==='true');await page.waitForTimeout(3000);
  check('Published pipeline has three source/result pairs',await page.locator('.pipe-origin').count()===3&&await page.locator('.pipe-deck').count()===3);
  await mkdir('landing/shots/publication',{recursive:true});

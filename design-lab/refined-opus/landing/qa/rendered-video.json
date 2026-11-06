@@ -5,12 +5,12 @@
       "before": [
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-01-m02/preview.mp4",
-          "time": 1.360627,
+          "time": 1.366649,
           "paused": false,
           "ready": 4,
           "waiting": false,
           "frames": 39,
-          "dropped": 10,
+          "dropped": 8,
           "rect": {
             "x": 715.6759643554688,
             "y": 247.1702117919922,
@@ -20,12 +20,12 @@
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-01-m05/preview.mp4",
-          "time": 1.360639,
+          "time": 1.366664,
           "paused": false,
           "ready": 4,
           "waiting": false,
           "frames": 39,
-          "dropped": 10,
+          "dropped": 8,
           "rect": {
             "x": 933.9417724609375,
             "y": 253.96337890625,
@@ -35,12 +35,12 @@
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-01-m04/preview.mp4",
-          "time": 1.360639,
+          "time": 1.366583,
           "paused": false,
           "ready": 4,
           "waiting": false,
           "frames": 39,
-          "dropped": 10,
+          "dropped": 8,
           "rect": {
             "x": 1121.139892578125,
             "y": 247.1702117919922,
@@ -52,12 +52,12 @@
       "after": [
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-01-m02/preview.mp4",
-          "time": 2.484167,
+          "time": 2.557414,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 66,
-          "dropped": 10,
+          "frames": 68,
+          "dropped": 8,
           "rect": {
             "x": 715.6759643554688,
             "y": 247.1702117919922,
@@ -67,12 +67,12 @@
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-01-m05/preview.mp4",
-          "time": 2.484167,
+          "time": 2.557198,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 66,
-          "dropped": 10,
+          "frames": 68,
+          "dropped": 8,
           "rect": {
             "x": 933.9417724609375,
             "y": 253.96337890625,
@@ -82,12 +82,12 @@
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-01-m04/preview.mp4",
-          "time": 2.484167,
+          "time": 2.557013,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 66,
-          "dropped": 10,
+          "frames": 68,
+          "dropped": 8,
           "rect": {
             "x": 1121.139892578125,
             "y": 247.1702117919922,
@@ -98,158 +98,285 @@
       ]
     },
     {
-      "name": "gallery-0",
+      "name": "how-desktop",
       "before": [
         {
-          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-hr-m01/preview.mp4",
-          "time": 2.172938,
-          "paused": false,
-          "ready": 4,
-          "waiting": false,
-          "frames": 59,
-          "dropped": 2,
-          "rect": {
-            "x": 414.67303466796875,
-            "y": 295.48162841796875,
-            "w": 183.27392578125,
-            "h": 365.4327392578125
-          }
-        },
-        {
-          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/examples/full-stream-02-m03/preview.mp4",
-          "time": 2.11677,
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/pipeline/hero-wide.mp4",
+          "time": 2.5358,
           "paused": false,
           "ready": 4,
           "waiting": false,
           "frames": 57,
+          "dropped": 3,
+          "rect": {
+            "x": 115,
+            "y": 440.515625,
+            "w": 270,
+            "h": 151.875
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-01-m02/preview.mp4",
+          "time": 2.440148,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 65,
+          "dropped": 1,
+          "rect": {
+            "x": 799.25,
+            "y": 396.515625,
+            "w": 141.75,
+            "h": 252
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-01-m05/preview.mp4",
+          "time": 2.439933,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 65,
+          "dropped": 1,
+          "rect": {
+            "x": 1126,
+            "y": 417.1875,
+            "w": 51,
+            "h": 90.65625
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-01-m02/preview.mp4",
+          "time": 2.439933,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 65,
+          "dropped": 1,
+          "rect": {
+            "x": 1183,
+            "y": 417.1875,
+            "w": 51,
+            "h": 90.65625
+          }
+        }
+      ],
+      "after": [
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/pipeline/hero-wide.mp4",
+          "time": 0.8699,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 80,
+          "dropped": 3,
+          "rect": {
+            "x": 115,
+            "y": 440.515625,
+            "w": 270,
+            "h": 151.875
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-01-m02/preview.mp4",
+          "time": 3.495815,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 92,
+          "dropped": 1,
+          "rect": {
+            "x": 799.25,
+            "y": 396.515625,
+            "w": 141.75,
+            "h": 252
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-01-m05/preview.mp4",
+          "time": 3.495594,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 92,
+          "dropped": 1,
+          "rect": {
+            "x": 1126,
+            "y": 417.1875,
+            "w": 51,
+            "h": 90.65625
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-01-m02/preview.mp4",
+          "time": 3.49559,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 92,
+          "dropped": 1,
+          "rect": {
+            "x": 1183,
+            "y": 417.1875,
+            "w": 51,
+            "h": 90.65625
+          }
+        }
+      ]
+    },
+    {
+      "name": "gallery-0",
+      "before": [
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-hr-m01/preview.mp4",
+          "time": 2.454791,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 70,
+          "dropped": 0,
+          "rect": {
+            "x": 414.6629943847656,
+            "y": 388.50347900390625,
+            "w": 183.27401733398438,
+            "h": 365.41802978515625
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/examples/full-stream-02-m03/preview.mp4",
+          "time": 2.452281,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 70,
           "dropped": 0,
           "rect": {
             "x": 609,
-            "y": 287.375,
+            "y": 380.375,
             "w": 212,
             "h": 376.875
           }
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cafe-m01/preview.mp4",
-          "time": 2.11296,
+          "time": 2.452295,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 57,
+          "frames": 70,
           "dropped": 0,
           "rect": {
-            "x": 832.0530395507812,
-            "y": 295.48162841796875,
-            "w": 183.27392578125,
-            "h": 365.4327392578125
+            "x": 832.06298828125,
+            "y": 388.50347900390625,
+            "w": 183.2740478515625,
+            "h": 365.41802978515625
           }
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/anime-01-hook-demons/preview.mp4",
-          "time": 0.942134,
+          "time": 0.158772,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 32,
+          "frames": 13,
           "dropped": 0,
           "rect": {
-            "x": 1031.785888671875,
-            "y": 318.04345703125,
-            "w": 110.6737060546875,
-            "h": 333.58740234375
+            "x": 1031.76806640625,
+            "y": 411.0264892578125,
+            "w": 110.6639404296875,
+            "h": 333.572021484375
           }
         },
         {
-          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-startup-m02/preview.mp4",
-          "time": 2.112961,
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-03-m01/preview.mp4",
+          "time": 2.452197,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 57,
+          "frames": 70,
           "dropped": 0,
           "rect": {
-            "x": 287.5404052734375,
-            "y": 318.04345703125,
-            "w": 110.67361450195312,
-            "h": 333.58740234375
+            "x": 287.5679931640625,
+            "y": 411.0264892578125,
+            "w": 110.66400146484375,
+            "h": 333.572021484375
           }
         }
       ],
       "after": [
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-hr-m01/preview.mp4",
-          "time": 3.264502,
+          "time": 3.585628,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 87,
-          "dropped": 2,
+          "frames": 98,
+          "dropped": 0,
           "rect": {
-            "x": 414.67303466796875,
-            "y": 295.48162841796875,
-            "w": 183.27392578125,
-            "h": 365.4327392578125
+            "x": 414.6629943847656,
+            "y": 388.50347900390625,
+            "w": 183.27401733398438,
+            "h": 365.41802978515625
           }
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/examples/full-stream-02-m03/preview.mp4",
-          "time": 3.207976,
+          "time": 3.583581,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 85,
+          "frames": 98,
           "dropped": 0,
           "rect": {
             "x": 609,
-            "y": 287.375,
+            "y": 380.375,
             "w": 212,
             "h": 376.875
           }
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cafe-m01/preview.mp4",
-          "time": 3.204503,
+          "time": 3.583596,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 85,
+          "frames": 98,
           "dropped": 0,
           "rect": {
-            "x": 832.0530395507812,
-            "y": 295.48162841796875,
-            "w": 183.27392578125,
-            "h": 365.4327392578125
+            "x": 832.06298828125,
+            "y": 388.50347900390625,
+            "w": 183.2740478515625,
+            "h": 365.41802978515625
           }
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/anime-01-hook-demons/preview.mp4",
-          "time": 2.033713,
+          "time": 1.290098,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 60,
+          "frames": 41,
           "dropped": 0,
           "rect": {
-            "x": 1031.785888671875,
-            "y": 318.04345703125,
-            "w": 110.6737060546875,
-            "h": 333.58740234375
+            "x": 1031.76806640625,
+            "y": 411.0264892578125,
+            "w": 110.6639404296875,
+            "h": 333.572021484375
           }
         },
         {
-          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-startup-m02/preview.mp4",
-          "time": 3.204511,
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-03-m01/preview.mp4",
+          "time": 3.583451,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 85,
+          "frames": 98,
           "dropped": 0,
           "rect": {
-            "x": 287.5404052734375,
-            "y": 318.04345703125,
-            "w": 110.67361450195312,
-            "h": 333.58740234375
+            "x": 287.5679931640625,
+            "y": 411.0264892578125,
+            "w": 110.66400146484375,
+            "h": 333.572021484375
           }
         }
       ]
@@ -258,155 +385,155 @@
       "name": "gallery-1",
       "before": [
         {
-          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/examples/full-stream-02-m03/preview.mp4",
-          "time": 4.465434,
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-hr-m01/preview.mp4",
+          "time": 4.752268,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 116,
+          "frames": 128,
           "dropped": 0,
           "rect": {
-            "x": 287.5404052734375,
-            "y": 318.04345703125,
-            "w": 110.67361450195312,
-            "h": 333.58740234375
+            "x": 287.5679931640625,
+            "y": 411.0264892578125,
+            "w": 110.66400146484375,
+            "h": 333.572021484375
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/examples/full-stream-02-m03/preview.mp4",
+          "time": 4.749752,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 128,
+          "dropped": 0,
+          "rect": {
+            "x": 414.6629943847656,
+            "y": 388.50347900390625,
+            "w": 183.27401733398438,
+            "h": 365.41802978515625
           }
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cafe-m01/preview.mp4",
-          "time": 4.461576,
+          "time": 4.749785,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 115,
-          "dropped": 0,
-          "rect": {
-            "x": 414.67303466796875,
-            "y": 295.48162841796875,
-            "w": 183.27392578125,
-            "h": 365.4327392578125
-          }
-        },
-        {
-          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/anime-01-hook-demons/preview.mp4",
-          "time": 3.290528,
-          "paused": false,
-          "ready": 4,
-          "waiting": false,
-          "frames": 90,
+          "frames": 128,
           "dropped": 0,
           "rect": {
             "x": 609,
-            "y": 287.375,
+            "y": 380.375,
             "w": 212,
             "h": 376.875
           }
         },
         {
-          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-02-m01/preview.mp4",
-          "time": 1.98736,
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/anime-01-hook-demons/preview.mp4",
+          "time": 2.456252,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 54,
+          "frames": 70,
           "dropped": 0,
           "rect": {
-            "x": 832.0530395507812,
-            "y": 295.48162841796875,
-            "w": 183.27392578125,
-            "h": 365.4327392578125
+            "x": 832.06298828125,
+            "y": 388.50347900390625,
+            "w": 183.2740478515625,
+            "h": 365.41802978515625
           }
         },
         {
-          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-fonts-m03/preview.mp4",
-          "time": 1.006824,
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-02-m01/preview.mp4",
+          "time": 0.153344,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 29,
-          "dropped": 1,
+          "frames": 13,
+          "dropped": 0,
           "rect": {
-            "x": 1031.785888671875,
-            "y": 318.04345703125,
-            "w": 110.6737060546875,
-            "h": 333.58740234375
+            "x": 1031.76806640625,
+            "y": 411.0264892578125,
+            "w": 110.6639404296875,
+            "h": 333.572021484375
           }
         }
       ],
       "after": [
         {
-          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/examples/full-stream-02-m03/preview.mp4",
-          "time": 5.642238,
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-hr-m01/preview.mp4",
+          "time": 5.821653,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 146,
+          "frames": 154,
           "dropped": 0,
           "rect": {
-            "x": 287.5404052734375,
-            "y": 318.04345703125,
-            "w": 110.67361450195312,
-            "h": 333.58740234375
+            "x": 287.5679931640625,
+            "y": 411.0264892578125,
+            "w": 110.66400146484375,
+            "h": 333.572021484375
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/examples/full-stream-02-m03/preview.mp4",
+          "time": 5.81917,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 154,
+          "dropped": 0,
+          "rect": {
+            "x": 414.6629943847656,
+            "y": 388.50347900390625,
+            "w": 183.27401733398438,
+            "h": 365.41802978515625
           }
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cafe-m01/preview.mp4",
-          "time": 5.638354,
+          "time": 5.819182,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 145,
-          "dropped": 0,
-          "rect": {
-            "x": 414.67303466796875,
-            "y": 295.48162841796875,
-            "w": 183.27392578125,
-            "h": 365.4327392578125
-          }
-        },
-        {
-          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/anime-01-hook-demons/preview.mp4",
-          "time": 4.465959,
-          "paused": false,
-          "ready": 4,
-          "waiting": false,
-          "frames": 120,
+          "frames": 154,
           "dropped": 0,
           "rect": {
             "x": 609,
-            "y": 287.375,
+            "y": 380.375,
             "w": 212,
             "h": 376.875
           }
         },
         {
-          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-02-m01/preview.mp4",
-          "time": 3.164159,
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/anime-01-hook-demons/preview.mp4",
+          "time": 3.525684,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 84,
+          "frames": 97,
           "dropped": 0,
           "rect": {
-            "x": 832.0530395507812,
-            "y": 295.48162841796875,
-            "w": 183.27392578125,
-            "h": 365.4327392578125
+            "x": 832.06298828125,
+            "y": 388.50347900390625,
+            "w": 183.2740478515625,
+            "h": 365.41802978515625
           }
         },
         {
-          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-fonts-m03/preview.mp4",
-          "time": 2.183604,
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-02-m01/preview.mp4",
+          "time": 1.222731,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 59,
-          "dropped": 1,
+          "frames": 40,
+          "dropped": 0,
           "rect": {
-            "x": 1031.785888671875,
-            "y": 318.04345703125,
-            "w": 110.6737060546875,
-            "h": 333.58740234375
+            "x": 1031.76806640625,
+            "y": 411.0264892578125,
+            "w": 110.6639404296875,
+            "h": 333.572021484375
           }
         }
       ]
@@ -415,155 +542,155 @@
       "name": "gallery-2",
       "before": [
         {
-          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-02-m01/preview.mp4",
-          "time": 4.685521,
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/examples/full-stream-02-m03/preview.mp4",
+          "time": 7.097733,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 121,
+          "frames": 186,
           "dropped": 0,
           "rect": {
-            "x": 287.5404052734375,
-            "y": 318.04345703125,
-            "w": 110.67361450195312,
-            "h": 333.58740234375
+            "x": 287.5679931640625,
+            "y": 411.0264892578125,
+            "w": 110.66400146484375,
+            "h": 333.572021484375
           }
         },
         {
-          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-fonts-m03/preview.mp4",
-          "time": 3.704978,
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cafe-m01/preview.mp4",
+          "time": 7.097791,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 97,
-          "dropped": 1,
+          "frames": 186,
+          "dropped": 0,
           "rect": {
-            "x": 414.67303466796875,
-            "y": 295.48162841796875,
-            "w": 183.27392578125,
-            "h": 365.4327392578125
+            "x": 414.6629943847656,
+            "y": 388.50347900390625,
+            "w": 183.27401733398438,
+            "h": 365.41802978515625
           }
         },
         {
-          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/auto-01-hook-mileage/preview.mp4",
-          "time": 2.149701,
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/anime-01-hook-demons/preview.mp4",
+          "time": 4.803997,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 58,
-          "dropped": 1,
+          "frames": 129,
+          "dropped": 0,
           "rect": {
             "x": 609,
-            "y": 287.375,
+            "y": 380.375,
             "w": 212,
             "h": 376.875
           }
         },
         {
-          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-01-m05/preview.mp4",
-          "time": 1.198129,
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-02-m01/preview.mp4",
+          "time": 2.501293,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 34,
+          "frames": 71,
           "dropped": 0,
           "rect": {
-            "x": 832.0530395507812,
-            "y": 295.48162841796875,
-            "w": 183.27392578125,
-            "h": 365.4327392578125
+            "x": 832.06298828125,
+            "y": 388.50347900390625,
+            "w": 183.2740478515625,
+            "h": 365.41802978515625
           }
         },
         {
-          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-marketing-m02/preview.mp4",
-          "time": 0.991725,
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-fonts-m03/preview.mp4",
+          "time": 0.177836,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 29,
-          "dropped": 1,
+          "frames": 9,
+          "dropped": 0,
           "rect": {
-            "x": 1031.785888671875,
-            "y": 318.04345703125,
-            "w": 110.6737060546875,
-            "h": 333.58740234375
+            "x": 1031.76806640625,
+            "y": 411.0264892578125,
+            "w": 110.6639404296875,
+            "h": 333.572021484375
           }
         }
       ],
       "after": [
         {
-          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-02-m01/preview.mp4",
-          "time": 5.773914,
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/examples/full-stream-02-m03/preview.mp4",
+          "time": 8.24099,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 149,
+          "frames": 214,
           "dropped": 0,
           "rect": {
-            "x": 287.5404052734375,
-            "y": 318.04345703125,
-            "w": 110.67361450195312,
-            "h": 333.58740234375
+            "x": 287.5679931640625,
+            "y": 411.0264892578125,
+            "w": 110.66400146484375,
+            "h": 333.572021484375
           }
         },
         {
-          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-fonts-m03/preview.mp4",
-          "time": 4.793361,
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cafe-m01/preview.mp4",
+          "time": 8.241036,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 124,
-          "dropped": 1,
+          "frames": 214,
+          "dropped": 0,
           "rect": {
-            "x": 414.67303466796875,
-            "y": 295.48162841796875,
-            "w": 183.27392578125,
-            "h": 365.4327392578125
+            "x": 414.6629943847656,
+            "y": 388.50347900390625,
+            "w": 183.27401733398438,
+            "h": 365.41802978515625
           }
         },
         {
-          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/auto-01-hook-mileage/preview.mp4",
-          "time": 3.238087,
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/anime-01-hook-demons/preview.mp4",
+          "time": 5.947478,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 86,
-          "dropped": 1,
+          "frames": 157,
+          "dropped": 0,
           "rect": {
             "x": 609,
-            "y": 287.375,
+            "y": 380.375,
             "w": 212,
             "h": 376.875
           }
         },
         {
-          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-01-m05/preview.mp4",
-          "time": 2.286515,
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-02-m01/preview.mp4",
+          "time": 3.644563,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 62,
+          "frames": 100,
           "dropped": 0,
           "rect": {
-            "x": 832.0530395507812,
-            "y": 295.48162841796875,
-            "w": 183.27392578125,
-            "h": 365.4327392578125
+            "x": 832.06298828125,
+            "y": 388.50347900390625,
+            "w": 183.2740478515625,
+            "h": 365.41802978515625
           }
         },
         {
-          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-marketing-m02/preview.mp4",
-          "time": 2.080109,
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-fonts-m03/preview.mp4",
+          "time": 1.321075,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 57,
-          "dropped": 1,
+          "frames": 37,
+          "dropped": 0,
           "rect": {
-            "x": 1031.785888671875,
-            "y": 318.04345703125,
-            "w": 110.6737060546875,
-            "h": 333.58740234375
+            "x": 1031.76806640625,
+            "y": 411.0264892578125,
+            "w": 110.6639404296875,
+            "h": 333.572021484375
           }
         }
       ]
@@ -572,155 +699,1411 @@
       "name": "gallery-3",
       "before": [
         {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cafe-m01/preview.mp4",
+          "time": 9.401626,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 243,
+          "dropped": 0,
+          "rect": {
+            "x": 287.5679931640625,
+            "y": 411.0264892578125,
+            "w": 110.66400146484375,
+            "h": 333.572021484375
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/anime-01-hook-demons/preview.mp4",
+          "time": 7.108054,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 186,
+          "dropped": 0,
+          "rect": {
+            "x": 414.6629943847656,
+            "y": 388.50347900390625,
+            "w": 183.27401733398438,
+            "h": 365.41802978515625
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-02-m01/preview.mp4",
+          "time": 4.80512,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 129,
+          "dropped": 0,
+          "rect": {
+            "x": 609,
+            "y": 380.375,
+            "w": 212,
+            "h": 376.875
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-fonts-m03/preview.mp4",
+          "time": 2.481652,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 67,
+          "dropped": 0,
+          "rect": {
+            "x": 832.06298828125,
+            "y": 388.50347900390625,
+            "w": 183.2740478515625,
+            "h": 365.41802978515625
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/auto-01-hook-mileage/preview.mp4",
+          "time": 0.182263,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 9,
+          "dropped": 0,
+          "rect": {
+            "x": 1031.76806640625,
+            "y": 411.0264892578125,
+            "w": 110.6639404296875,
+            "h": 333.572021484375
+          }
+        }
+      ],
+      "after": [
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cafe-m01/preview.mp4",
+          "time": 10.485395,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 271,
+          "dropped": 0,
+          "rect": {
+            "x": 287.5679931640625,
+            "y": 411.0264892578125,
+            "w": 110.66400146484375,
+            "h": 333.572021484375
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/anime-01-hook-demons/preview.mp4",
+          "time": 8.193692,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 214,
+          "dropped": 0,
+          "rect": {
+            "x": 414.6629943847656,
+            "y": 388.50347900390625,
+            "w": 183.27401733398438,
+            "h": 365.41802978515625
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-02-m01/preview.mp4",
+          "time": 5.890766,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 156,
+          "dropped": 0,
+          "rect": {
+            "x": 609,
+            "y": 380.375,
+            "w": 212,
+            "h": 376.875
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-fonts-m03/preview.mp4",
+          "time": 3.565418,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 94,
+          "dropped": 0,
+          "rect": {
+            "x": 832.06298828125,
+            "y": 388.50347900390625,
+            "w": 183.2740478515625,
+            "h": 365.41802978515625
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/auto-01-hook-mileage/preview.mp4",
+          "time": 1.267792,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 37,
+          "dropped": 0,
+          "rect": {
+            "x": 1031.76806640625,
+            "y": 411.0264892578125,
+            "w": 110.6639404296875,
+            "h": 333.572021484375
+          }
+        }
+      ]
+    },
+    {
+      "name": "gallery-4",
+      "before": [
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/anime-01-hook-demons/preview.mp4",
+          "time": 9.45505,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 245,
+          "dropped": 0,
+          "rect": {
+            "x": 287.5679931640625,
+            "y": 411.0264892578125,
+            "w": 110.66400146484375,
+            "h": 333.572021484375
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-02-m01/preview.mp4",
+          "time": 7.154504,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 188,
+          "dropped": 0,
+          "rect": {
+            "x": 414.6629943847656,
+            "y": 388.50347900390625,
+            "w": 183.27401733398438,
+            "h": 365.41802978515625
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-fonts-m03/preview.mp4",
+          "time": 4.831031,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 126,
+          "dropped": 0,
+          "rect": {
+            "x": 609,
+            "y": 380.375,
+            "w": 212,
+            "h": 376.875
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/auto-01-hook-mileage/preview.mp4",
+          "time": 2.531595,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 68,
+          "dropped": 0,
+          "rect": {
+            "x": 832.06298828125,
+            "y": 388.50347900390625,
+            "w": 183.2740478515625,
+            "h": 365.41802978515625
+          }
+        },
+        {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-01-m05/preview.mp4",
-          "time": 3.698962,
+          "time": 0.191007,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 14,
+          "dropped": 0,
+          "rect": {
+            "x": 1031.76806640625,
+            "y": 411.0264892578125,
+            "w": 110.6639404296875,
+            "h": 333.572021484375
+          }
+        }
+      ],
+      "after": [
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/anime-01-hook-demons/preview.mp4",
+          "time": 10.590657,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 274,
+          "dropped": 0,
+          "rect": {
+            "x": 287.5679931640625,
+            "y": 411.0264892578125,
+            "w": 110.66400146484375,
+            "h": 333.572021484375
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-02-m01/preview.mp4",
+          "time": 8.287725,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 216,
+          "dropped": 0,
+          "rect": {
+            "x": 414.6629943847656,
+            "y": 388.50347900390625,
+            "w": 183.27401733398438,
+            "h": 365.41802978515625
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-fonts-m03/preview.mp4",
+          "time": 5.964268,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 154,
+          "dropped": 0,
+          "rect": {
+            "x": 609,
+            "y": 380.375,
+            "w": 212,
+            "h": 376.875
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/auto-01-hook-mileage/preview.mp4",
+          "time": 3.664896,
           "paused": false,
           "ready": 4,
           "waiting": false,
           "frames": 97,
           "dropped": 0,
           "rect": {
-            "x": 287.5404052734375,
-            "y": 318.04345703125,
-            "w": 110.67361450195312,
-            "h": 333.58740234375
+            "x": 832.06298828125,
+            "y": 388.50347900390625,
+            "w": 183.2740478515625,
+            "h": 365.41802978515625
           }
         },
         {
-          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-marketing-m02/preview.mp4",
-          "time": 3.492581,
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-01-m05/preview.mp4",
+          "time": 1.323914,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 92,
-          "dropped": 1,
+          "frames": 42,
+          "dropped": 0,
           "rect": {
-            "x": 414.67303466796875,
-            "y": 295.48162841796875,
-            "w": 183.27392578125,
-            "h": 365.4327392578125
+            "x": 1031.76806640625,
+            "y": 411.0264892578125,
+            "w": 110.6639404296875,
+            "h": 333.572021484375
           }
-        },
+        }
+      ]
+    },
+    {
+      "name": "gallery-5",
+      "before": [
         {
-          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cg-m02/preview.mp4",
-          "time": 2.053394,
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-02-m01/preview.mp4",
+          "time": 9.449875,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 60,
-          "dropped": 1,
+          "frames": 245,
+          "dropped": 0,
+          "rect": {
+            "x": 287.5679931640625,
+            "y": 411.0264892578125,
+            "w": 110.66400146484375,
+            "h": 333.572021484375
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-fonts-m03/preview.mp4",
+          "time": 7.126416,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 182,
+          "dropped": 0,
+          "rect": {
+            "x": 414.6629943847656,
+            "y": 388.50347900390625,
+            "w": 183.27401733398438,
+            "h": 365.41802978515625
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/auto-01-hook-mileage/preview.mp4",
+          "time": 4.827064,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 125,
+          "dropped": 0,
           "rect": {
             "x": 609,
-            "y": 287.375,
+            "y": 380.375,
             "w": 212,
             "h": 376.875
           }
         },
         {
-          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-03-m01/preview.mp4",
-          "time": 3.225417,
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-01-m05/preview.mp4",
+          "time": 2.486384,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 85,
+          "frames": 71,
           "dropped": 0,
           "rect": {
-            "x": 832.0530395507812,
-            "y": 295.48162841796875,
-            "w": 183.27392578125,
-            "h": 365.4327392578125
+            "x": 832.06298828125,
+            "y": 388.50347900390625,
+            "w": 183.2740478515625,
+            "h": 365.41802978515625
           }
         },
         {
-          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-startup-m02/preview.mp4",
-          "time": 5.365885,
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-marketing-m02/preview.mp4",
+          "time": 0.185913,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 138,
+          "frames": 14,
           "dropped": 0,
           "rect": {
-            "x": 1031.785888671875,
-            "y": 318.04345703125,
-            "w": 110.6737060546875,
-            "h": 333.58740234375
+            "x": 1031.76806640625,
+            "y": 411.0264892578125,
+            "w": 110.6639404296875,
+            "h": 333.572021484375
           }
         }
       ],
       "after": [
         {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-02-m01/preview.mp4",
+          "time": 10.563412,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 273,
+          "dropped": 0,
+          "rect": {
+            "x": 287.5679931640625,
+            "y": 411.0264892578125,
+            "w": 110.66400146484375,
+            "h": 333.572021484375
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-fonts-m03/preview.mp4",
+          "time": 8.239967,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 211,
+          "dropped": 0,
+          "rect": {
+            "x": 414.6629943847656,
+            "y": 388.50347900390625,
+            "w": 183.27401733398438,
+            "h": 365.41802978515625
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/auto-01-hook-mileage/preview.mp4",
+          "time": 5.940624,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 153,
+          "dropped": 0,
+          "rect": {
+            "x": 609,
+            "y": 380.375,
+            "w": 212,
+            "h": 376.875
+          }
+        },
+        {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-01-m05/preview.mp4",
-          "time": 4.883997,
+          "time": 3.599959,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 99,
+          "dropped": 0,
+          "rect": {
+            "x": 832.06298828125,
+            "y": 388.50347900390625,
+            "w": 183.2740478515625,
+            "h": 365.41802978515625
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-marketing-m02/preview.mp4",
+          "time": 1.299468,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 41,
+          "dropped": 0,
+          "rect": {
+            "x": 1031.76806640625,
+            "y": 411.0264892578125,
+            "w": 110.6639404296875,
+            "h": 333.572021484375
+          }
+        }
+      ]
+    },
+    {
+      "name": "gallery-6",
+      "before": [
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-fonts-m03/preview.mp4",
+          "time": 9.408344,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 240,
+          "dropped": 0,
+          "rect": {
+            "x": 287.5679931640625,
+            "y": 411.0264892578125,
+            "w": 110.66400146484375,
+            "h": 333.572021484375
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/auto-01-hook-mileage/preview.mp4",
+          "time": 7.108991,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 182,
+          "dropped": 0,
+          "rect": {
+            "x": 414.6629943847656,
+            "y": 388.50347900390625,
+            "w": 183.27401733398438,
+            "h": 365.41802978515625
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-01-m05/preview.mp4",
+          "time": 4.768293,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 128,
+          "dropped": 0,
+          "rect": {
+            "x": 609,
+            "y": 380.375,
+            "w": 212,
+            "h": 376.875
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-marketing-m02/preview.mp4",
+          "time": 2.466782,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 70,
+          "dropped": 0,
+          "rect": {
+            "x": 832.06298828125,
+            "y": 388.50347900390625,
+            "w": 183.2740478515625,
+            "h": 365.41802978515625
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cg-m02/preview.mp4",
+          "time": 2.442447,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 70,
+          "dropped": 0,
+          "rect": {
+            "x": 1031.76806640625,
+            "y": 411.0264892578125,
+            "w": 110.6639404296875,
+            "h": 333.572021484375
+          }
+        }
+      ],
+      "after": [
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-fonts-m03/preview.mp4",
+          "time": 10.520761,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 267,
+          "dropped": 0,
+          "rect": {
+            "x": 287.5679931640625,
+            "y": 411.0264892578125,
+            "w": 110.66400146484375,
+            "h": 333.572021484375
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/auto-01-hook-mileage/preview.mp4",
+          "time": 8.221528,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 210,
+          "dropped": 0,
+          "rect": {
+            "x": 414.6629943847656,
+            "y": 388.50347900390625,
+            "w": 183.27401733398438,
+            "h": 365.41802978515625
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-01-m05/preview.mp4",
+          "time": 5.880762,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 155,
+          "dropped": 0,
+          "rect": {
+            "x": 609,
+            "y": 380.375,
+            "w": 212,
+            "h": 376.875
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-marketing-m02/preview.mp4",
+          "time": 3.580439,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 98,
+          "dropped": 0,
+          "rect": {
+            "x": 832.06298828125,
+            "y": 388.50347900390625,
+            "w": 183.2740478515625,
+            "h": 365.41802978515625
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cg-m02/preview.mp4",
+          "time": 3.554978,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 98,
+          "dropped": 0,
+          "rect": {
+            "x": 1031.76806640625,
+            "y": 411.0264892578125,
+            "w": 110.6639404296875,
+            "h": 333.572021484375
+          }
+        }
+      ]
+    },
+    {
+      "name": "gallery-7",
+      "before": [
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/auto-01-hook-mileage/preview.mp4",
+          "time": 9.384806,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 239,
+          "dropped": 0,
+          "rect": {
+            "x": 287.5679931640625,
+            "y": 411.0264892578125,
+            "w": 110.66400146484375,
+            "h": 333.572021484375
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-01-m05/preview.mp4",
+          "time": 7.043352,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 185,
+          "dropped": 0,
+          "rect": {
+            "x": 414.6629943847656,
+            "y": 388.50347900390625,
+            "w": 183.27401733398438,
+            "h": 365.41802978515625
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-marketing-m02/preview.mp4",
+          "time": 4.743345,
           "paused": false,
           "ready": 4,
           "waiting": false,
           "frames": 127,
           "dropped": 0,
           "rect": {
-            "x": 287.5404052734375,
-            "y": 318.04345703125,
-            "w": 110.67361450195312,
-            "h": 333.58740234375
-          }
-        },
-        {
-          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-marketing-m02/preview.mp4",
-          "time": 4.67768,
-          "paused": false,
-          "ready": 4,
-          "waiting": false,
-          "frames": 122,
-          "dropped": 1,
-          "rect": {
-            "x": 414.67303466796875,
-            "y": 295.48162841796875,
-            "w": 183.27392578125,
-            "h": 365.4327392578125
+            "x": 609,
+            "y": 380.375,
+            "w": 212,
+            "h": 376.875
           }
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cg-m02/preview.mp4",
-          "time": 3.238501,
+          "time": 4.718203,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 90,
-          "dropped": 1,
+          "frames": 127,
+          "dropped": 0,
+          "rect": {
+            "x": 832.06298828125,
+            "y": 388.50347900390625,
+            "w": 183.2740478515625,
+            "h": 365.41802978515625
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-03-m01/preview.mp4",
+          "time": 4.71781,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 126,
+          "dropped": 0,
+          "rect": {
+            "x": 1031.76806640625,
+            "y": 411.0264892578125,
+            "w": 110.6639404296875,
+            "h": 333.572021484375
+          }
+        }
+      ],
+      "after": [
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/auto-01-hook-mileage/preview.mp4",
+          "time": 10.511878,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 267,
+          "dropped": 0,
+          "rect": {
+            "x": 287.5679931640625,
+            "y": 411.0264892578125,
+            "w": 110.66400146484375,
+            "h": 333.572021484375
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-01-m05/preview.mp4",
+          "time": 8.171869,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 213,
+          "dropped": 0,
+          "rect": {
+            "x": 414.6629943847656,
+            "y": 388.50347900390625,
+            "w": 183.27401733398438,
+            "h": 365.41802978515625
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-marketing-m02/preview.mp4",
+          "time": 5.871864,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 155,
+          "dropped": 0,
           "rect": {
             "x": 609,
-            "y": 287.375,
+            "y": 380.375,
+            "w": 212,
+            "h": 376.875
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cg-m02/preview.mp4",
+          "time": 5.846655,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 155,
+          "dropped": 0,
+          "rect": {
+            "x": 832.06298828125,
+            "y": 388.50347900390625,
+            "w": 183.2740478515625,
+            "h": 365.41802978515625
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-03-m01/preview.mp4",
+          "time": 5.846193,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 154,
+          "dropped": 0,
+          "rect": {
+            "x": 1031.76806640625,
+            "y": 411.0264892578125,
+            "w": 110.6639404296875,
+            "h": 333.572021484375
+          }
+        }
+      ]
+    },
+    {
+      "name": "gallery-8",
+      "before": [
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-hr-m01/preview.mp4",
+          "time": 7.118158,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 187,
+          "dropped": 0,
+          "rect": {
+            "x": 1031.76806640625,
+            "y": 411.0264892578125,
+            "w": 110.6639404296875,
+            "h": 333.572021484375
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-01-m05/preview.mp4",
+          "time": 9.437151,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 245,
+          "dropped": 0,
+          "rect": {
+            "x": 287.5679931640625,
+            "y": 411.0264892578125,
+            "w": 110.66400146484375,
+            "h": 333.572021484375
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-marketing-m02/preview.mp4",
+          "time": 7.136727,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 187,
+          "dropped": 0,
+          "rect": {
+            "x": 414.6629943847656,
+            "y": 388.50347900390625,
+            "w": 183.27401733398438,
+            "h": 365.41802978515625
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cg-m02/preview.mp4",
+          "time": 7.111149,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 187,
+          "dropped": 0,
+          "rect": {
+            "x": 609,
+            "y": 380.375,
             "w": 212,
             "h": 376.875
           }
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-03-m01/preview.mp4",
-          "time": 4.410191,
+          "time": 7.11086,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 115,
+          "frames": 186,
           "dropped": 0,
           "rect": {
-            "x": 832.0530395507812,
-            "y": 295.48162841796875,
-            "w": 183.27392578125,
-            "h": 365.4327392578125
+            "x": 832.06298828125,
+            "y": 388.50347900390625,
+            "w": 183.2740478515625,
+            "h": 365.41802978515625
+          }
+        }
+      ],
+      "after": [
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-hr-m01/preview.mp4",
+          "time": 8.291239,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 216,
+          "dropped": 0,
+          "rect": {
+            "x": 1031.76806640625,
+            "y": 411.0264892578125,
+            "w": 110.6639404296875,
+            "h": 333.572021484375
           }
         },
         {
-          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-startup-m02/preview.mp4",
-          "time": 6.550951,
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-01-m05/preview.mp4",
+          "time": 10.610325,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 168,
+          "frames": 274,
           "dropped": 0,
           "rect": {
-            "x": 1031.785888671875,
-            "y": 318.04345703125,
-            "w": 110.6737060546875,
-            "h": 333.58740234375
+            "x": 287.5679931640625,
+            "y": 411.0264892578125,
+            "w": 110.66400146484375,
+            "h": 333.572021484375
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-marketing-m02/preview.mp4",
+          "time": 8.309906,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 216,
+          "dropped": 0,
+          "rect": {
+            "x": 414.6629943847656,
+            "y": 388.50347900390625,
+            "w": 183.27401733398438,
+            "h": 365.41802978515625
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cg-m02/preview.mp4",
+          "time": 8.283506,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 216,
+          "dropped": 0,
+          "rect": {
+            "x": 609,
+            "y": 380.375,
+            "w": 212,
+            "h": 376.875
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-03-m01/preview.mp4",
+          "time": 8.2835,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 215,
+          "dropped": 0,
+          "rect": {
+            "x": 832.06298828125,
+            "y": 388.50347900390625,
+            "w": 183.2740478515625,
+            "h": 365.41802978515625
+          }
+        }
+      ]
+    },
+    {
+      "name": "gallery-9",
+      "before": [
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-hr-m01/preview.mp4",
+          "time": 9.452116,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 245,
+          "dropped": 0,
+          "rect": {
+            "x": 832.06298828125,
+            "y": 388.50347900390625,
+            "w": 183.2740478515625,
+            "h": 365.41802978515625
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/examples/full-stream-02-m03/preview.mp4",
+          "time": 9.432484,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 244,
+          "dropped": 0,
+          "rect": {
+            "x": 1031.76806640625,
+            "y": 411.0264892578125,
+            "w": 110.6639404296875,
+            "h": 333.572021484375
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-marketing-m02/preview.mp4",
+          "time": 9.470745,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 245,
+          "dropped": 0,
+          "rect": {
+            "x": 287.5679931640625,
+            "y": 411.0264892578125,
+            "w": 110.66400146484375,
+            "h": 333.572021484375
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cg-m02/preview.mp4",
+          "time": 9.445376,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 245,
+          "dropped": 0,
+          "rect": {
+            "x": 414.6629943847656,
+            "y": 388.50347900390625,
+            "w": 183.27401733398438,
+            "h": 365.41802978515625
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-03-m01/preview.mp4",
+          "time": 9.444898,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 244,
+          "dropped": 0,
+          "rect": {
+            "x": 609,
+            "y": 380.375,
+            "w": 212,
+            "h": 376.875
+          }
+        }
+      ],
+      "after": [
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-hr-m01/preview.mp4",
+          "time": 10.537894,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 273,
+          "dropped": 0,
+          "rect": {
+            "x": 832.06298828125,
+            "y": 388.50347900390625,
+            "w": 183.2740478515625,
+            "h": 365.41802978515625
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/examples/full-stream-02-m03/preview.mp4",
+          "time": 10.518278,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 272,
+          "dropped": 0,
+          "rect": {
+            "x": 1031.76806640625,
+            "y": 411.0264892578125,
+            "w": 110.6639404296875,
+            "h": 333.572021484375
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-marketing-m02/preview.mp4",
+          "time": 10.556491,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 273,
+          "dropped": 0,
+          "rect": {
+            "x": 287.5679931640625,
+            "y": 411.0264892578125,
+            "w": 110.66400146484375,
+            "h": 333.572021484375
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cg-m02/preview.mp4",
+          "time": 10.531113,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 273,
+          "dropped": 0,
+          "rect": {
+            "x": 414.6629943847656,
+            "y": 388.50347900390625,
+            "w": 183.27401733398438,
+            "h": 365.41802978515625
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-03-m01/preview.mp4",
+          "time": 10.530633,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 272,
+          "dropped": 0,
+          "rect": {
+            "x": 609,
+            "y": 380.375,
+            "w": 212,
+            "h": 376.875
+          }
+        }
+      ]
+    },
+    {
+      "name": "gallery-10",
+      "before": [
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-hr-m01/preview.mp4",
+          "time": 11.701669,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 302,
+          "dropped": 0,
+          "rect": {
+            "x": 609,
+            "y": 380.375,
+            "w": 212,
+            "h": 376.875
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/examples/full-stream-02-m03/preview.mp4",
+          "time": 11.682009,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 301,
+          "dropped": 0,
+          "rect": {
+            "x": 832.06298828125,
+            "y": 388.50347900390625,
+            "w": 183.2740478515625,
+            "h": 365.41802978515625
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cafe-m01/preview.mp4",
+          "time": 11.72173,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 302,
+          "dropped": 0,
+          "rect": {
+            "x": 1031.76806640625,
+            "y": 411.0264892578125,
+            "w": 110.6639404296875,
+            "h": 333.572021484375
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cg-m02/preview.mp4",
+          "time": 11.694898,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 302,
+          "dropped": 0,
+          "rect": {
+            "x": 287.5679931640625,
+            "y": 411.0264892578125,
+            "w": 110.66400146484375,
+            "h": 333.572021484375
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-03-m01/preview.mp4",
+          "time": 11.694391,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 301,
+          "dropped": 0,
+          "rect": {
+            "x": 414.6629943847656,
+            "y": 388.50347900390625,
+            "w": 183.27401733398438,
+            "h": 365.41802978515625
+          }
+        }
+      ],
+      "after": [
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-hr-m01/preview.mp4",
+          "time": 12.804945,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 329,
+          "dropped": 0,
+          "rect": {
+            "x": 609,
+            "y": 380.375,
+            "w": 212,
+            "h": 376.875
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/examples/full-stream-02-m03/preview.mp4",
+          "time": 12.785375,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 329,
+          "dropped": 0,
+          "rect": {
+            "x": 832.06298828125,
+            "y": 388.50347900390625,
+            "w": 183.2740478515625,
+            "h": 365.41802978515625
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cafe-m01/preview.mp4",
+          "time": 12.825,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 329,
+          "dropped": 0,
+          "rect": {
+            "x": 1031.76806640625,
+            "y": 411.0264892578125,
+            "w": 110.6639404296875,
+            "h": 333.572021484375
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cg-m02/preview.mp4",
+          "time": 12.797643,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 329,
+          "dropped": 0,
+          "rect": {
+            "x": 287.5679931640625,
+            "y": 411.0264892578125,
+            "w": 110.66400146484375,
+            "h": 333.572021484375
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-03-m01/preview.mp4",
+          "time": 12.797636,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 329,
+          "dropped": 0,
+          "rect": {
+            "x": 414.6629943847656,
+            "y": 388.50347900390625,
+            "w": 183.27401733398438,
+            "h": 365.41802978515625
+          }
+        }
+      ]
+    },
+    {
+      "name": "gallery-11",
+      "before": [
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-hr-m01/preview.mp4",
+          "time": 13.969511,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 358,
+          "dropped": 0,
+          "rect": {
+            "x": 414.6629943847656,
+            "y": 388.50347900390625,
+            "w": 183.27401733398438,
+            "h": 365.41802978515625
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/examples/full-stream-02-m03/preview.mp4",
+          "time": 13.949811,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 358,
+          "dropped": 0,
+          "rect": {
+            "x": 609,
+            "y": 380.375,
+            "w": 212,
+            "h": 376.875
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cafe-m01/preview.mp4",
+          "time": 13.989716,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 358,
+          "dropped": 0,
+          "rect": {
+            "x": 832.06298828125,
+            "y": 388.50347900390625,
+            "w": 183.2740478515625,
+            "h": 365.41802978515625
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/anime-01-hook-demons/preview.mp4",
+          "time": 11.688865,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 301,
+          "dropped": 0,
+          "rect": {
+            "x": 1031.76806640625,
+            "y": 411.0264892578125,
+            "w": 110.6639404296875,
+            "h": 333.572021484375
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-03-m01/preview.mp4",
+          "time": 13.962324,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 358,
+          "dropped": 0,
+          "rect": {
+            "x": 287.5679931640625,
+            "y": 411.0264892578125,
+            "w": 110.66400146484375,
+            "h": 333.572021484375
+          }
+        }
+      ],
+      "after": [
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-hr-m01/preview.mp4",
+          "time": 15.123736,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 387,
+          "dropped": 0,
+          "rect": {
+            "x": 414.6629943847656,
+            "y": 388.50347900390625,
+            "w": 183.27401733398438,
+            "h": 365.41802978515625
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/examples/full-stream-02-m03/preview.mp4",
+          "time": 15.103765,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 386,
+          "dropped": 0,
+          "rect": {
+            "x": 609,
+            "y": 380.375,
+            "w": 212,
+            "h": 376.875
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cafe-m01/preview.mp4",
+          "time": 15.143754,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 387,
+          "dropped": 0,
+          "rect": {
+            "x": 832.06298828125,
+            "y": 388.50347900390625,
+            "w": 183.2740478515625,
+            "h": 365.41802978515625
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/anime-01-hook-demons/preview.mp4",
+          "time": 12.843252,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 330,
+          "dropped": 0,
+          "rect": {
+            "x": 1031.76806640625,
+            "y": 411.0264892578125,
+            "w": 110.6639404296875,
+            "h": 333.572021484375
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-03-m01/preview.mp4",
+          "time": 15.11664,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 386,
+          "dropped": 0,
+          "rect": {
+            "x": 287.5679931640625,
+            "y": 411.0264892578125,
+            "w": 110.66400146484375,
+            "h": 333.572021484375
           }
         }
       ]
@@ -730,7 +2113,7 @@
       "before": [
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-02-m01/preview.mp4",
-          "time": 0.939473,
+          "time": 0.92929,
           "paused": false,
           "ready": 4,
           "waiting": false,
@@ -745,7 +2128,7 @@
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-02-m02/preview.mp4",
-          "time": 0.938999,
+          "time": 0.929287,
           "paused": false,
           "ready": 4,
           "waiting": false,
@@ -760,7 +2143,7 @@
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/examples/full-audience-02-m03/preview.mp4",
-          "time": 0.939031,
+          "time": 0.927971,
           "paused": false,
           "ready": 4,
           "waiting": false,
@@ -768,50 +2151,50 @@
           "dropped": 11,
           "rect": {
             "x": 659,
-            "y": 559.312255859375,
+            "y": 559.3121337890625,
             "w": 112,
             "h": 199.109375
           }
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-02-m04/preview.mp4",
-          "time": 0.939026,
+          "time": 0.927969,
           "paused": false,
           "ready": 4,
           "waiting": false,
           "frames": 32,
           "dropped": 12,
           "rect": {
-            "x": 784.7176513671875,
-            "y": 565.964111328125,
-            "w": 120.564697265625,
-            "h": 203.783935546875
+            "x": 784.718017578125,
+            "y": 565.9597778320312,
+            "w": 120.56396484375,
+            "h": 203.78363037109375
           }
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/examples/full-audience-02-m05/preview.mp4",
-          "time": 0.939023,
+          "time": 0.927781,
           "paused": false,
           "ready": 4,
           "waiting": false,
           "frames": 32,
-          "dropped": 14,
+          "dropped": 13,
           "rect": {
-            "x": 910.5731201171875,
-            "y": 572.7767333984375,
-            "w": 128.853759765625,
-            "h": 208.0189208984375
+            "x": 910.5822143554688,
+            "y": 572.7694091796875,
+            "w": 128.83551025390625,
+            "h": 207.99542236328125
           }
         }
       ],
       "after": [
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-02-m01/preview.mp4",
-          "time": 2.086836,
+          "time": 2.023963,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 61,
+          "frames": 59,
           "dropped": 9,
           "rect": {
             "x": 390.5363464355469,
@@ -822,11 +2205,11 @@
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-02-m02/preview.mp4",
-          "time": 2.086283,
+          "time": 2.024025,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 61,
+          "frames": 59,
           "dropped": 10,
           "rect": {
             "x": 524.7108154296875,
@@ -837,47 +2220,47 @@
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/examples/full-audience-02-m03/preview.mp4",
-          "time": 2.086435,
+          "time": 2.022763,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 61,
+          "frames": 59,
           "dropped": 11,
           "rect": {
             "x": 659,
-            "y": 559.312255859375,
+            "y": 559.3121337890625,
             "w": 112,
             "h": 199.109375
           }
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-02-m04/preview.mp4",
-          "time": 2.086432,
+          "time": 2.022756,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 61,
+          "frames": 59,
           "dropped": 12,
           "rect": {
-            "x": 784.7176513671875,
-            "y": 565.964111328125,
-            "w": 120.564697265625,
-            "h": 203.783935546875
+            "x": 784.718017578125,
+            "y": 565.9597778320312,
+            "w": 120.56396484375,
+            "h": 203.78363037109375
           }
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/examples/full-audience-02-m05/preview.mp4",
-          "time": 2.086303,
+          "time": 2.022603,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 61,
-          "dropped": 14,
+          "frames": 59,
+          "dropped": 13,
           "rect": {
-            "x": 910.5731201171875,
-            "y": 572.7767333984375,
-            "w": 128.853759765625,
-            "h": 208.0189208984375
+            "x": 910.5822143554688,
+            "y": 572.7694091796875,
+            "w": 128.83551025390625,
+            "h": 207.99542236328125
           }
         }
       ]
@@ -887,7 +2270,7 @@
       "before": [
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cafe-m01/preview.mp4",
-          "time": 0.931375,
+          "time": 0.932509,
           "paused": false,
           "ready": 4,
           "waiting": false,
@@ -902,7 +2285,7 @@
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/examples/full-biz-cafe-m02/preview.mp4",
-          "time": 0.931371,
+          "time": 0.932034,
           "paused": false,
           "ready": 4,
           "waiting": false,
@@ -917,7 +2300,7 @@
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cafe-m03/preview.mp4",
-          "time": 0.930695,
+          "time": 0.932033,
           "paused": false,
           "ready": 4,
           "waiting": false,
@@ -934,7 +2317,7 @@
       "after": [
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cafe-m01/preview.mp4",
-          "time": 1.942121,
+          "time": 1.926109,
           "paused": false,
           "ready": 4,
           "waiting": false,
@@ -949,7 +2332,7 @@
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/examples/full-biz-cafe-m02/preview.mp4",
-          "time": 1.942117,
+          "time": 1.926102,
           "paused": false,
           "ready": 4,
           "waiting": false,
@@ -964,7 +2347,7 @@
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cafe-m03/preview.mp4",
-          "time": 1.942114,
+          "time": 1.9261,
           "paused": false,
           "ready": 4,
           "waiting": false,
@@ -984,12 +2367,12 @@
       "before": [
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-hr-m01/preview.mp4",
-          "time": 0.930412,
+          "time": 0.949829,
           "paused": false,
           "ready": 4,
           "waiting": false,
           "frames": 28,
-          "dropped": 11,
+          "dropped": 10,
           "rect": {
             "x": 515.481201171875,
             "y": 560.5106201171875,
@@ -999,7 +2382,7 @@
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/examples/full-biz-hr-m02/preview.mp4",
-          "time": 0.930412,
+          "time": 0.94982,
           "paused": false,
           "ready": 4,
           "waiting": false,
@@ -1014,12 +2397,12 @@
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-hr-m03/preview.mp4",
-          "time": 0.929867,
+          "time": 0.949817,
           "paused": false,
           "ready": 4,
           "waiting": false,
           "frames": 28,
-          "dropped": 13,
+          "dropped": 12,
           "rect": {
             "x": 787.4886474609375,
             "y": 560.50830078125,
@@ -1031,12 +2414,12 @@
       "after": [
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-hr-m01/preview.mp4",
-          "time": 1.993886,
+          "time": 1.9762,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 55,
-          "dropped": 11,
+          "frames": 54,
+          "dropped": 10,
           "rect": {
             "x": 515.481201171875,
             "y": 560.5106201171875,
@@ -1046,11 +2429,11 @@
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/examples/full-biz-hr-m02/preview.mp4",
-          "time": 1.993884,
+          "time": 1.976173,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 55,
+          "frames": 54,
           "dropped": 11,
           "rect": {
             "x": 656,
@@ -1061,12 +2444,12 @@
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-hr-m03/preview.mp4",
-          "time": 1.993447,
+          "time": 1.976171,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 55,
-          "dropped": 13,
+          "frames": 54,
+          "dropped": 12,
           "rect": {
             "x": 787.4886474609375,
             "y": 560.50830078125,
@@ -1081,7 +2464,7 @@
       "before": [
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-02-m01/preview.mp4",
-          "time": 0.929587,
+          "time": 0.928082,
           "paused": false,
           "ready": 4,
           "waiting": false,
@@ -1096,73 +2479,73 @@
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-02-m02/preview.mp4",
-          "time": 0.929076,
-          "paused": false,
-          "ready": 4,
-          "waiting": false,
-          "frames": 32,
-          "dropped": 10,
-          "rect": {
-            "x": 150,
-            "y": 437.984375,
-            "w": 80,
-            "h": 142.21875
-          }
-        },
-        {
-          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/examples/full-audience-02-m03/preview.mp4",
-          "time": 0.926701,
+          "time": 0.928095,
           "paused": false,
           "ready": 4,
           "waiting": false,
           "frames": 32,
           "dropped": 11,
           "rect": {
-            "x": 236.15240478515625,
-            "y": 439.95782470703125,
-            "w": 83.6951904296875,
-            "h": 144.2640380859375
+            "x": 150,
+            "y": 437.98388671875,
+            "w": 80,
+            "h": 142.21875
+          }
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/examples/full-audience-02-m03/preview.mp4",
+          "time": 0.927791,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 32,
+          "dropped": 11,
+          "rect": {
+            "x": 236.15695190429688,
+            "y": 439.95245361328125,
+            "w": 83.68609619140625,
+            "h": 144.24920654296875
           }
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-02-m04/preview.mp4",
-          "time": 0.926697,
+          "time": 0.927774,
           "paused": false,
           "ready": 4,
           "waiting": false,
           "frames": 32,
           "dropped": 12,
           "rect": {
-            "x": 105.08155822753906,
-            "y": 589.1719970703125,
-            "w": 81.83688354492188,
-            "h": 143.2242431640625
+            "x": 105.09469604492188,
+            "y": 589.1336669921875,
+            "w": 81.81060791015625,
+            "h": 143.1802978515625
           }
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/examples/full-audience-02-m05/preview.mp4",
-          "time": 0.926681,
+          "time": 0.927652,
           "paused": false,
           "ready": 4,
           "waiting": false,
           "frames": 32,
-          "dropped": 13,
+          "dropped": 14,
           "rect": {
-            "x": 193.112548828125,
-            "y": 589.0697021484375,
-            "w": 81.77490234375,
-            "h": 143.12139892578125
+            "x": 193.1478729248047,
+            "y": 588.9617919921875,
+            "w": 81.70423889160156,
+            "h": 143.00390625
           }
         }
       ],
       "after": [
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-02-m01/preview.mp4",
-          "time": 1.872758,
+          "time": 1.88142,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 55,
+          "frames": 56,
           "dropped": 10,
           "rect": {
             "x": 60.152278900146484,
@@ -1173,62 +2556,62 @@
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-02-m02/preview.mp4",
-          "time": 1.872184,
+          "time": 1.881416,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 55,
-          "dropped": 10,
+          "frames": 56,
+          "dropped": 11,
           "rect": {
             "x": 150,
-            "y": 437.984375,
+            "y": 437.98388671875,
             "w": 80,
             "h": 142.21875
           }
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/examples/full-audience-02-m03/preview.mp4",
-          "time": 1.868999,
+          "time": 1.880816,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 55,
+          "frames": 56,
           "dropped": 11,
           "rect": {
-            "x": 236.15240478515625,
-            "y": 439.95782470703125,
-            "w": 83.6951904296875,
-            "h": 144.2640380859375
+            "x": 236.15695190429688,
+            "y": 439.95245361328125,
+            "w": 83.68609619140625,
+            "h": 144.24920654296875
           }
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-02-m04/preview.mp4",
-          "time": 1.868995,
+          "time": 1.880811,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 55,
+          "frames": 56,
           "dropped": 12,
           "rect": {
-            "x": 105.08155822753906,
-            "y": 589.1719970703125,
-            "w": 81.83688354492188,
-            "h": 143.2242431640625
+            "x": 105.09469604492188,
+            "y": 589.1336669921875,
+            "w": 81.81060791015625,
+            "h": 143.1802978515625
           }
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/examples/full-audience-02-m05/preview.mp4",
-          "time": 1.868995,
+          "time": 1.88081,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 55,
-          "dropped": 13,
+          "frames": 56,
+          "dropped": 14,
           "rect": {
-            "x": 193.112548828125,
-            "y": 589.0697021484375,
-            "w": 81.77490234375,
-            "h": 143.12139892578125
+            "x": 193.1478729248047,
+            "y": 588.9617919921875,
+            "w": 81.70423889160156,
+            "h": 143.00390625
           }
         }
       ]
@@ -1250,41 +2633,105 @@
       "data": [
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-01-m02/preview.mp4",
-          "time": 1.360627,
+          "time": 1.366649,
           "paused": false,
           "ready": 4,
           "waiting": false,
           "frames": 39,
-          "dropped": 10,
-          "advance": 1.1235399999999984,
-          "newFrames": 27
+          "dropped": 8,
+          "advance": 1.190764999999999,
+          "newFrames": 29
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-01-m05/preview.mp4",
-          "time": 1.360639,
+          "time": 1.366664,
           "paused": false,
           "ready": 4,
           "waiting": false,
           "frames": 39,
-          "dropped": 10,
-          "advance": 1.1235280000000003,
-          "newFrames": 27
+          "dropped": 8,
+          "advance": 1.1905339999999995,
+          "newFrames": 29
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-01-m04/preview.mp4",
-          "time": 1.360639,
+          "time": 1.366583,
           "paused": false,
           "ready": 4,
           "waiting": false,
           "frames": 39,
-          "dropped": 10,
-          "advance": 1.1235280000000003,
-          "newFrames": 27
+          "dropped": 8,
+          "advance": 1.1904299999999992,
+          "newFrames": 29
         }
       ]
     },
     {
       "name": "Hero uses wide three-person recording",
+      "ok": true
+    },
+    {
+      "name": "how-desktop visible video count",
+      "ok": true,
+      "data": [
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/pipeline/hero-wide.mp4",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-01-m02/preview.mp4",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-01-m05/preview.mp4",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-01-m02/preview.mp4"
+      ]
+    },
+    {
+      "name": "how-desktop every player advances",
+      "ok": true,
+      "data": [
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/pipeline/hero-wide.mp4",
+          "time": 2.5358,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 57,
+          "dropped": 3,
+          "advance": 58.3341,
+          "newFrames": 23
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-01-m02/preview.mp4",
+          "time": 2.440148,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 65,
+          "dropped": 1,
+          "advance": 1.0556669999999997,
+          "newFrames": 27
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-01-m05/preview.mp4",
+          "time": 2.439933,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 65,
+          "dropped": 1,
+          "advance": 1.0556610000000006,
+          "newFrames": 27
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-01-m02/preview.mp4",
+          "time": 2.439933,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 65,
+          "dropped": 1,
+          "advance": 1.0558819999999969,
+          "newFrames": 27
+        }
+      ]
+    },
+    {
+      "name": "Steps 1, 3 and 4 each have live footage",
       "ok": true
     },
     {
@@ -1295,7 +2742,7 @@
         "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/examples/full-stream-02-m03/preview.mp4",
         "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cafe-m01/preview.mp4",
         "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/anime-01-hook-demons/preview.mp4",
-        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-startup-m02/preview.mp4"
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-03-m01/preview.mp4"
       ]
     },
     {
@@ -1304,63 +2751,135 @@
       "data": [
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-hr-m01/preview.mp4",
-          "time": 2.172938,
+          "time": 2.454791,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 59,
-          "dropped": 2,
-          "advance": 1.0915639999999982,
+          "frames": 70,
+          "dropped": 0,
+          "advance": 1.1308369999999996,
           "newFrames": 28
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/examples/full-stream-02-m03/preview.mp4",
-          "time": 2.11677,
+          "time": 2.452281,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 57,
+          "frames": 70,
           "dropped": 0,
-          "advance": 1.0912059999999997,
+          "advance": 1.131300000000003,
           "newFrames": 28
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cafe-m01/preview.mp4",
-          "time": 2.11296,
+          "time": 2.452295,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 57,
+          "frames": 70,
           "dropped": 0,
-          "advance": 1.0915430000000015,
+          "advance": 1.1313010000000006,
           "newFrames": 28
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/anime-01-hook-demons/preview.mp4",
-          "time": 0.942134,
+          "time": 0.158772,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 32,
+          "frames": 13,
           "dropped": 0,
-          "advance": 1.091579000000003,
+          "advance": 1.1313260000000014,
           "newFrames": 28
         },
         {
-          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-startup-m02/preview.mp4",
-          "time": 2.112961,
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-03-m01/preview.mp4",
+          "time": 2.452197,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 57,
+          "frames": 70,
           "dropped": 0,
-          "advance": 1.091549999999998,
+          "advance": 1.1312539999999984,
           "newFrames": 28
         }
       ]
     },
     {
       "name": "gallery-1 visible video count",
+      "ok": true,
+      "data": [
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-hr-m01/preview.mp4",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/examples/full-stream-02-m03/preview.mp4",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cafe-m01/preview.mp4",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/anime-01-hook-demons/preview.mp4",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-02-m01/preview.mp4"
+      ]
+    },
+    {
+      "name": "gallery-1 every player advances",
+      "ok": true,
+      "data": [
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-hr-m01/preview.mp4",
+          "time": 4.752268,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 128,
+          "dropped": 0,
+          "advance": 1.069384999999997,
+          "newFrames": 26
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/examples/full-stream-02-m03/preview.mp4",
+          "time": 4.749752,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 128,
+          "dropped": 0,
+          "advance": 1.0694179999999989,
+          "newFrames": 26
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cafe-m01/preview.mp4",
+          "time": 4.749785,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 128,
+          "dropped": 0,
+          "advance": 1.0693970000000022,
+          "newFrames": 26
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/anime-01-hook-demons/preview.mp4",
+          "time": 2.456252,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 70,
+          "dropped": 0,
+          "advance": 1.069431999999999,
+          "newFrames": 27
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-02-m01/preview.mp4",
+          "time": 0.153344,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 13,
+          "dropped": 0,
+          "advance": 1.069386999999999,
+          "newFrames": 27
+        }
+      ]
+    },
+    {
+      "name": "gallery-2 visible video count",
       "ok": true,
       "data": [
         "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/examples/full-stream-02-m03/preview.mp4",
@@ -1371,68 +2890,212 @@
       ]
     },
     {
-      "name": "gallery-1 every player advances",
+      "name": "gallery-2 every player advances",
       "ok": true,
       "data": [
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/examples/full-stream-02-m03/preview.mp4",
-          "time": 4.465434,
+          "time": 7.097733,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 116,
+          "frames": 186,
           "dropped": 0,
-          "advance": 1.176803999999997,
-          "newFrames": 30
+          "advance": 1.1432569999999984,
+          "newFrames": 28
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cafe-m01/preview.mp4",
-          "time": 4.461576,
+          "time": 7.097791,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 115,
+          "frames": 186,
           "dropped": 0,
-          "advance": 1.1767779999999988,
-          "newFrames": 30
+          "advance": 1.1432450000000003,
+          "newFrames": 28
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/anime-01-hook-demons/preview.mp4",
-          "time": 3.290528,
+          "time": 4.803997,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 90,
+          "frames": 129,
           "dropped": 0,
-          "advance": 1.1754310000000032,
-          "newFrames": 30
+          "advance": 1.1434810000000013,
+          "newFrames": 28
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-02-m01/preview.mp4",
-          "time": 1.98736,
+          "time": 2.501293,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 54,
+          "frames": 71,
           "dropped": 0,
-          "advance": 1.1767990000000026,
-          "newFrames": 30
+          "advance": 1.1432700000000011,
+          "newFrames": 29
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-fonts-m03/preview.mp4",
-          "time": 1.006824,
+          "time": 0.177836,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 29,
-          "dropped": 1,
-          "advance": 1.1767800000000008,
-          "newFrames": 30
+          "frames": 9,
+          "dropped": 0,
+          "advance": 1.1432390000000012,
+          "newFrames": 28
         }
       ]
     },
     {
-      "name": "gallery-2 visible video count",
+      "name": "gallery-3 visible video count",
+      "ok": true,
+      "data": [
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cafe-m01/preview.mp4",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/anime-01-hook-demons/preview.mp4",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-02-m01/preview.mp4",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-fonts-m03/preview.mp4",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/auto-01-hook-mileage/preview.mp4"
+      ]
+    },
+    {
+      "name": "gallery-3 every player advances",
+      "ok": true,
+      "data": [
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cafe-m01/preview.mp4",
+          "time": 9.401626,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 243,
+          "dropped": 0,
+          "advance": 1.0837690000000038,
+          "newFrames": 28
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/anime-01-hook-demons/preview.mp4",
+          "time": 7.108054,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 186,
+          "dropped": 0,
+          "advance": 1.085638000000003,
+          "newFrames": 28
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-02-m01/preview.mp4",
+          "time": 4.80512,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 129,
+          "dropped": 0,
+          "advance": 1.085645999999997,
+          "newFrames": 27
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-fonts-m03/preview.mp4",
+          "time": 2.481652,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 67,
+          "dropped": 0,
+          "advance": 1.0837659999999971,
+          "newFrames": 27
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/auto-01-hook-mileage/preview.mp4",
+          "time": 0.182263,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 9,
+          "dropped": 0,
+          "advance": 1.085529000000001,
+          "newFrames": 28
+        }
+      ]
+    },
+    {
+      "name": "gallery-4 visible video count",
+      "ok": true,
+      "data": [
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/anime-01-hook-demons/preview.mp4",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-02-m01/preview.mp4",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-fonts-m03/preview.mp4",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/auto-01-hook-mileage/preview.mp4",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-01-m05/preview.mp4"
+      ]
+    },
+    {
+      "name": "gallery-4 every player advances",
+      "ok": true,
+      "data": [
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/anime-01-hook-demons/preview.mp4",
+          "time": 9.45505,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 245,
+          "dropped": 0,
+          "advance": 1.1356070000000003,
+          "newFrames": 29
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-02-m01/preview.mp4",
+          "time": 7.154504,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 188,
+          "dropped": 0,
+          "advance": 1.133220999999999,
+          "newFrames": 28
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-fonts-m03/preview.mp4",
+          "time": 4.831031,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 126,
+          "dropped": 0,
+          "advance": 1.1332370000000012,
+          "newFrames": 28
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/auto-01-hook-mileage/preview.mp4",
+          "time": 2.531595,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 68,
+          "dropped": 0,
+          "advance": 1.133301000000003,
+          "newFrames": 29
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-01-m05/preview.mp4",
+          "time": 0.191007,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 14,
+          "dropped": 0,
+          "advance": 1.132907000000003,
+          "newFrames": 28
+        }
+      ]
+    },
+    {
+      "name": "gallery-5 visible video count",
       "ok": true,
       "data": [
         "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-02-m01/preview.mp4",
@@ -1443,153 +3106,142 @@
       ]
     },
     {
-      "name": "gallery-2 every player advances",
+      "name": "gallery-5 every player advances",
       "ok": true,
       "data": [
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-02-m01/preview.mp4",
-          "time": 4.685521,
+          "time": 9.449875,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 121,
+          "frames": 245,
           "dropped": 0,
-          "advance": 1.0883930000000035,
+          "advance": 1.1135370000000009,
           "newFrames": 28
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-fonts-m03/preview.mp4",
-          "time": 3.704978,
+          "time": 7.126416,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 97,
-          "dropped": 1,
-          "advance": 1.0883830000000003,
+          "frames": 182,
+          "dropped": 0,
+          "advance": 1.113551000000001,
+          "newFrames": 29
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/auto-01-hook-mileage/preview.mp4",
+          "time": 4.827064,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 125,
+          "dropped": 0,
+          "advance": 1.1135599999999997,
+          "newFrames": 28
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-01-m05/preview.mp4",
+          "time": 2.486384,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 71,
+          "dropped": 0,
+          "advance": 1.1135749999999973,
+          "newFrames": 28
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-marketing-m02/preview.mp4",
+          "time": 0.185913,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 14,
+          "dropped": 0,
+          "advance": 1.113554999999998,
+          "newFrames": 27
+        }
+      ]
+    },
+    {
+      "name": "gallery-6 visible video count",
+      "ok": true,
+      "data": [
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-fonts-m03/preview.mp4",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/auto-01-hook-mileage/preview.mp4",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-01-m05/preview.mp4",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-marketing-m02/preview.mp4",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cg-m02/preview.mp4"
+      ]
+    },
+    {
+      "name": "gallery-6 every player advances",
+      "ok": true,
+      "data": [
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-fonts-m03/preview.mp4",
+          "time": 9.408344,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 240,
+          "dropped": 0,
+          "advance": 1.1124170000000007,
           "newFrames": 27
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/auto-01-hook-mileage/preview.mp4",
-          "time": 2.149701,
+          "time": 7.108991,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 58,
-          "dropped": 1,
-          "advance": 1.0883859999999999,
+          "frames": 182,
+          "dropped": 0,
+          "advance": 1.1125370000000032,
           "newFrames": 28
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-01-m05/preview.mp4",
-          "time": 1.198129,
+          "time": 4.768293,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 34,
+          "frames": 128,
           "dropped": 0,
-          "advance": 1.0883859999999999,
-          "newFrames": 28
+          "advance": 1.1124689999999973,
+          "newFrames": 27
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-marketing-m02/preview.mp4",
-          "time": 0.991725,
+          "time": 2.466782,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 29,
-          "dropped": 1,
-          "advance": 1.0883839999999978,
-          "newFrames": 28
-        }
-      ]
-    },
-    {
-      "name": "gallery-3 visible video count",
-      "ok": true,
-      "data": [
-        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-01-m05/preview.mp4",
-        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-marketing-m02/preview.mp4",
-        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cg-m02/preview.mp4",
-        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-03-m01/preview.mp4",
-        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-startup-m02/preview.mp4"
-      ]
-    },
-    {
-      "name": "gallery-3 every player advances",
-      "ok": true,
-      "data": [
-        {
-          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-01-m05/preview.mp4",
-          "time": 3.698962,
-          "paused": false,
-          "ready": 4,
-          "waiting": false,
-          "frames": 97,
+          "frames": 70,
           "dropped": 0,
-          "advance": 1.1850349999999992,
-          "newFrames": 30
-        },
-        {
-          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-marketing-m02/preview.mp4",
-          "time": 3.492581,
-          "paused": false,
-          "ready": 4,
-          "waiting": false,
-          "frames": 92,
-          "dropped": 1,
-          "advance": 1.185099000000001,
-          "newFrames": 30
+          "advance": 1.1136570000000034,
+          "newFrames": 28
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cg-m02/preview.mp4",
-          "time": 2.053394,
+          "time": 2.442447,
           "paused": false,
           "ready": 4,
           "waiting": false,
-          "frames": 60,
-          "dropped": 1,
-          "advance": 1.1851070000000021,
-          "newFrames": 30
-        },
-        {
-          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-03-m01/preview.mp4",
-          "time": 3.225417,
-          "paused": false,
-          "ready": 4,
-          "waiting": false,
-          "frames": 85,
+          "frames": 70,
           "dropped": 0,
-          "advance": 1.1847739999999973,
-          "newFrames": 30
-        },
-        {
-          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-startup-m02/preview.mp4",
-          "time": 5.365885,
-          "paused": false,
-          "ready": 4,
-          "waiting": false,
-          "frames": 138,
-          "dropped": 0,
-          "advance": 1.185065999999999,
-          "newFrames": 30
+          "advance": 1.112530999999997,
+          "newFrames": 28
         }
       ]
     },
     {
-      "name": "Drum uses flat video surfaces",
-      "ok": true
-    },
-    {
-      "name": "All twelve gallery clips were actually seen moving",
+      "name": "gallery-7 visible video count",
       "ok": true,
       "data": [
-        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-hr-m01/preview.mp4",
-        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/examples/full-stream-02-m03/preview.mp4",
-        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cafe-m01/preview.mp4",
-        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/anime-01-hook-demons/preview.mp4",
-        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-startup-m02/preview.mp4",
-        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-02-m01/preview.mp4",
-        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-fonts-m03/preview.mp4",
         "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/auto-01-hook-mileage/preview.mp4",
         "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-01-m05/preview.mp4",
         "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-marketing-m02/preview.mp4",
@@ -1598,7 +3250,381 @@
       ]
     },
     {
-      "name": "Drum is wider: edge poster cards on both sides",
+      "name": "gallery-7 every player advances",
+      "ok": true,
+      "data": [
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/auto-01-hook-mileage/preview.mp4",
+          "time": 9.384806,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 239,
+          "dropped": 0,
+          "advance": 1.1270719999999983,
+          "newFrames": 28
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-01-m05/preview.mp4",
+          "time": 7.043352,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 185,
+          "dropped": 0,
+          "advance": 1.1285170000000022,
+          "newFrames": 28
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-marketing-m02/preview.mp4",
+          "time": 4.743345,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 127,
+          "dropped": 0,
+          "advance": 1.1285189999999972,
+          "newFrames": 28
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cg-m02/preview.mp4",
+          "time": 4.718203,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 127,
+          "dropped": 0,
+          "advance": 1.128452000000003,
+          "newFrames": 28
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-03-m01/preview.mp4",
+          "time": 4.71781,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 126,
+          "dropped": 0,
+          "advance": 1.1283829999999995,
+          "newFrames": 28
+        }
+      ]
+    },
+    {
+      "name": "gallery-8 visible video count",
+      "ok": true,
+      "data": [
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-hr-m01/preview.mp4",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-01-m05/preview.mp4",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-marketing-m02/preview.mp4",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cg-m02/preview.mp4",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-03-m01/preview.mp4"
+      ]
+    },
+    {
+      "name": "gallery-8 every player advances",
+      "ok": true,
+      "data": [
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-hr-m01/preview.mp4",
+          "time": 7.118158,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 187,
+          "dropped": 0,
+          "advance": 1.1730809999999963,
+          "newFrames": 29
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-01-m05/preview.mp4",
+          "time": 9.437151,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 245,
+          "dropped": 0,
+          "advance": 1.173174000000003,
+          "newFrames": 29
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-marketing-m02/preview.mp4",
+          "time": 7.136727,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 187,
+          "dropped": 0,
+          "advance": 1.1731789999999975,
+          "newFrames": 29
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cg-m02/preview.mp4",
+          "time": 7.111149,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 187,
+          "dropped": 0,
+          "advance": 1.172356999999998,
+          "newFrames": 29
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-03-m01/preview.mp4",
+          "time": 7.11086,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 186,
+          "dropped": 0,
+          "advance": 1.1726400000000012,
+          "newFrames": 29
+        }
+      ]
+    },
+    {
+      "name": "gallery-9 visible video count",
+      "ok": true,
+      "data": [
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-hr-m01/preview.mp4",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/examples/full-stream-02-m03/preview.mp4",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-marketing-m02/preview.mp4",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cg-m02/preview.mp4",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-03-m01/preview.mp4"
+      ]
+    },
+    {
+      "name": "gallery-9 every player advances",
+      "ok": true,
+      "data": [
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-hr-m01/preview.mp4",
+          "time": 9.452116,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 245,
+          "dropped": 0,
+          "advance": 1.0857779999999977,
+          "newFrames": 28
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/examples/full-stream-02-m03/preview.mp4",
+          "time": 9.432484,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 244,
+          "dropped": 0,
+          "advance": 1.085794,
+          "newFrames": 28
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-marketing-m02/preview.mp4",
+          "time": 9.470745,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 245,
+          "dropped": 0,
+          "advance": 1.0857460000000003,
+          "newFrames": 28
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cg-m02/preview.mp4",
+          "time": 9.445376,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 245,
+          "dropped": 0,
+          "advance": 1.0857370000000017,
+          "newFrames": 28
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-03-m01/preview.mp4",
+          "time": 9.444898,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 244,
+          "dropped": 0,
+          "advance": 1.0857349999999997,
+          "newFrames": 28
+        }
+      ]
+    },
+    {
+      "name": "gallery-10 visible video count",
+      "ok": true,
+      "data": [
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-hr-m01/preview.mp4",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/examples/full-stream-02-m03/preview.mp4",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cafe-m01/preview.mp4",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cg-m02/preview.mp4",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-03-m01/preview.mp4"
+      ]
+    },
+    {
+      "name": "gallery-10 every player advances",
+      "ok": true,
+      "data": [
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-hr-m01/preview.mp4",
+          "time": 11.701669,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 302,
+          "dropped": 0,
+          "advance": 1.103276000000001,
+          "newFrames": 27
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/examples/full-stream-02-m03/preview.mp4",
+          "time": 11.682009,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 301,
+          "dropped": 0,
+          "advance": 1.1033660000000012,
+          "newFrames": 28
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cafe-m01/preview.mp4",
+          "time": 11.72173,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 302,
+          "dropped": 0,
+          "advance": 1.1032699999999949,
+          "newFrames": 27
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cg-m02/preview.mp4",
+          "time": 11.694898,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 302,
+          "dropped": 0,
+          "advance": 1.1027449999999988,
+          "newFrames": 27
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-03-m01/preview.mp4",
+          "time": 11.694391,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 301,
+          "dropped": 0,
+          "advance": 1.1032450000000011,
+          "newFrames": 28
+        }
+      ]
+    },
+    {
+      "name": "gallery-11 visible video count",
+      "ok": true,
+      "data": [
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-hr-m01/preview.mp4",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/examples/full-stream-02-m03/preview.mp4",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cafe-m01/preview.mp4",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/anime-01-hook-demons/preview.mp4",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-03-m01/preview.mp4"
+      ]
+    },
+    {
+      "name": "gallery-11 every player advances",
+      "ok": true,
+      "data": [
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-hr-m01/preview.mp4",
+          "time": 13.969511,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 358,
+          "dropped": 0,
+          "advance": 1.1542249999999967,
+          "newFrames": 29
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/examples/full-stream-02-m03/preview.mp4",
+          "time": 13.949811,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 358,
+          "dropped": 0,
+          "advance": 1.1539539999999988,
+          "newFrames": 28
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cafe-m01/preview.mp4",
+          "time": 13.989716,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 358,
+          "dropped": 0,
+          "advance": 1.154038,
+          "newFrames": 29
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/anime-01-hook-demons/preview.mp4",
+          "time": 11.688865,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 301,
+          "dropped": 0,
+          "advance": 1.1543869999999998,
+          "newFrames": 29
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-03-m01/preview.mp4",
+          "time": 13.962324,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 358,
+          "dropped": 0,
+          "advance": 1.1543160000000015,
+          "newFrames": 28
+        }
+      ]
+    },
+    {
+      "name": "Drum uses flat video surfaces",
+      "ok": true
+    },
+    {
+      "name": "All eleven gallery clips were actually seen moving",
+      "ok": true,
+      "data": [
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-hr-m01/preview.mp4",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/examples/full-stream-02-m03/preview.mp4",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cafe-m01/preview.mp4",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/anime-01-hook-demons/preview.mp4",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-03-m01/preview.mp4",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-02-m01/preview.mp4",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-fonts-m03/preview.mp4",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/auto-01-hook-mileage/preview.mp4",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-01-m05/preview.mp4",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-marketing-m02/preview.mp4",
+        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cg-m02/preview.mp4"
+      ]
+    },
+    {
+      "name": "Drum is wider: faded edge poster cards on both sides",
+      "ok": true
+    },
+    {
+      "name": "Only the active long recording is shown",
       "ok": true
     },
     {
@@ -1640,58 +3666,58 @@
       "data": [
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-02-m01/preview.mp4",
-          "time": 0.939473,
+          "time": 0.92929,
           "paused": false,
           "ready": 4,
           "waiting": false,
           "frames": 32,
           "dropped": 9,
-          "advance": 1.1473629999999986,
-          "newFrames": 29
+          "advance": 1.0946730000000002,
+          "newFrames": 27
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-02-m02/preview.mp4",
-          "time": 0.938999,
+          "time": 0.929287,
           "paused": false,
           "ready": 4,
           "waiting": false,
           "frames": 32,
           "dropped": 10,
-          "advance": 1.147283999999999,
-          "newFrames": 29
+          "advance": 1.0947379999999995,
+          "newFrames": 27
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/examples/full-audience-02-m03/preview.mp4",
-          "time": 0.939031,
+          "time": 0.927971,
           "paused": false,
           "ready": 4,
           "waiting": false,
           "frames": 32,
           "dropped": 11,
-          "advance": 1.1474040000000016,
-          "newFrames": 29
+          "advance": 1.0947919999999982,
+          "newFrames": 27
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-02-m04/preview.mp4",
-          "time": 0.939026,
+          "time": 0.927969,
           "paused": false,
           "ready": 4,
           "waiting": false,
           "frames": 32,
           "dropped": 12,
-          "advance": 1.1474059999999966,
-          "newFrames": 29
+          "advance": 1.0947869999999966,
+          "newFrames": 27
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/examples/full-audience-02-m05/preview.mp4",
-          "time": 0.939023,
+          "time": 0.927781,
           "paused": false,
           "ready": 4,
           "waiting": false,
           "frames": 32,
-          "dropped": 14,
-          "advance": 1.147280000000002,
-          "newFrames": 29
+          "dropped": 13,
+          "advance": 1.0948220000000006,
+          "newFrames": 27
         }
       ]
     },
@@ -1726,35 +3752,35 @@
       "data": [
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cafe-m01/preview.mp4",
-          "time": 0.931375,
+          "time": 0.932509,
           "paused": false,
           "ready": 4,
           "waiting": false,
           "frames": 32,
           "dropped": 10,
-          "advance": 1.0107459999999975,
+          "advance": 0.9936000000000007,
           "newFrames": 25
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/examples/full-biz-cafe-m02/preview.mp4",
-          "time": 0.931371,
+          "time": 0.932034,
           "paused": false,
           "ready": 4,
           "waiting": false,
           "frames": 32,
           "dropped": 11,
-          "advance": 1.0107459999999975,
+          "advance": 0.9940679999999986,
           "newFrames": 25
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cafe-m03/preview.mp4",
-          "time": 0.930695,
+          "time": 0.932033,
           "paused": false,
           "ready": 4,
           "waiting": false,
           "frames": 32,
           "dropped": 12,
-          "advance": 1.0114189999999965,
+          "advance": 0.9940670000000011,
           "newFrames": 25
         }
       ]
@@ -1790,36 +3816,36 @@
       "data": [
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-hr-m01/preview.mp4",
-          "time": 0.930412,
+          "time": 0.949829,
           "paused": false,
           "ready": 4,
           "waiting": false,
           "frames": 28,
-          "dropped": 11,
-          "advance": 1.0634739999999994,
-          "newFrames": 27
+          "dropped": 10,
+          "advance": 1.0263709999999975,
+          "newFrames": 26
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/examples/full-biz-hr-m02/preview.mp4",
-          "time": 0.930412,
+          "time": 0.94982,
           "paused": false,
           "ready": 4,
           "waiting": false,
           "frames": 28,
           "dropped": 11,
-          "advance": 1.0634719999999973,
-          "newFrames": 27
+          "advance": 1.0263530000000003,
+          "newFrames": 26
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-hr-m03/preview.mp4",
-          "time": 0.929867,
+          "time": 0.949817,
           "paused": false,
           "ready": 4,
           "waiting": false,
           "frames": 28,
-          "dropped": 13,
-          "advance": 1.0635800000000017,
-          "newFrames": 27
+          "dropped": 12,
+          "advance": 1.0263539999999978,
+          "newFrames": 26
         }
       ]
     },
@@ -1840,58 +3866,58 @@
       "data": [
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-02-m01/preview.mp4",
-          "time": 0.929587,
+          "time": 0.928082,
           "paused": false,
           "ready": 4,
           "waiting": false,
           "frames": 32,
           "dropped": 10,
-          "advance": 0.9431709999999995,
-          "newFrames": 23
+          "advance": 0.9533380000000022,
+          "newFrames": 24
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-02-m02/preview.mp4",
-          "time": 0.929076,
-          "paused": false,
-          "ready": 4,
-          "waiting": false,
-          "frames": 32,
-          "dropped": 10,
-          "advance": 0.9431080000000023,
-          "newFrames": 23
-        },
-        {
-          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/examples/full-audience-02-m03/preview.mp4",
-          "time": 0.926701,
+          "time": 0.928095,
           "paused": false,
           "ready": 4,
           "waiting": false,
           "frames": 32,
           "dropped": 11,
-          "advance": 0.942298000000001,
-          "newFrames": 23
+          "advance": 0.9533210000000025,
+          "newFrames": 24
+        },
+        {
+          "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/examples/full-audience-02-m03/preview.mp4",
+          "time": 0.927791,
+          "paused": false,
+          "ready": 4,
+          "waiting": false,
+          "frames": 32,
+          "dropped": 11,
+          "advance": 0.9530249999999967,
+          "newFrames": 24
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-02-m04/preview.mp4",
-          "time": 0.926697,
+          "time": 0.927774,
           "paused": false,
           "ready": 4,
           "waiting": false,
           "frames": 32,
           "dropped": 12,
-          "advance": 0.942298000000001,
-          "newFrames": 23
+          "advance": 0.9530370000000019,
+          "newFrames": 24
         },
         {
           "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/examples/full-audience-02-m05/preview.mp4",
-          "time": 0.926681,
+          "time": 0.927652,
           "paused": false,
           "ready": 4,
           "waiting": false,
           "frames": 32,
-          "dropped": 13,
-          "advance": 0.9423140000000032,
-          "newFrames": 23
+          "dropped": 14,
+          "advance": 0.953158000000002,
+          "newFrames": 24
         }
       ]
     },

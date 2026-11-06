@@ -11,21 +11,21 @@
           {
             "ready": 4,
             "paused": false,
-            "time": 6.012872,
+            "time": 6.025719,
             "w": 360,
             "h": 640
           },
           {
             "ready": 4,
             "paused": false,
-            "time": 6.012867,
+            "time": 6.023227,
             "w": 360,
             "h": 640
           },
           {
             "ready": 4,
             "paused": false,
-            "time": 6.012863,
+            "time": 6.023223,
             "w": 360,
             "h": 640
           }
@@ -70,66 +70,45 @@
       ]
     },
     {
-      "name": "Twelve source recordings",
+      "name": "Drum: eleven sources, no controls, startup close-up removed",
+      "ok": true,
+      "details": {
+        "posters": [
+          "full-biz-hr-m01",
+          "full-stream-02-m03",
+          "full-biz-cafe-m01",
+          "anime-01-hook-demons",
+          "full-audience-02-m01",
+          "full-biz-fonts-m03",
+          "auto-01-hook-mileage",
+          "full-audience-01-m05",
+          "full-biz-marketing-m02",
+          "full-biz-cg-m02",
+          "full-audience-03-m01"
+        ],
+        "controls": 0,
+        "pointer": "none"
+      }
+    },
+    {
+      "name": "Drum keeps turning by itself after clicks",
       "ok": true,
       "details": [
-        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-hr-m01/poster.jpg",
-        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/examples/full-stream-02-m03/poster.jpg",
-        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cafe-m01/poster.jpg",
-        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/anime-01-hook-demons/poster.jpg",
-        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-02-m01/poster.jpg",
-        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-fonts-m03/poster.jpg",
-        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/auto-01-hook-mileage/poster.jpg",
-        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-01-m05/poster.jpg",
-        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-marketing-m02/poster.jpg",
-        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-cg-m02/poster.jpg",
-        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-audience-03-m01/poster.jpg",
-        "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/full-biz-startup-m02/poster.jpg"
+        "0",
+        "1",
+        "2",
+        "3"
       ]
     },
     {
-      "name": "Genre Стрим",
-      "ok": true
-    },
-    {
-      "name": "Full clip Стрим",
+      "name": "Drum turn is a continuous arc (no reversals or jumps)",
       "ok": true,
       "details": {
-        "open": true,
-        "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/assets/examples/full-stream-02-m03/final.mp4",
-        "muted": false,
-        "controls": true,
-        "ready": 4,
-        "previewsPaused": true
+        "frames": 79,
+        "moved": 219,
+        "back": 0,
+        "jumps": 0
       }
-    },
-    {
-      "name": "Close preserves manual pause",
-      "ok": true
-    },
-    {
-      "name": "Genre Аниме",
-      "ok": true
-    },
-    {
-      "name": "Full clip Аниме",
-      "ok": true,
-      "details": {
-        "open": true,
-        "src": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/media/examples/anime-01-hook-demons/final.mp4",
-        "muted": false,
-        "controls": true,
-        "ready": 4,
-        "previewsPaused": true
-      }
-    },
-    {
-      "name": "Close preserves manual pause",
-      "ok": true
-    },
-    {
-      "name": "Close resumes automatic drum",
-      "ok": true
     },
     {
       "name": "Offscreen videos pause",
@@ -140,6 +119,14 @@
       "ok": true,
       "details": {
         "moved": 0
+      }
+    },
+    {
+      "name": "Pain strike repeats while visible (cycle under 8 s)",
+      "ok": true,
+      "details": {
+        "wraps": 2,
+        "cycle": 7.55
       }
     },
     {

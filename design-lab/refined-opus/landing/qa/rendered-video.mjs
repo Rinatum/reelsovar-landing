@@ -15,19 +15,20 @@ try{
  await p.setViewportSize({width:1440,height:960});await p.goto(root+'?rendered-qa=6',{waitUntil:'domcontentloaded'});await p.evaluate(()=>window.__qaOwner='rendered-video-v6');
  await p.waitForFunction(()=>document.querySelector('#cut').dataset.phase==='clips');await p.evaluate(()=>{gsap.getById('cut').pause()});await sample('hero','.slice video',3);
  check('Hero uses wide three-person recording',(await p.locator('.cut-src').getAttribute('src')).includes('hero-wide.mp4'));
- await p.locator('#examples').scrollIntoViewIfNeeded();await p.waitForFunction(()=>document.querySelectorAll('.drum-item').length===12);await p.waitForTimeout(1300);
- // A user turn postpones autoplay so screenshots measure video, not card travel.
- for(let group=0;group<4;group++){
-  const target=group*3;
-  while(+(await p.locator('#drum').getAttribute('data-front'))!==target){const from=await p.locator('#drum').getAttribute('data-front');await p.locator('[data-drum="1"]').click();await p.waitForFunction(from=>document.querySelector('#drum').dataset.front!==from,from)}
-  // Clicking to the current target again would open a dialog; the next/prev pair only resets the autoplay dwell.
-  const from=await p.locator('#drum').getAttribute('data-front');await p.locator('[data-drum="1"]').click();await p.waitForFunction(from=>document.querySelector('#drum').dataset.front!==from,from);const next=await p.locator('#drum').getAttribute('data-front');await p.locator('[data-drum="-1"]').click();await p.waitForFunction(from=>document.querySelector('#drum').dataset.front!==from,next);
-  await p.waitForTimeout(650);await sample('gallery-'+group,'.drum-item video',5);
+ // Steps on desktop: footage plays in steps 1, 3 and 4 (not only the last one).
+ await p.locator('#how').scrollIntoViewIfNeeded();await p.waitForFunction(()=>document.querySelector('#how-scene').dataset.initialized==='true',null,{polling:200});await p.waitForTimeout(2500);await sample('how-desktop','#how-scene video',4);
+ check('Steps 1, 3 and 4 each have live footage',await p.evaluate(()=>[0,2,3].every(i=>[...document.querySelectorAll('.station')[i].querySelectorAll('video')].some(v=>!v.paused))));
+ await p.locator('#examples').scrollIntoViewIfNeeded();await p.waitForFunction(()=>document.querySelectorAll('.drum-item').length===11,null,{polling:200});await p.waitForTimeout(1300);
+ // The drum turns by itself; sample during each rest between turns until every clip was seen moving.
+ for(let n=0;n<12;n++){
+  const from=await p.locator('#drum').getAttribute('data-front');await p.waitForFunction(from=>document.querySelector('#drum').dataset.front!==from,from,{polling:100,timeout:8000});
+  await p.waitForTimeout(150);await p.evaluate(()=>{});await sample('gallery-'+n,'.drum-item:not(.is-edge) video',5);
  }
  check('Drum uses flat video surfaces',await p.evaluate(()=>getComputedStyle(document.querySelector('.drum-ring')).transformStyle==='flat'));
- const galleryIds=new Set(report.samples.filter(x=>x.name.startsWith('gallery')).flatMap(x=>x.before.map(v=>v.src)));check('All twelve gallery clips were actually seen moving',galleryIds.size===12,[...galleryIds]);
- check('Drum is wider: edge poster cards on both sides',await p.evaluate(()=>{const g=[...document.querySelectorAll('.drum-item.is-ghost')],st=document.querySelector('#drum').getBoundingClientRect();return g.length===2&&g.every(e=>{const r=e.getBoundingClientRect();return r.left>=st.left-1&&r.right<=st.right+1})}));
+ const galleryIds=new Set(report.samples.filter(x=>x.name.startsWith('gallery')).flatMap(x=>x.before.map(v=>v.src)));check('All eleven gallery clips were actually seen moving',galleryIds.size===11,[...galleryIds]);
+ check('Drum is wider: faded edge poster cards on both sides',await p.evaluate(()=>{const g=[...document.querySelectorAll('.drum-item.is-edge')].filter(e=>e.style.visibility==='visible'&&+e.style.opacity>.05),st=document.querySelector('#drum').getBoundingClientRect();return g.length>=2&&g.every(e=>{const r=e.getBoundingClientRect();return r.left>=st.left-1&&r.right<=st.right+1})}));
  await p.locator('#rf').scrollIntoViewIfNeeded();await p.waitForFunction(()=>document.querySelectorAll('.pipe-deck').length===3);
+ check('Only the active long recording is shown',await p.evaluate(()=>[...document.querySelectorAll('.pipe-origin')].filter(e=>getComputedStyle(e).visibility==='visible').length===1));
  check('No source switcher or genre labels',await p.evaluate(()=>!document.querySelector('.pipe-switcher,[data-pipeline]')&&![...document.querySelectorAll('.pipe-meta span')].some(e=>/Бизнес|Подкаст|Интервью/.test(e.textContent))));
  // Automatic source rotation: each recording shows its own real results, as many as exist.
  const expect={'audience-02':['full-audience-02-m01','full-audience-02-m02','full-audience-02-m03','full-audience-02-m04','full-audience-02-m05'],'biz-cafe':['full-biz-cafe-m01','full-biz-cafe-m02','full-biz-cafe-m03'],'biz-hr':['full-biz-hr-m01','full-biz-hr-m02','full-biz-hr-m03']};
