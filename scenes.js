@@ -288,15 +288,16 @@
     const st = $('#how-scene'), stations = $$('.station', st), track = $('.how-track', st), fill = $('.ht-fill', st), token = $('.ht-token', st);
     const url = $('.mu-text', st), rec = $('.mini-rec', st), count = $('.mc-n', st);
     const rows = $$('.mrow', st), sel = $('.ms-n', st), frameBox = $('.st-frame', st), tall = $('.mf-tall', st);
-    const vids = $$('.md-clip video', st), chips = $$('.md-platforms li', st);
+    const vids = $$('video', st), chips = $$('.md-platforms li', st);
+    const vidStation = v => stations.indexOf(v.closest('.station'));
     const URL = 'youtube.com/watch?v=np2Az44NJMY', STEP = 2.85;
     // На телефоне шаги идут столбиком: каждый проигрывается, когда посетитель до него доскроллил.
     const vertical = () => mobile();
     let tl, state, xs = [], segs = [], lastVertical = null;
-    const seen = stations.map(() => false);
+    const stationLive = stations.map(() => false);
     const stepButtons = $$('[data-step]', st);
     const syncVideos = () => vids.forEach(v => {
-      const on = state?.running() && (vertical() ? seen[3] : (+st.dataset.step === 3 || !mobile()));
+      const on = state?.running() && (vertical() ? stationLive[vidStation(v)] : true);
       if (on) play(v); else v.pause();
     });
     const activate = i => {
@@ -369,8 +370,8 @@
     const stationView = stations.map(() => false);
     const watcher = new IntersectionObserver(entries => entries.forEach(e => {
       const i = stations.indexOf(e.target), inView = e.isIntersecting && e.intersectionRatio >= .55;
-      if (inView && !stationView[i]) { seen[i] = true; playStation(i); }
-      if (i === 3) seen[3] = e.isIntersecting && e.intersectionRatio >= .25;
+      if (inView && !stationView[i]) playStation(i);
+      stationLive[i] = e.isIntersecting && e.intersectionRatio >= .25;
       stationView[i] = inView; syncVideos();
     }), { threshold: [0, .25, .55, .8] });
     stations.forEach(s => watcher.observe(s));
@@ -403,10 +404,12 @@
     const clipsWord=n=>{const a=n%10,b=n%100;return a===1&&b!==11?'готовый клип':a>=2&&a<=4&&(b<12||b>14)?'готовых клипа':'готовых клипов'};
     let current=0, tl, state, revision=0;
     function warm(i){load(sources[i]);videos[i].forEach(load)}
+    // Следующая запись и её клипы грузятся заранее, ещё во время текущей: смена без ожиданий и рывков.
     function pauseAll(){all.forEach(v=>v.pause())}
     function paintQueue(){
-      origins.forEach((e,i)=>{const active=i===current,side=((i-current+N)%N)===1?1:-1;
-        gsap.set(e,{xPercent:-50,x:active?0:side*st.clientWidth*.17,y:active?0:-28,scale:active?1:.72,rotation:active?0:side*7,opacity:active?1:.38,zIndex:active?3:1});
+      // Видна только текущая запись; соседние в очереди не показываются.
+      origins.forEach((e,i)=>{const active=i===current;
+        gsap.set(e,{xPercent:-50,x:0,rotation:0,zIndex:active?3:1,visibility:active?'visible':'hidden'});
       });
       decks.forEach((e,i)=>e.classList.toggle('is-active',i===current));
       st.dataset.group=current; st.dataset.source=origins[current].dataset.sourceId; st.dataset.count=cards[current].length;
@@ -426,12 +429,6 @@
       });
       paintQueue();
     }
-    async function gate(){
-      if(reduced||!state?.running())return;
-      const token=++revision,group=current;tl.pause();st.dataset.phase='buffering';label.textContent='Находим моменты';
-      const ready=await liveTogether(videos[group],()=>token===revision&&group===current&&state.running());
-      if(ready){st.dataset.phase='processing';tl.resume()}
-    }
     function build(){
       tl?.kill();layout();gsap.set(cards.flat(),{opacity:0,y:0,scale:1,rotation:0});
       gsap.set(cursor,{opacity:0});gsap.set(meter,{scaleX:0});label.textContent='Нарезать запись';
@@ -444,10 +441,9 @@
       tl.call(()=>{label.textContent='Находим моменты';if(state?.running())videos[current].forEach(play)},null,.95)
         .to(meter,{scaleX:1,duration:.65,ease:'power2.inOut'},.95)
         .to(cursor,{opacity:0,duration:.16},1.05)
-        .call(gate,null,1.4)
         .call(()=>{st.dataset.phase='results';label.textContent=`${n} ${clipsWord(n)}`;sources[current].pause()},null,1.55)
         .fromTo(active,{y:-60,scale:.72,opacity:0,rotation:0},{y:0,scale:1,opacity:1,rotation:(i,e)=>+e.dataset.fan,duration:.6,stagger:.045,ease:'power3.out',immediateRender:false},1.55)
-        .call(()=>{if(!reduced)warm((current+1)%N)},null,2.2)
+        .call(()=>{if(!reduced)warm((current+1)%N)},null,.6)
         .to({}, {duration:2.15+(n-3)*.25},2.2);
       const out=4.35+(n-3)*.25;
       tl.call(()=>{st.dataset.phase='return'},null,out)
@@ -466,7 +462,7 @@
     }
     state=loopScene(st,'rf',{
       warm(){warm(current)},prime(){if(tl.time()<1.55)play(sources[current])},
-      play(){if(st.dataset.phase==='buffering'){gate();return}if(tl.progress()===1){select((current+1)%N);return}tl.resume();if(tl.time()<1.55)play(sources[current]);if(tl.time()>.95&&tl.time()<+st.dataset.out)videos[current].forEach(play)},
+      play(){if(tl.progress()===1){select((current+1)%N);return}tl.resume();if(tl.time()<1.55)play(sources[current]);if(tl.time()>.95&&tl.time()<+st.dataset.out)videos[current].forEach(play)},
       pause(){revision++;tl.pause();pauseAll()}
     },true);
     select(0);
@@ -491,9 +487,8 @@
     state = loopScene(st, 'layers', { play() { if (tl.progress() === 1) tl.restart(); else tl.resume(); }, pause() { tl.pause(); } });
   });
 
-  /* ── 3. Барабан: все видимые клипы играют, рядом всегда разные люди ── */
+  /* ── 3. Барабан: сам крутится, без управления; карточки идут по дуге, а не по прямой ── */
   deferScene('#drum', function drum() {
-    // Разные записи; каждый видимый ролик воспроизводится, входящий готовится до поворота.
     const CLIPS = [
       ['full-biz-hr-m01', 'Офис заправлял машины до утра', 'Интервью'],
       ['full-stream-02-m03', 'Зритель включил другого стримера', 'Стрим', 'assets/examples'],
@@ -506,87 +501,62 @@
       ['full-biz-marketing-m02', 'Клиент не может сниматься: «Я зубы делаю»', 'Маркетинг'],
       ['full-biz-cg-m02', 'Знакомство привело к совместным проектам', 'CG'],
       ['full-audience-03-m01', 'Чем «сдаться» отличается от «опустить руки»', 'Интервью'],
-      ['full-biz-startup-m02', 'Почему отказался от миллиона рублей за 20%', 'Стартапы'],
-    ];    const st = $('#drum'), ring = $('.drum-ring', st), cap = $('.drum-caption', st);
-    const N = CLIPS.length;
-    let k=0,targetK=0,turnRevision=0,timer,lastUser=0,moved=false,state,watchdog,cardWidth=190,settleTimer;
-    let activeArc=new Set(),warmingArc=new Set();
-    const front=()=>((k%N)+N)%N;
-    const items=CLIPS.map(([id,title,genre,base='media/examples'],i)=>{
-      const d=document.createElement('button');d.type='button';d.className='drum-item';d.setAttribute('aria-label',title);
-      d.innerHTML=`<video muted loop playsinline preload="none" poster="${base}/${id}/poster.jpg" data-src="${base}/${id}/preview.mp4"></video>`;
-      d.addEventListener('click',()=>{if(!moved){if(i===front())openClip();else turn(((i-front())%N+N+N/2)%N-N/2,true)}});
-      ring.appendChild(d);return d;
+    ];
+    const st = $('#drum'), ring = $('.drum-ring', st), cap = $('.drum-caption', st);
+    const N = CLIPS.length, TURN = .85, DWELL = 1.45;
+    const pos = { k: 0 };              // непрерывная позиция барабана; целые значения — остановки
+    let state, timer, tween, cardWidth = 190;
+    const items = CLIPS.map(([id, title, genre, base = 'media/examples']) => {
+      const d = document.createElement('div'); d.className = 'drum-item'; d.setAttribute('aria-hidden', 'true');
+      d.innerHTML = `<video muted loop playsinline preload="none" poster="${base}/${id}/poster.jpg" data-src="${base}/${id}/preview.mp4"></video>`;
+      ring.appendChild(d); return d;
     });
-    const vids=items.map(d=>$('video',d));vids.forEach(underlay);
-    const relative=(i,p)=>((i-p+N*1.5)%N)-N/2;
-    const dist=i=>Math.abs(relative(i,front()));
-    let warmed=false;
-    const preload=()=>{if(warmed)vids.forEach((v,i)=>{if(dist(i)<=(mobile()?1:2)+1)load(v)})};
-    function syncVideos(){vids.forEach((v,i)=>{if(state?.running()&&(activeArc.has(i)||warmingArc.has(i)))play(v);else v.pause()})}
-    // The cylinder is projected onto a flat plane. Video never lives on a culled 3-D backface.
-    // Шире размах: больший радиус и ещё по одной карточке-постеру с каждого края (без видео).
-    const ghost=i=>!mobile()&&dist(i)===3;
-    function paint(){
-      const span=st.clientWidth,R=mobile()?Math.min(cardWidth*1.75,span*.62):Math.min(cardWidth*2.45,span*.36);
-      items.forEach((d,i)=>{
-        if(!activeArc.has(i)&&!warmingArc.has(i)&&!ghost(i)){d.style.visibility='hidden';d.classList.remove('is-ghost');return}
-        const r=relative(i,k),angle=r*.47,depth=Math.cos(angle),scale=.72+.28*Math.max(0,depth);
-        d.style.transform=`translate(${Math.sin(angle)*R}px,${(1-depth)*22}px) scale(${Math.max(.2,depth)*scale},${scale})`;
-        d.style.opacity=String(warmingArc.has(i)&&!activeArc.has(i)?.015:ghost(i)&&!activeArc.has(i)?.42:Math.max(.1,1-Math.abs(r)*.1));d.style.zIndex=String(Math.round(depth*100));d.style.visibility='visible';
-        d.classList.toggle('is-ghost',ghost(i)&&!activeArc.has(i)&&!warmingArc.has(i));
+    const vids = items.map(d => $('video', d)); vids.forEach(underlay);
+    const rel = i => ((i - pos.k) % N + N * 1.5) % N - N / 2;           // −N/2 … N/2
+    const reach = () => mobile() ? { play: 1.6, show: 2.6 } : { play: 2.6, show: 3.6 };
+    // Каждую позицию считаем по углу цилиндра: x = sin, глубина = cos. Края плавно гаснут, ничего не «выскакивает».
+    function paint() {
+      const span = st.clientWidth, R = mobile() ? Math.min(cardWidth * 1.75, span * .62) : Math.min(cardWidth * 2.45, span * .36);
+      const { show } = reach();
+      items.forEach((d, i) => {
+        const r = rel(i), a = Math.abs(r);
+        if (a > show) { if (d.style.visibility !== 'hidden') d.style.visibility = 'hidden'; return; }
+        const angle = r * .47, depth = Math.cos(angle), scale = .72 + .28 * Math.max(0, depth);
+        const fade = Math.min(1, Math.max(0, show - a)) * Math.max(.18, 1 - a * .1);
+        d.style.transform = `translate3d(${(Math.sin(angle) * R).toFixed(1)}px,${((1 - depth) * 22).toFixed(1)}px,0) scale(${(Math.max(.2, depth) * scale).toFixed(4)},${scale.toFixed(4)})`;
+        d.style.opacity = fade.toFixed(3); d.style.zIndex = String(Math.round(depth * 100)); d.style.visibility = 'visible';
+        d.classList.toggle('is-front', a < .5);
+        d.classList.toggle('is-edge', a > reach().play);
       });
     }
-    function apply(moving=false){
-      const next=new Set(items.map((_,i)=>i).filter(i=>dist(i)<=(mobile()?1:2)));
-      activeArc=moving?new Set([...activeArc,...next]):next;clearTimeout(settleTimer);
-      items.forEach((d,i)=>{d.classList.toggle('is-front',i===front());d.tabIndex=i===front()?0:-1});
-      cap.textContent=CLIPS[front()][2]+' · '+CLIPS[front()][1];st.dataset.front=front();st.dataset.projection='flat';
-      preload();syncVideos();
-      paint();
-      if(moving&&!reduced)settleTimer=setTimeout(()=>{activeArc=next;paint();syncVideos()},550);
-      else{activeArc=next;paint()}
-
+    function syncVideos() {
+      const { play: near, show } = reach();
+      vids.forEach((v, i) => {
+        const a = Math.abs(rel(i));
+        if (a <= show + 1) load(v);                                   // заранее, до появления на дуге
+        if (state?.running() && a <= near) play(v); else if (!v.paused) v.pause();
+      });
     }
-    function layout(){cardWidth=ring.getBoundingClientRect().width||190;apply()}
-    function turn(d,user){
-      targetK+=d;if(user)lastUser=Date.now();const goal=targetK,token=++turnRevision;
-      const next=new Set(items.map((_,i)=>i).filter(i=>Math.abs(relative(i,((goal%N)+N)%N))<=(mobile()?1:2)));
-      const commit=()=>{warmingArc.clear();k=goal;apply(true)};
-      if(!state?.running()){commit();return}
-      warmingArc=new Set([...next].filter(i=>!activeArc.has(i)));paint();syncVideos();
-      if(!warmingArc.size){commit();return}
-      liveTogether([...warmingArc].map(i=>vids[i]),()=>token===turnRevision&&state.running()).then(ready=>{if(ready&&token===turnRevision)commit()});
+    function front() { return ((Math.round(pos.k) % N) + N) % N; }
+    function caption() { const [, title, genre] = CLIPS[front()]; cap.textContent = genre + ' · ' + title; st.dataset.front = front(); }
+    function turn() {
+      if (!state?.running()) return;
+      const goal = Math.round(pos.k) + 1;
+      tween?.kill();
+      tween = gsap.to(pos, { k: goal, duration: TURN, ease: 'power2.inOut', onUpdate: paint,
+        onStart: syncVideos, onComplete() { caption(); syncVideos(); schedule(); } });
+      if (reduced) tween.progress(1);
     }
-    function tick(){clearTimeout(timer);timer=setTimeout(()=>{if(!state?.running())return;if(Date.now()-lastUser>5000)turn(1);tick()},1350)}
-    function checkPlayback(){
-      clearTimeout(watchdog);if(!state?.running())return;
-      vids.forEach((v,i)=>{if(activeArc.has(i)&&v.paused&&!v.error)play(v)});
-      watchdog=setTimeout(checkPlayback,450);
-    }
-    $$('[data-drum]').forEach(b=>b.addEventListener('click',()=>turn(+b.dataset.drum,true)));
-    st.addEventListener('keydown',e=>{if(e.key==='ArrowRight'){turn(1,true);e.preventDefault()}if(e.key==='ArrowLeft'){turn(-1,true);e.preventDefault()}});
-    let x0=null;st.addEventListener('pointerdown',e=>{x0=e.clientX;moved=false});
-    st.addEventListener('pointerup',e=>{if(x0===null)return;const dx=e.clientX-x0;x0=null;if(Math.abs(dx)>30){moved=true;turn(dx<0?1:-1,true);setTimeout(()=>moved=false,50)}});
-    state=loopScene(st,'drum',{warm(){warmed=true;preload()},play(){syncVideos();tick();checkPlayback()},pause(){turnRevision++;targetK=k;warmingArc.clear();vids.forEach(v=>v.pause());clearTimeout(timer);clearTimeout(watchdog)}},true);
-    const dialog=$('.clip-dialog'), viewer=$('video',dialog);let wasPaused=true;
-    function openClip(){
-      if(dialog.open)return;
-      const [id,title,,base='media/examples']=CLIPS[front()];
-      wasPaused=state.paused;state.pause();lastUser=Date.now();
-      $('#clip-heading').textContent=title;viewer.poster=`${base}/${id}/poster.jpg`;viewer.src=`${base}/${id}/final.mp4`;
-      dialog.showModal();viewer.play().catch(()=>{});
-    }
-    $('.watch-clip').addEventListener('click',openClip);
-    $('.dialog-close',dialog).addEventListener('click',()=>dialog.close());
-    dialog.addEventListener('keydown',e=>{if(e.key==='Escape'){e.preventDefault();dialog.close()}},true);
-    dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close()}});
-    dialog.addEventListener('close',()=>{viewer.pause();viewer.removeAttribute('src');viewer.load();if(!wasPaused)state.resume()});
-    let resumeViewer=false;
-    document.addEventListener('visibilitychange',()=>{if(document.hidden){resumeViewer=dialog.open&&!viewer.paused;viewer.pause()}else if(resumeViewer&&dialog.open){resumeViewer=false;viewer.play().catch(()=>{})}});
+    function schedule() { clearTimeout(timer); if (state?.running()) timer = setTimeout(turn, DWELL * 1000); }
+    state = loopScene(st, 'drum', {
+      warm() { syncVideos(); },
+      play() { tween?.resume(); syncVideos(); if (!tween?.isActive()) schedule(); },
+      pause() { clearTimeout(timer); tween?.pause(); vids.forEach(v => v.pause()); },
+    }, true);
+    function layout() { cardWidth = ring.getBoundingClientRect().width || 190; paint(); }
     let width = innerWidth;
     addEventListener('resize', () => { if (innerWidth !== width) { width = innerWidth; layout(); } });
-    layout();warmed=true;preload();
+    layout(); caption(); syncVideos();
   }, 640);
 
 
@@ -596,8 +566,10 @@
     const TOTAL = 6859, o = { s: 0 };
     const thick = () => Math.max(6, Math.round(parseFloat(getComputedStyle(lis[0]).fontSize) * .3)) + 'px';
     lis.forEach(li => { const mark=document.createElement('i');mark.className='strike-head';mark.setAttribute('aria-hidden','true');$('span',li).appendChild(mark); });
-    const tl = gsap.timeline({ id:'pain', paused: true })
-      .call(() => { lis.forEach(li => li.classList.remove('cut','is-striking')); }, null, 0)
+    let painState;
+    // Цикл повторяется сам после короткой паузы на итоге, а не только при новом появлении на экране.
+    const tl = gsap.timeline({ id:'pain', paused: true, onComplete() { if (painState?.running()) tl.restart(); } })
+      .call(() => { lis.forEach(li => li.classList.remove('cut','is-striking')); }, null, .01)
       .fromTo(o, { s: 0 }, { s: TOTAL, duration: 1.75, ease: 'power2.inOut', onUpdate: () => { time.textContent = hms(o.s); } }, 0)
       .fromTo(fill, { scaleX: 0 }, { scaleX: 1, duration: 1.75, ease: 'power2.inOut' }, 0)
       .fromTo(cut, { opacity: 0, scaleX: 2 }, { opacity: 1, scaleX: 1, duration: .4, ease: 'power3.out' }, 1.9)
@@ -611,9 +583,10 @@
         .to(head,{opacity:0,duration:.2},at+.8)
         .call(() => {li.classList.add('cut');li.classList.remove('is-striking')}, null, at+.95);
     });
-    tl.fromTo(bridge, { opacity: .35, y: 6 }, { opacity: 1, y: 0, duration: .65, ease: EXPO }, 5.5);
+    tl.fromTo(bridge, { opacity: .35, y: 6 }, { opacity: 1, y: 0, duration: .65, ease: EXPO }, 5.5)
+      .to({}, { duration: 1.4 }, 6.15);
     if(reduced)tl.progress(1).pause();
-    loopScene(st,'pain',{play(){if(tl.progress()===1)tl.restart();else tl.resume()},pause(){tl.pause()}});
+    painState = loopScene(st,'pain',{play(){if(tl.progress()===1)tl.restart();else tl.resume()},pause(){tl.pause()}});
   });
 
   /* Выгоды: жёлтая полоса, которой зачёркивались боли, проводится под главной фразой выгоды. */
