@@ -29,7 +29,7 @@ with tempfile.TemporaryDirectory(prefix='.pages-build-', dir=landing) as temp:
         with source.open('rb') as stream:
             digest = hashlib.file_digest(stream, 'sha256').hexdigest()
         if digest != item['sha256']:
-            raise ValueError(f'Media changed since v5 snapshot: {item["path"]}')
+            raise ValueError(f'Media changed since manifest snapshot: {item["path"]}')
         destination = stage / item['path']
         destination.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(source, destination)
@@ -42,11 +42,11 @@ with tempfile.TemporaryDirectory(prefix='.pages-build-', dir=landing) as temp:
         shutil.copy2(source, destination)
     (stage / '.nojekyll').touch()
     publication = {
-        'version': 'v5',
+        'version': 'v6',
         'sourceBranch': 'feature/landing-motion-v5',
         'mediaFiles': len(selected),
         'mediaBytes': sum(item['bytes'] for item in selected),
-        'authorization': 'Owner authorized GitHub publication with a working landing on 2026-11-05.'
+        'authorization': 'Owner authorized GitHub publication with a working landing on 2026-11-05; v6 adds two more real results of the same fitness recording (2026-11-06).'
     }
     (stage / 'release.json').write_text(json.dumps(publication, ensure_ascii=False, indent=2) + '\n')
     if output.exists():

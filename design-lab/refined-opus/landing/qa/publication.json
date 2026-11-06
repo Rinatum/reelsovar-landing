@@ -1,5 +1,5 @@
 {
-  "url": "https://rinatum.github.io/reelsovar-landing/",
+  "url": "http://127.0.0.1:8720/design-lab/refined-opus/landing/site/",
   "checks": [
     {
       "name": "Published entry returns 200",
@@ -7,21 +7,21 @@
       "data": 200
     },
     {
-      "name": "Published release is v5",
+      "name": "Published release is v6",
       "ok": true,
       "data": {
-        "version": "v5",
+        "version": "v6",
         "sourceBranch": "feature/landing-motion-v5",
-        "mediaFiles": 88,
-        "mediaBytes": 91393920,
-        "authorization": "Owner authorized GitHub publication with a working landing on 2026-11-05."
+        "mediaFiles": 92,
+        "mediaBytes": 94521782,
+        "authorization": "Owner authorized GitHub publication with a working landing on 2026-11-05; v6 adds two more real results of the same fitness recording (2026-11-06)."
       }
     },
     {
       "name": "All published files return success",
       "ok": true,
       "data": {
-        "count": 97,
+        "count": 101,
         "bad": []
       }
     },
@@ -30,17 +30,17 @@
       "ok": true,
       "data": [
         {
-          "time": 1.960044,
+          "time": 1.96995,
           "ready": 4,
           "paused": false
         },
         {
-          "time": 1.959943,
+          "time": 1.969952,
           "ready": 4,
           "paused": false
         },
         {
-          "time": 1.959832,
+          "time": 1.968208,
           "ready": 4,
           "paused": false
         }
@@ -60,6 +60,14 @@
       "data": {
         "width": 1440,
         "scroll": 1430
+      }
+    },
+    {
+      "name": "No horizontal overflow 768",
+      "ok": true,
+      "data": {
+        "width": 768,
+        "scroll": 758
       }
     },
     {

@@ -11,21 +11,21 @@
           {
             "ready": 4,
             "paused": false,
-            "time": 3.52059,
+            "time": 6.012872,
             "w": 360,
             "h": 640
           },
           {
             "ready": 4,
             "paused": false,
-            "time": 3.519786,
+            "time": 6.012867,
             "w": 360,
             "h": 640
           },
           {
             "ready": 4,
             "paused": false,
-            "time": 3.519776,
+            "time": 6.012863,
             "w": 360,
             "h": 640
           }
@@ -34,18 +34,40 @@
       }
     },
     {
-      "name": "Title stays readable after one run",
+      "name": "Title cut repeats at least twice without blank frames",
       "ok": true,
       "details": {
-        "progress": 1,
-        "time": 2.15,
-        "faces": [
-          "1",
-          "1",
-          "1",
-          "1"
-        ]
+        "wraps": 2,
+        "minSum": 1,
+        "wordFrames": 323,
+        "frames": 466
       }
+    },
+    {
+      "name": "Hidden tab stops title and all videos",
+      "ok": true,
+      "details": {
+        "titleMoved": 0,
+        "playing": 0
+      }
+    },
+    {
+      "name": "Middle hero card is never covered 1180",
+      "ok": true,
+      "details": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "Middle hero card is never covered 1440",
+      "ok": true,
+      "details": [
+        true,
+        true,
+        true
+      ]
     },
     {
       "name": "Twelve source recordings",
@@ -114,6 +136,13 @@
       "ok": true
     },
     {
+      "name": "Title pauses offscreen",
+      "ok": true,
+      "details": {
+        "moved": 0
+      }
+    },
+    {
       "name": "CTA destinations exist",
       "ok": true,
       "details": [
@@ -138,57 +167,141 @@
       "ok": true
     },
     {
-      "name": "Reduced motion has no autoplay",
+      "name": "Reduced motion has no autoplay and a readable title",
       "ok": true,
       "details": {
         "playing": 0,
         "hero": 3,
-        "scene": 1
+        "scene": true
       }
     },
     {
-      "name": "Mobile manual step 1",
+      "name": "Mobile steps are a vertical sequence",
       "ok": true,
       "details": {
-        "active": "0",
-        "visible": 1,
+        "st": [
+          {
+            "top": 1892.5,
+            "h": 296.78125,
+            "vis": "visible",
+            "op": 1
+          },
+          {
+            "top": 2219.28125,
+            "h": 296.78125,
+            "vis": "visible",
+            "op": 1
+          },
+          {
+            "top": 2546.0625,
+            "h": 280,
+            "vis": "visible",
+            "op": 1
+          },
+          {
+            "top": 2856.0625,
+            "h": 280,
+            "vis": "visible",
+            "op": 1
+          }
+        ],
+        "tabs": "none",
         "picked": 2,
+        "count": "23",
         "outputs": 2,
-        "interactive": 0
+        "interactive": 0,
+        "overflow": -10
       }
     },
     {
-      "name": "Mobile manual step 2",
+      "name": "Normal phone scroll plays every step in the flow",
       "ok": true,
-      "details": {
-        "active": "1",
-        "visible": 1,
-        "picked": 2,
-        "outputs": 2,
-        "interactive": 0
-      }
-    },
-    {
-      "name": "Mobile manual step 3",
-      "ok": true,
-      "details": {
-        "active": "2",
-        "visible": 1,
-        "picked": 2,
-        "outputs": 2,
-        "interactive": 0
-      }
-    },
-    {
-      "name": "Mobile manual step 4",
-      "ok": true,
-      "details": {
-        "active": "3",
-        "visible": 1,
-        "picked": 2,
-        "outputs": 2,
-        "interactive": 0
-      }
+      "details": [
+        {
+          "i": 0,
+          "early": {
+            "played": 1,
+            "box": [
+              274,
+              570
+            ],
+            "count": "0",
+            "picked": 0,
+            "url": 31,
+            "chips": 5
+          },
+          "late": {
+            "count": "23",
+            "picked": 2,
+            "tall": 1,
+            "chips": 5,
+            "playing": 0
+          }
+        },
+        {
+          "i": 1,
+          "early": {
+            "played": 1,
+            "box": [
+              280,
+              577
+            ],
+            "count": "23",
+            "picked": 2,
+            "url": 31,
+            "chips": 5
+          },
+          "late": {
+            "count": "23",
+            "picked": 2,
+            "tall": 1,
+            "chips": 5,
+            "playing": 0
+          }
+        },
+        {
+          "i": 2,
+          "early": {
+            "played": 1,
+            "box": [
+              287,
+              567
+            ],
+            "count": "23",
+            "picked": 2,
+            "url": 31,
+            "chips": 0
+          },
+          "late": {
+            "count": "23",
+            "picked": 2,
+            "tall": 1,
+            "chips": 5,
+            "playing": 2
+          }
+        },
+        {
+          "i": 3,
+          "early": {
+            "played": 1,
+            "box": [
+              282,
+              562
+            ],
+            "count": "23",
+            "picked": 2,
+            "url": 31,
+            "chips": 5
+          },
+          "late": {
+            "count": "23",
+            "picked": 2,
+            "tall": 1,
+            "chips": 5,
+            "playing": 2
+          }
+        }
+      ]
     },
     {
       "name": "No runtime errors",

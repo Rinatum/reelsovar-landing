@@ -166,7 +166,8 @@
         const x=x0+i*(w+gap),y=small?S.height*.13:Math.max(S.height*.05,(S.height*.8-h)/2),sx=F.width/3/w,sy=F.height/h;
         Object.assign(el.style,{left:x+'px',top:y+'px',width:w+'px',height:h+'px'});
         const dpr=Math.min(devicePixelRatio||1,1.5);canvases[i].width=Math.round(w*dpr);canvases[i].height=Math.round(h*dpr);
-        return {x:(F.left-S.left+i*F.width/3+F.width/6)-(x+w/2),y:(F.top-S.top+F.height/2)-(y+h/2),sx,sy,S};
+        el.style.zIndex=i===1?'3':'1';
+        return {x:(F.left-S.left+i*F.width/3+F.width/6)-(x+w/2),y:(F.top-S.top+F.height/2)-(y+h/2),sx,sy,S,end:small&&i!==1?.9:1};
       });
     }
     function snapshot() {
@@ -183,7 +184,7 @@
       const g=geometry[i],u=back?1-t:t,wave=Math.sin(Math.PI*u);
       // Continuous curved flight: no stop at the image handover.
       gsap.set(cards[i],{x:lerp(g.x,0,u)+(i-1)*wave*g.S.width*.045,y:lerp(g.y,0,u)-wave*g.S.height*.08,
-        z:wave*75,scaleX:lerp(g.sx,1,u),scaleY:lerp(g.sy,1,u),rotationY:wave*84*(i===1?-1:1),
+        z:wave*75+(i===1?6:-6)*u,scaleX:lerp(g.sx,g.end,u),scaleY:lerp(g.sy,g.end,u),rotationY:wave*84*(i===1?-1:1),
         rotation:lerp(0,[-6,0,6][i],u)+(i-1)*wave*11});
       mode(i,u>=.5?'clip':'source');
     }
@@ -262,20 +263,22 @@
         gsap.set(e,{rotationY:Math.sin(v*Math.PI)*78,x:(i-1.5)*fs*.11*v,y:-Math.sin(v*Math.PI)*fs*.07});
         gsap.set($('.front',e),{opacity:1-mix});gsap.set($('.back',e),{opacity:mix});
       }
-      tl=gsap.timeline({id:'title',paused:true})
+      tl=gsap.timeline({id:'title',paused:true,onComplete(){if(state?.running())tl.restart()}})
         .set(playhead,{x:0,opacity:0},0).set(cuts,{scaleY:0,opacity:1},0)
         .to(playhead,{opacity:1,duration:.15},.1).to(playhead,{x:offset,duration:.65,ease:'power2.inOut'},.15)
         .to(playhead,{opacity:0,duration:.15},.8).to(cuts,{scaleY:1,duration:.14,stagger:.06},.85)
         .to(cuts,{opacity:0,duration:.16},1.12);
       states.forEach((v,i)=>{pose(i,0);tl.fromTo(v,{v:0},{v:1,duration:.72,ease:'power2.inOut',immediateRender:false,onUpdate(){pose(i,v.v)}},1.1+i*.055)});
-      tl.to({}, {duration:.1},2.05).timeScale(TEMPO.title);
+      // Слова держатся ~4 с, затем мягко возвращаются в плёнку и рез повторяется: без пустого кадра.
+      states.forEach((v,i)=>tl.fromTo(v,{v:1},{v:0,duration:.7,ease:'power2.inOut',immediateRender:false,onUpdate(){pose(i,v.v)}},6.1+i*.04));
+      tl.to({}, {duration:.5},6.92).timeScale(TEMPO.title);
       if(reduced){tl.time(3).pause();states.forEach((v,i)=>pose(i,1))}
     }
     // Keep the complete title readable even before its first word arrives.
     const intro=gsap.timeline({paused:true});
     first.forEach((e,i)=>intro.fromTo(e,{y:'.18em',color:'#bda65b'},{y:0,color:'#22251f',duration:.35,ease:'power2.out',immediateRender:false},i*.14));
     let entered=false;
-    state=loopScene(st,'title',{play(){if(!entered&&!reduced){entered=true;intro.play()}else if(!reduced&&intro.progress()<1)intro.resume();if(tl.progress()<1)tl.resume()},pause(){tl.pause();intro.pause()}});
+    state=loopScene(st,'title',{play(){if(!entered&&!reduced){entered=true;intro.play()}else if(!reduced&&intro.progress()<1)intro.resume();if(tl.progress()===1)tl.restart();else tl.resume()},pause(){tl.pause();intro.pause()}});
     build();lastWidth=st.clientWidth;
     addEventListener('resize',()=>{if(Math.abs(st.clientWidth-lastWidth)>2){lastWidth=st.clientWidth;build();if(state.running())tl.play()}});
   });
@@ -284,18 +287,27 @@
   deferScene('#how-scene', function how() {
     const st = $('#how-scene'), stations = $$('.station', st), track = $('.how-track', st), fill = $('.ht-fill', st), token = $('.ht-token', st);
     const url = $('.mu-text', st), rec = $('.mini-rec', st), count = $('.mc-n', st);
-    const rows = $$('.mrow', st), sel = $('.ms-n', st), frameBox = $('.st-frame', st), tall = $('.mf-tall', st), crop = $('.mf-crop', st);
+    const rows = $$('.mrow', st), sel = $('.ms-n', st), frameBox = $('.st-frame', st), tall = $('.mf-tall', st);
     const vids = $$('.md-clip video', st), chips = $$('.md-platforms li', st);
     const URL = 'youtube.com/watch?v=np2Az44NJMY', STEP = 2.85;
-    let tl, state, xs = [];
+    // На телефоне шаги идут столбиком: каждый проигрывается, когда посетитель до него доскроллил.
+    const vertical = () => mobile();
+    let tl, state, xs = [], segs = [], lastVertical = null;
+    const seen = stations.map(() => false);
     const stepButtons = $$('[data-step]', st);
+    const syncVideos = () => vids.forEach(v => {
+      const on = state?.running() && (vertical() ? seen[3] : (+st.dataset.step === 3 || !mobile()));
+      if (on) play(v); else v.pause();
+    });
     const activate = i => {
       st.dataset.step = i;
-      stations.forEach((s, k) => { s.classList.toggle('on', k === i); s.classList.toggle('dim', k !== i); s.setAttribute('aria-hidden', String(mobile() && k !== i)); });
+      if (vertical()) stations.forEach(s => { s.classList.add('on'); s.classList.remove('dim'); s.removeAttribute('aria-hidden'); });
+      else stations.forEach((s, k) => { s.classList.toggle('on', k === i); s.classList.toggle('dim', k !== i); s.setAttribute('aria-hidden', 'false'); });
       stepButtons.forEach((b, k) => b.setAttribute('aria-pressed', String(k === i)));
-      vids.forEach(v => { if ((i === 3 || !mobile()) && state?.running()) play(v); else v.pause(); });
+      syncVideos();
     };
     function measure() {
+      xs = [];
       if (getComputedStyle(track).display === 'none') return;
       const S = st.getBoundingClientRect(), nums = stations.map(s => $('.st-n', s).getBoundingClientRect());
       const c = nums.map(r => r.left + r.width / 2 - S.left), top = nums[0].top - S.top - 22;
@@ -304,49 +316,71 @@
     }
     const finals = () => {   // итоговый вид всех станций (для неактивных и reduced motion)
       url.textContent = URL; gsap.set(rec, { opacity: 1, y: 0 }); count.textContent = '23';
-      rows.forEach(r => r.classList.toggle('picked', !!r.dataset.pick)); sel.textContent = '2';
+      rows.forEach(r => { r.classList.toggle('picked', !!r.dataset.pick); gsap.set(r, { opacity: 1, y: 0 }); }); sel.textContent = '2';
       frameBox.classList.add('dimmed'); gsap.set(tall, { opacity: 1, scale: 1 });
       chips.forEach(c => c.classList.add('on'));
     };
-    function station(i, t) {
-      tl.call(() => activate(i), null, t);
-      if (xs.length) tl.to(token, { x: xs[i], duration: .7, ease: 'power3.inOut' }, t).to(fill, { scaleX: i / 3, duration: .7, ease: 'power3.inOut' }, t);
+    function station(T, i, t) {
+      T.call(() => activate(i), null, t);
+      if (xs.length) T.to(token, { x: xs[i], duration: .7, ease: 'power3.inOut' }, t).to(fill, { scaleX: i / 3, duration: .7, ease: 'power3.inOut' }, t);
       if (i === 0) {
         const o = { n: 0 }, c = { v: 0 };
-        tl.call(() => { url.textContent = ''; count.textContent = '0'; }, null, t)
+        T.call(() => { url.textContent = ''; count.textContent = '0'; }, null, t)
           .fromTo(rec, { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: .5, ease: EXPO, immediateRender: false }, t + 1)
           .fromTo(o, { n: 0 }, { n: URL.length, duration: .8, ease: 'none', immediateRender: false, onUpdate: () => { url.textContent = URL.slice(0, Math.round(o.n)); } }, t + .2)
           .fromTo(c, { v: 0 }, { v: 23, duration: .8, ease: 'power2.out', immediateRender: false, onUpdate: () => { count.textContent = Math.round(c.v); } }, t + 1.5);
       }
       if (i === 1) {
-        tl.call(() => { rows.forEach(r => r.classList.remove('picked')); sel.textContent = '0'; }, null, t)
+        T.call(() => { rows.forEach(r => r.classList.remove('picked')); sel.textContent = '0'; }, null, t)
           .fromTo(rows, { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: .4, ease: EXPO, stagger: .08, immediateRender: false }, t + .1)
           .call(() => { rows[0].classList.add('picked'); sel.textContent = '1'; }, null, t + 1.1)
           .call(() => { rows[1].classList.add('picked'); sel.textContent = '2'; }, null, t + 1.6);
       }
       if (i === 2) {
-        tl.call(() => frameBox.classList.remove('dimmed'), null, t).set(tall, { opacity: 0 }, t)
+        T.call(() => frameBox.classList.remove('dimmed'), null, t).set(tall, { opacity: 0 }, t)
           .call(() => frameBox.classList.add('dimmed'), null, t + .6)
           .fromTo(tall, { opacity: 0, scale: .58 }, { opacity: 1, scale: 1, duration: .8, ease: EXPO, immediateRender: false }, t + 1.4);
       }
       if (i === 3) {
-        tl.call(() => chips.forEach(c => c.classList.remove('on')), null, t);
-        chips.forEach((c, k) => tl.call(() => c.classList.add('on'), null, t + .6 + k * .3));
+        T.call(() => chips.forEach(c => c.classList.remove('on')), null, t);
+        chips.forEach((c, k) => T.call(() => c.classList.add('on'), null, t + .6 + k * .3));
       }
     }
     function build() {
-      tl?.kill(); measure();
+      tl?.kill(); segs.forEach(x => x.kill()); segs = []; measure();
+      lastVertical = vertical(); st.dataset.layout = lastVertical ? 'column' : 'desk';
       tl = gsap.timeline({ id: 'how', paused: true, onComplete() { if (state?.running()) tl.restart(); } });
       finals(); activate(0);
       gsap.set(token, { x: 0 }); gsap.set(fill, { scaleX: 0 });
-      [0, 1, 2, 3].forEach(i => station(i, i * STEP));
-      tl.to({}, { duration: .6 }, 4 * STEP);
+      if (lastVertical) {
+        // Отдельный короткий сюжет на каждый шаг; итог шага остаётся на месте, ничего не прячется.
+        segs = stations.map((_, i) => { const T = gsap.timeline({ paused: true, onStart() { stations[i].dataset.played = String((+stations[i].dataset.played || 0) + 1); } }); station(T, i, .02); T.to({}, { duration: .3 }, STEP - .3); return T; });
+        tl.to({}, { duration: .1 });
+      } else {
+        [0, 1, 2, 3].forEach(i => station(tl, i, i * STEP));
+        tl.to({}, { duration: .6 }, 4 * STEP);
+      }
       if (reduced) { tl.progress(1).pause(); finals(); activate(0); stations.forEach(s => s.classList.remove('dim')); }
     }
+    function playStation(i) {
+      if (!vertical() || reduced || !state?.running()) return;
+      segs[i]?.restart();
+    }
+    const stationView = stations.map(() => false);
+    const watcher = new IntersectionObserver(entries => entries.forEach(e => {
+      const i = stations.indexOf(e.target), inView = e.isIntersecting && e.intersectionRatio >= .55;
+      if (inView && !stationView[i]) { seen[i] = true; playStation(i); }
+      if (i === 3) seen[3] = e.isIntersecting && e.intersectionRatio >= .25;
+      stationView[i] = inView; syncVideos();
+    }), { threshold: [0, .25, .55, .8] });
+    stations.forEach(s => watcher.observe(s));
     state = loopScene(st, 'how', {
       warm() { vids.forEach(load); },
-      play() { if (tl.progress() === 1) tl.restart(); else tl.resume(); activate(+st.dataset.step || 0); },
-      pause() { tl.pause(); vids.forEach(v => v.pause()); },
+      play() {
+        if (vertical()) { segs.forEach((T, i) => { if (stationView[i] && T.progress() < 1) T.resume(); }); syncVideos(); return; }
+        if (tl.progress() === 1) tl.restart(); else tl.resume(); activate(+st.dataset.step || 0);
+      },
+      pause() { tl.pause(); segs.forEach(T => T.pause()); vids.forEach(v => v.pause()); },
     }, true);
     build();
     stepButtons.forEach((b, i) => b.addEventListener('click', () => {
@@ -356,31 +390,40 @@
     }));
     // На телефоне resize приходит при скрытии адресной строки: перестраиваем только при смене ширины.
     let width = innerWidth;
-    addEventListener('resize', () => { if (innerWidth === width) return; width = innerWidth; build(); if (state.running()) tl.play(); });
-    addEventListener('load', () => { if (tl.time() > 0) return; build(); if (state.running()) tl.play(); });
+    addEventListener('resize', () => { if (innerWidth === width) return; width = innerWidth; build(); if (state.running()) state.run(); });
+    addEventListener('load', () => { if (tl.time() > 0 || vertical()) return; build(); if (state.running()) tl.play(); });
   });
 
-  /* Each long recording enters from above and produces only its own real clips. */
+  /* Each long recording enters from above and produces only its own real clips (their real count). */
   deferScene('#rf', function pipeline() {
     const st=$('#rf'), origins=$$('.pipe-origin',st), sources=$$('.pipe-source',st), decks=$$('.pipe-deck',st);
     const cards=decks.map(d=>$$('.pipe-card',d)), videos=cards.map(group=>group.map(c=>$('video',c)));
     const button=$('.pipe-button',st), label=$('.pipe-button>span',st), meter=$('.pipe-meter',st), cursor=$('.cursor',st);
-    const tabs=$$('[data-pipeline]',st), all=[...sources,...videos.flat()];
+    const all=[...sources,...videos.flat()], N=origins.length;
+    const clipsWord=n=>{const a=n%10,b=n%100;return a===1&&b!==11?'готовый клип':a>=2&&a<=4&&(b<12||b>14)?'готовых клипа':'готовых клипов'};
     let current=0, tl, state, revision=0;
     function warm(i){load(sources[i]);videos[i].forEach(load)}
     function pauseAll(){all.forEach(v=>v.pause())}
     function paintQueue(){
-      origins.forEach((e,i)=>{const active=i===current,side=((i-current+3)%3)===1?1:-1;
+      origins.forEach((e,i)=>{const active=i===current,side=((i-current+N)%N)===1?1:-1;
         gsap.set(e,{xPercent:-50,x:active?0:side*st.clientWidth*.17,y:active?0:-28,scale:active?1:.72,rotation:active?0:side*7,opacity:active?1:.38,zIndex:active?3:1});
       });
       decks.forEach((e,i)=>e.classList.toggle('is-active',i===current));
-      tabs.forEach((e,i)=>e.setAttribute('aria-pressed',String(i===current)));
-      st.dataset.group=current; st.dataset.source=origins[current].dataset.sourceId;
+      st.dataset.group=current; st.dataset.source=origins[current].dataset.sourceId; st.dataset.count=cards[current].length;
     }
+    // Веер под фактическое число клипов: на desktop один ряд, на телефоне по три в ряд.
     function layout(){
-      const width=st.clientWidth,small=width<600,w=small?Math.min(100,(width-48)/3):118,h=w*16/9,gap=small?8:22;
-      const x0=(width-3*w-2*gap)/2,y=st.clientHeight*.58;
-      cards.flat().forEach((e,i)=>Object.assign(e.style,{left:(x0+i%3*(w+gap))+'px',top:y+'px',width:w+'px',height:h+'px'}));
+      const W=st.clientWidth,H=st.clientHeight,small=W<600;
+      cards.forEach(group=>{
+        const n=group.length,perRow=small?Math.min(3,n):n,rows=Math.ceil(n/perRow),gap=small?8:18;
+        const w=small?Math.min(rows>1?80:100,(W-40-(perRow-1)*gap)/perRow):Math.min(n>3?112:118,(W-80-(n-1)*gap)/n),h=w*16/9;
+        const top=H*(small?.52:.575),avail=H-top-(small?14:22),block=rows*h+(rows-1)*gap,y0=top+Math.max(0,(avail-block)/2);
+        group.forEach((e,i)=>{
+          const row=Math.floor(i/perRow),inRow=Math.min(perRow,n-row*perRow),col=i-row*perRow,off=col-(inRow-1)/2;
+          const x=(W-inRow*w-(inRow-1)*gap)/2+col*(w+gap),y=y0+row*(h+gap)+Math.abs(off)*(small?3:9);
+          Object.assign(e.style,{left:x+'px',top:y+'px',width:w+'px',height:h+'px'});e.dataset.fan=String(off*(small?1.5:2.5));
+        });
+      });
       paintQueue();
     }
     async function gate(){
@@ -392,9 +435,9 @@
     function build(){
       tl?.kill();layout();gsap.set(cards.flat(),{opacity:0,y:0,scale:1,rotation:0});
       gsap.set(cursor,{opacity:0});gsap.set(meter,{scaleX:0});label.textContent='Нарезать запись';
-      const active=cards[current];
+      const active=cards[current],n=active.length;
       gsap.set(origins[current],{y:-135,opacity:0,scale:.88});
-      tl=gsap.timeline({id:'rf',paused:true,onComplete(){if(state?.running())select((current+1)%3)}})
+      tl=gsap.timeline({id:'rf',paused:true,onComplete(){if(state?.running())select((current+1)%N)}})
         .call(()=>{st.dataset.phase='input';label.textContent='Нарезать запись'},null,0)
         .fromTo(origins[current],{y:-135,opacity:0,scale:.88},{y:0,opacity:1,scale:1,duration:.55,ease:'power3.out',immediateRender:false},0);
       cursorTo(tl,cursor,st,button,.1,{x:st.clientWidth*.8,y:st.clientHeight*.53});
@@ -402,30 +445,31 @@
         .to(meter,{scaleX:1,duration:.65,ease:'power2.inOut'},.95)
         .to(cursor,{opacity:0,duration:.16},1.05)
         .call(gate,null,1.4)
-        .call(()=>{st.dataset.phase='results';label.textContent='3 готовых клипа';sources[current].pause()},null,1.55)
-        .fromTo(active,{y:-60,scale:.72,opacity:0},{y:0,scale:1,opacity:1,duration:.6,stagger:.045,ease:'power3.out',immediateRender:false},1.55)
-        .call(()=>{if(!reduced)warm((current+1)%3)},null,2.2)
-        .to({}, {duration:2.15},2.2)
-        .call(()=>{st.dataset.phase='return'},null,4.35)
-        .to(active,{y:50,opacity:0,scale:.94,duration:.4,stagger:.03,ease:'power2.in'},4.35)
-        .to(origins[current],{y:-100,opacity:0,duration:.4,ease:'power2.in'},4.65)
-        .call(()=>videos[current].forEach(v=>v.pause()),null,4.8)
-        .to({}, {duration:.2},4.95).timeScale(TEMPO.rf);
+        .call(()=>{st.dataset.phase='results';label.textContent=`${n} ${clipsWord(n)}`;sources[current].pause()},null,1.55)
+        .fromTo(active,{y:-60,scale:.72,opacity:0,rotation:0},{y:0,scale:1,opacity:1,rotation:(i,e)=>+e.dataset.fan,duration:.6,stagger:.045,ease:'power3.out',immediateRender:false},1.55)
+        .call(()=>{if(!reduced)warm((current+1)%N)},null,2.2)
+        .to({}, {duration:2.15+(n-3)*.25},2.2);
+      const out=4.35+(n-3)*.25;
+      tl.call(()=>{st.dataset.phase='return'},null,out)
+        .to(active,{y:50,opacity:0,scale:.94,duration:.4,stagger:.03,ease:'power2.in'},out)
+        .to(origins[current],{y:-100,opacity:0,duration:.4,ease:'power2.in'},out+.3)
+        .call(()=>videos[current].forEach(v=>v.pause()),null,out+.45)
+        .to({}, {duration:.2},out+.6).timeScale(TEMPO.rf);
+      st.dataset.out=out+.45;
       if(reduced){tl.time(3).pause();pauseAll()}
     }
     function select(i){
-      revision++;pauseAll();current=(i+3)%3;st.dataset.phase='input';
+      revision++;pauseAll();current=(i+N)%N;st.dataset.phase='input';
       sources.forEach(underlay);videos[current].forEach(underlay);warm(current);build();
       if(state?.running()){play(sources[current]);tl.play()}
       else if(state?.paused){tl.time(3).pause();pauseAll()}
     }
     state=loopScene(st,'rf',{
       warm(){warm(current)},prime(){if(tl.time()<1.55)play(sources[current])},
-      play(){if(st.dataset.phase==='buffering'){gate();return}if(tl.progress()===1){select((current+1)%3);return}tl.resume();if(tl.time()<1.55)play(sources[current]);if(tl.time()>.95&&tl.time()<4.8)videos[current].forEach(play)},
+      play(){if(st.dataset.phase==='buffering'){gate();return}if(tl.progress()===1){select((current+1)%N);return}tl.resume();if(tl.time()<1.55)play(sources[current]);if(tl.time()>.95&&tl.time()<+st.dataset.out)videos[current].forEach(play)},
       pause(){revision++;tl.pause();pauseAll()}
     },true);
     select(0);
-    tabs.forEach((b,i)=>b.addEventListener('click',()=>select(i)));
     let width=innerWidth;addEventListener('resize',()=>{if(Math.abs(innerWidth-width)>20){width=innerWidth;const t=tl.time();build();tl.time(t);if(state.running())tl.resume()}});
   });
 
@@ -481,13 +525,16 @@
     const preload=()=>{if(warmed)vids.forEach((v,i)=>{if(dist(i)<=(mobile()?1:2)+1)load(v)})};
     function syncVideos(){vids.forEach((v,i)=>{if(state?.running()&&(activeArc.has(i)||warmingArc.has(i)))play(v);else v.pause()})}
     // The cylinder is projected onto a flat plane. Video never lives on a culled 3-D backface.
+    // Шире размах: больший радиус и ещё по одной карточке-постеру с каждого края (без видео).
+    const ghost=i=>!mobile()&&dist(i)===3;
     function paint(){
-      const R=cardWidth*1.5;
+      const span=st.clientWidth,R=mobile()?Math.min(cardWidth*1.75,span*.62):Math.min(cardWidth*2.45,span*.36);
       items.forEach((d,i)=>{
-        if(!activeArc.has(i)&&!warmingArc.has(i)){d.style.visibility='hidden';return}
-        const r=relative(i,k),angle=r*.5,depth=Math.cos(angle),scale=.74+.26*Math.max(0,depth);
-        d.style.transform=`translate(${Math.sin(angle)*R}px,${(1-depth)*18}px) scale(${Math.max(.18,depth)*scale},${scale})`;
-        d.style.opacity=String(warmingArc.has(i)&&!activeArc.has(i)?.015:Math.max(.1,1-Math.abs(r)*.12));d.style.zIndex=String(Math.round(depth*100));d.style.visibility='visible';
+        if(!activeArc.has(i)&&!warmingArc.has(i)&&!ghost(i)){d.style.visibility='hidden';d.classList.remove('is-ghost');return}
+        const r=relative(i,k),angle=r*.47,depth=Math.cos(angle),scale=.72+.28*Math.max(0,depth);
+        d.style.transform=`translate(${Math.sin(angle)*R}px,${(1-depth)*22}px) scale(${Math.max(.2,depth)*scale},${scale})`;
+        d.style.opacity=String(warmingArc.has(i)&&!activeArc.has(i)?.015:ghost(i)&&!activeArc.has(i)?.42:Math.max(.1,1-Math.abs(r)*.1));d.style.zIndex=String(Math.round(depth*100));d.style.visibility='visible';
+        d.classList.toggle('is-ghost',ghost(i)&&!activeArc.has(i)&&!warmingArc.has(i));
       });
     }
     function apply(moving=false){
@@ -547,6 +594,7 @@
   deferScene('#pain', function pain() {
     const st = $('#pain'), time = $('.pc-time', st), fill = $('.pb-fill', st), cut = $('.pb-cut', st), lis = $$('.pain-lines li', st), bridge = $('.pain-bridge', st);
     const TOTAL = 6859, o = { s: 0 };
+    const thick = () => Math.max(6, Math.round(parseFloat(getComputedStyle(lis[0]).fontSize) * .3)) + 'px';
     lis.forEach(li => { const mark=document.createElement('i');mark.className='strike-head';mark.setAttribute('aria-hidden','true');$('span',li).appendChild(mark); });
     const tl = gsap.timeline({ id:'pain', paused: true })
       .call(() => { lis.forEach(li => li.classList.remove('cut','is-striking')); }, null, 0)
@@ -557,7 +605,7 @@
     lis.forEach((li, i) => {
       const span=$('span',li),head=$('.strike-head',li),at=2.65+i*1.05;
       tl.call(()=>li.classList.add('is-striking'),null,at)
-        .fromTo(span, { backgroundSize: '0% 6px' }, { backgroundSize: '100% 6px', duration: .95, ease: 'power2.inOut' }, at)
+        .fromTo(span, { backgroundSize: () => '0% ' + thick() }, { backgroundSize: () => '100% ' + thick(), duration: .95, ease: 'power2.inOut' }, at)
         .set(head,{opacity:1},at)
         .fromTo(head,{left:'0%'},{left:'100%',duration:.95,ease:'power2.inOut',immediateRender:false},at)
         .to(head,{opacity:0,duration:.2},at+.8)
@@ -566,6 +614,14 @@
     tl.fromTo(bridge, { opacity: .35, y: 6 }, { opacity: 1, y: 0, duration: .65, ease: EXPO }, 5.5);
     if(reduced)tl.progress(1).pause();
     loopScene(st,'pain',{play(){if(tl.progress()===1)tl.restart();else tl.resume()},pause(){tl.pause()}});
+  });
+
+  /* Выгоды: жёлтая полоса, которой зачёркивались боли, проводится под главной фразой выгоды. */
+  $$('.bf').forEach(article => {
+    const mark = $('mark', article);
+    if (!reduced) gsap.set(mark, { '--mark': '0%' });
+    const tl = gsap.timeline({ paused: true }).fromTo(mark, { '--mark': '0%' }, { '--mark': '100%', duration: .9, ease: 'power2.inOut' });
+    onceOnEnter(article, tl, .6);
   });
 
   /* ── 9–10. Одометр цены ── */

@@ -496,6 +496,30 @@
       "path": "media/examples/full-biz-startup-m02/poster.jpg",
       "bytes": 30323,
       "sha256": "65cc42d72d9f2b70d8f42454105645b1e4736dd6c2b133fc17562aa7ceded173"
+    },
+    {
+      "path": "assets/examples/full-audience-02-m03/preview.mp4",
+      "bytes": 1247388,
+      "sha256": "d0551ea7d1072e9d815bdcc6759247becb9b0dc2f8120b371a95b71acb59c2a1",
+      "origin": "reelsovar-drawio outputs/landing-examples/full-length-2026-11-02/full-audience-02-m03/preview.mp4"
+    },
+    {
+      "path": "assets/examples/full-audience-02-m03/poster.jpg",
+      "bytes": 46795,
+      "sha256": "fc17659e7cee8d7931c5e0943589e7b8570fb41e34209d7cab6042766979f104",
+      "origin": "reelsovar-drawio outputs/landing-examples/full-length-2026-11-02/full-audience-02-m03/poster.jpg"
+    },
+    {
+      "path": "assets/examples/full-audience-02-m05/preview.mp4",
+      "bytes": 1790968,
+      "sha256": "f839bffbe892b1cc9f839575a422d5eb5d3657d6dfbd20355056b79c5b8f3bdb",
+      "origin": "reelsovar-drawio outputs/landing-examples/full-length-2026-11-02/full-audience-02-m05/preview.mp4"
+    },
+    {
+      "path": "assets/examples/full-audience-02-m05/poster.jpg",
+      "bytes": 42711,
+      "sha256": "32d8e22490700b90716fa5652ae107f6e2590ae71aecd36fa2607fb978137031",
+      "origin": "reelsovar-drawio outputs/landing-examples/full-length-2026-11-02/full-audience-02-m05/poster.jpg"
     }
   ]
 }

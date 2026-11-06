@@ -93,3 +93,49 @@ video.v-wait{opacity:0}
 /* Each turn changes five transforms once; the browser interpolates them without a JS frame loop. */
 .drum-item{transition:transform .52s cubic-bezier(.4,0,.2,1),opacity .18s linear}
 @media(prefers-reduced-motion:reduce){.drum-item{transition:none}}
+
+/* v6 (owner notes, 06.11): louder pains, vertical mobile steps, wider drum, real result counts, stronger benefits. */
+/* Pains: each line reads as a statement; the strike grows with the type. */
+.pain-stage{grid-template-columns:minmax(0,.6fr) minmax(0,1.4fr);gap:16px 56px}
+.pain-lines{gap:6px}
+.pain-lines li{font-size:clamp(21px,2.1vw,30px);font-weight:600;line-height:1.28;letter-spacing:-.025em;padding:12px 18px;margin-inline:-18px;color:var(--ink)}
+.pain-lines li.cut span{color:#69705f}
+.strike-head{width:.28em;height:.72em}
+@media(min-width:761px) and (max-width:1100px){.pain-stage{grid-template-columns:1fr;gap:8px}.pain-lines li{font-size:23px}.pain-bar{margin:24px 0 18px}}
+@media(max-width:760px){.pain-lines{gap:4px}.pain-lines li{font-size:20px;line-height:1.3;padding:10px 14px;margin-inline:-14px}.pain-bridge{font-size:18px}}
+@media(max-width:360px){.pain-lines li{font-size:18px}}
+
+/* Steps on phones: all four stations follow each other in the page flow. */
+@media(max-width:760px){
+ .how-stage .how-tabs,.how-stage .how-track{display:none}
+ .how-stage .stations{display:grid;grid-template-columns:1fr;gap:30px}
+ .how-stage .station,.how-stage .station.dim{grid-area:auto;display:flex;flex-direction:column;gap:14px;opacity:1;visibility:visible}
+ .how-stage .station .st-text{order:-1;align-items:center}
+ .how-stage .station .st-vis{height:236px}
+ .how-stage .st-text h3{font-size:18px}
+}
+@media(max-width:360px){.how-stage .station .st-vis{height:222px}}
+
+/* Drum: a wider arc, edge cards keep their real posters. */
+.examples-section .drum-stage{height:560px}
+.drum-ring{--w:212px}
+@media(max-width:760px){.examples-section .drum-stage{height:420px}.drum-ring{--w:150px}}
+@media(max-width:360px){.drum-ring{--w:136px}}
+
+/* Content for the week: deck size follows each real recording. */
+#rf.pipeline-stage{height:660px}
+.pipe-meta span:first-child{color:#6b7561}
+@media(max-width:760px){#rf.pipeline-stage{height:650px}}
+@media(max-width:360px){#rf.pipeline-stage{height:620px}}
+
+/* Benefits: the same yellow bar that struck out the pains now marks what is gained. */
+.benefit-copy{gap:0;padding-top:0}
+.benefit-copy article.bf{padding:0 0 44px;border:0}
+.benefit-copy article.bf:first-child{padding-top:4px}.benefit-copy article.bf:last-child{padding-bottom:0}
+.benefit-copy .bf h3{font-size:clamp(24px,2.35vw,33px);font-weight:600;line-height:1.16;letter-spacing:-.03em;max-width:21em;text-wrap:balance}
+.bf mark{color:inherit;background:linear-gradient(var(--yellow),var(--yellow)) 0 88%/var(--mark,100%) .34em no-repeat;padding:0 .04em;margin:0 -.04em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.benefit-copy .bf p{margin-top:14px;font-size:16px}
+.benefit-copy .bf-price{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px;margin-top:16px}
+.bf-price b{font-size:clamp(34px,3.4vw,46px);font-weight:600;line-height:1;letter-spacing:-.035em;color:var(--ink);font-variant-numeric:tabular-nums}
+.bf-price span{color:var(--ink-2)}
+@media(max-width:760px){.benefit-copy article.bf{padding:0 0 34px}.benefit-copy .bf h3{font-size:24px}}

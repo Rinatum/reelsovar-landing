@@ -1,8 +1,8 @@
 {
   "repository": "https://github.com/Rinatum/reelsovar-landing",
   "visibility": "public",
-  "mediaCount": 88,
-  "mediaBytes": 91393920,
+  "mediaCount": 92,
+  "mediaBytes": 94521782,
   "files": [
     {
       "path": "assets/backdrops/cut-desktop.png",
@@ -88,6 +88,26 @@
       "path": "assets/backdrops/title-mobile.png",
       "bytes": 5825,
       "sha256": "be83e19ddc53e40f9372d6def98292f6b21c10f540e44c6a2e254afe0858c317"
+    },
+    {
+      "path": "assets/examples/full-audience-02-m03/poster.jpg",
+      "bytes": 46795,
+      "sha256": "fc17659e7cee8d7931c5e0943589e7b8570fb41e34209d7cab6042766979f104"
+    },
+    {
+      "path": "assets/examples/full-audience-02-m03/preview.mp4",
+      "bytes": 1247388,
+      "sha256": "d0551ea7d1072e9d815bdcc6759247becb9b0dc2f8120b371a95b71acb59c2a1"
+    },
+    {
+      "path": "assets/examples/full-audience-02-m05/poster.jpg",
+      "bytes": 42711,
+      "sha256": "32d8e22490700b90716fa5652ae107f6e2590ae71aecd36fa2607fb978137031"
+    },
+    {
+      "path": "assets/examples/full-audience-02-m05/preview.mp4",
+      "bytes": 1790968,
+      "sha256": "f839bffbe892b1cc9f839575a422d5eb5d3657d6dfbd20355056b79c5b8f3bdb"
     },
     {
       "path": "assets/examples/full-biz-cafe-m02/poster.jpg",
@@ -444,5 +464,11 @@
       "bytes": 987843,
       "sha256": "479b8e3b41f8e6c34f79a3a05c931c20fa01c1f415ce7375daba9e12b28ca6f8"
     }
+  ],
+  "v6Additions": [
+    "assets/examples/full-audience-02-m03/poster.jpg",
+    "assets/examples/full-audience-02-m03/preview.mp4",
+    "assets/examples/full-audience-02-m05/poster.jpg",
+    "assets/examples/full-audience-02-m05/preview.mp4"
   ]
 }
