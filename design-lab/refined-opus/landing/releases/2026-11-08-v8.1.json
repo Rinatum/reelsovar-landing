@@ -93,5 +93,34 @@
     "newMobileBytes": 1654660
   },
   "deviceObservation": "Owner reported v8.1 working on Pixel 10 / Chrome. Automated suites use desktop Chrome with mobile viewport/network emulation.",
-  "excluded": "Rejected experiments, raw traces/screenshots, duplicate intermediate builds, third-party skill collections, unrelated dirty original files. Preserved locally."
+  "excluded": "Rejected experiments, raw traces/screenshots, duplicate intermediate builds, third-party skill collections, unrelated dirty original files. Preserved locally.",
+  "deployment": {
+    "sourceCommit": "21e9a1184f0b411a109e91edf6874bca3b38bc8d",
+    "pagesCommit": "d4693f804e9034351259d4b9c4aa490966dd9ceb",
+    "workflowRun": "https://github.com/Rinatum/reelsovar-landing/actions/runs/42505878684",
+    "conclusion": "success",
+    "publicQA": {
+      "passed": true,
+      "suites": [
+        {
+          "name": "publication",
+          "passed": true,
+          "evidence": {
+            "checks": 12
+          }
+        },
+        {
+          "name": "native-video",
+          "passed": true,
+          "evidence": {
+            "checks": 55
+          }
+        }
+      ]
+    },
+    "publicRuntimeHashMatches": 5,
+    "releaseChangedFiles": 90,
+    "unrelatedRemainingChanges": 390,
+    "mainChanged": false
+  }
 }
