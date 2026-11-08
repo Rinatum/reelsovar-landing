@@ -1,0 +1,97 @@
+{
+  "version": "v8.1",
+  "date": "2026-11-08",
+  "base": "accepted v7; same content and structure with media recovery/mobile optimization and accepted weekly layout changes",
+  "site": "https://rinatum.github.io/reelsovar-landing/",
+  "qa": {
+    "passed": true,
+    "startedAt": "2026-11-08T17:16:59.350Z",
+    "endedAt": "2026-11-08T17:21:47.162Z",
+    "suites": [
+      {
+        "name": "recovery",
+        "passed": true,
+        "evidence": {
+          "checks": 13
+        }
+      },
+      {
+        "name": "mobile-drum",
+        "passed": true,
+        "evidence": {
+          "uniqueClips": 11,
+          "healthyWindows": 11,
+          "windows": 12,
+          "startupGraceWindows": 2
+        }
+      },
+      {
+        "name": "slow-mobile",
+        "passed": true,
+        "evidence": {
+          "groups": [
+            0,
+            1,
+            2
+          ],
+          "movingWindows": 14,
+          "minimumWindowMs": 650
+        }
+      },
+      {
+        "name": "resources",
+        "passed": true,
+        "evidence": {
+          "checks": 4
+        }
+      },
+      {
+        "name": "behavior",
+        "passed": true,
+        "evidence": {
+          "checks": 17
+        }
+      },
+      {
+        "name": "native-video",
+        "passed": true,
+        "evidence": {
+          "checks": 55
+        }
+      },
+      {
+        "name": "publication",
+        "passed": true,
+        "evidence": {
+          "checks": 12
+        }
+      },
+      {
+        "name": "diagnostics",
+        "passed": true,
+        "evidence": {
+          "version": "8.1",
+          "probe": {
+            "status": 200,
+            "ms": 9
+          }
+        }
+      }
+    ]
+  },
+  "runtimeSha256": {
+    "index.html": "69ea063d2154e799c2b6e197030ab79892551cab89f0f28ad275b372ed864acb",
+    "landing.css": "c19873adbd2cdc8bb4ce63ee2fb9f482ea4dd259e69c444ec2b09c430f740fa5",
+    "release.json": "fd6366f9becd14b7858717431f450343827efb7572596ba0cf060828a0754b4a",
+    "scenes.css": "ad824a78f28ab8323deeb03b9d837fa93208e43d58c4eedcb568da0ffb1128a4",
+    "scenes.js": "a9cb0760daf8c76f739cf2dfc4d01bba39e9fd8b3f764708d923c0a5769eea82"
+  },
+  "media": {
+    "files": 97,
+    "bytes": 27278783,
+    "newMobileFiles": 19,
+    "newMobileBytes": 1654660
+  },
+  "deviceObservation": "Owner reported v8.1 working on Pixel 10 / Chrome. Automated suites use desktop Chrome with mobile viewport/network emulation.",
+  "excluded": "Rejected experiments, raw traces/screenshots, duplicate intermediate builds, third-party skill collections, unrelated dirty original files. Preserved locally."
+}

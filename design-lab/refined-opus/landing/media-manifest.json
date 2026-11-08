@@ -98,6 +98,30 @@
       "sha256": "bba14195c56dc7b5f1941ab3721139f82056c6c4d092381cbd009f6ace4859a7"
     },
     {
+      "path": "assets/examples/full-audience-02-m03/poster.jpg",
+      "bytes": 46795,
+      "sha256": "fc17659e7cee8d7931c5e0943589e7b8570fb41e34209d7cab6042766979f104",
+      "origin": "reelsovar-drawio outputs/landing-examples/full-length-2026-11-02/full-audience-02-m03/poster.jpg"
+    },
+    {
+      "path": "assets/examples/full-audience-02-m03/preview.mp4",
+      "bytes": 1247388,
+      "sha256": "d0551ea7d1072e9d815bdcc6759247becb9b0dc2f8120b371a95b71acb59c2a1",
+      "origin": "reelsovar-drawio outputs/landing-examples/full-length-2026-11-02/full-audience-02-m03/preview.mp4"
+    },
+    {
+      "path": "assets/examples/full-audience-02-m05/poster.jpg",
+      "bytes": 42711,
+      "sha256": "32d8e22490700b90716fa5652ae107f6e2590ae71aecd36fa2607fb978137031",
+      "origin": "reelsovar-drawio outputs/landing-examples/full-length-2026-11-02/full-audience-02-m05/poster.jpg"
+    },
+    {
+      "path": "assets/examples/full-audience-02-m05/preview.mp4",
+      "bytes": 1790968,
+      "sha256": "f839bffbe892b1cc9f839575a422d5eb5d3657d6dfbd20355056b79c5b8f3bdb",
+      "origin": "reelsovar-drawio outputs/landing-examples/full-length-2026-11-02/full-audience-02-m05/preview.mp4"
+    },
+    {
       "path": "assets/examples/full-biz-cafe-m02/final.mp4",
       "bytes": 4714207,
       "sha256": "b7072c47266d50d448440bd0356d1f1d1e916bf687d23c210d05c4757da5ad1b"
@@ -141,6 +165,101 @@
       "path": "assets/fonts-poster.jpg",
       "bytes": 52117,
       "sha256": "a20d95fbba87f5635193cb0d6ce4af48554bb5277f7ce9d3a06abaca411d3297"
+    },
+    {
+      "path": "assets/mobile/examples/anime-01-hook-demons/preview.mp4",
+      "bytes": 48138,
+      "sha256": "2686bd3d7f24cceca4545e4a6479173e4dba21f94db5e1c5d2d0228db4104020"
+    },
+    {
+      "path": "assets/mobile/examples/auto-01-hook-mileage/preview.mp4",
+      "bytes": 97665,
+      "sha256": "4a1cad5576197e586a6e897588f791f83787e3436cd8f83c060f033c3b7b8f70"
+    },
+    {
+      "path": "assets/mobile/examples/full-audience-01-m05/preview.mp4",
+      "bytes": 88509,
+      "sha256": "97e6e37a8de8bc87866f9fa9ebf747f0033b070f900fb9e39d5f0db977070dbe"
+    },
+    {
+      "path": "assets/mobile/examples/full-audience-02-m01/preview.mp4",
+      "bytes": 88545,
+      "sha256": "98ab31c9f8e6e2191d7f6925355f48c678d51048e7f603ccd2412b5f95ff5456"
+    },
+    {
+      "path": "assets/mobile/examples/full-audience-02-m02/preview.mp4",
+      "bytes": 83241,
+      "sha256": "3567c083c2277c91a599311479065404aaebeb22b098a36fa0d8abb4947724d4"
+    },
+    {
+      "path": "assets/mobile/examples/full-audience-02-m03/preview.mp4",
+      "bytes": 89796,
+      "sha256": "5e2c917d17c034b9c478c77de0d370a7259197238aeb95e908697f73eac10e95"
+    },
+    {
+      "path": "assets/mobile/examples/full-audience-02-m04/preview.mp4",
+      "bytes": 88269,
+      "sha256": "d3182d049d501f17cd9d495a85d3f9987d104ed2165b7cc190dfde82f150192b"
+    },
+    {
+      "path": "assets/mobile/examples/full-audience-02-m05/preview.mp4",
+      "bytes": 88722,
+      "sha256": "2cd8563d6b96c7f13cd962a4bd0e70a72f015e2b277529b5a074c98743521492"
+    },
+    {
+      "path": "assets/mobile/examples/full-audience-03-m01/preview.mp4",
+      "bytes": 93653,
+      "sha256": "71e2ab11fc82350d41047c55dabe350586ecd4fb216970b7ef5b516d022e171f"
+    },
+    {
+      "path": "assets/mobile/examples/full-biz-cafe-m01/preview.mp4",
+      "bytes": 93816,
+      "sha256": "d4c4ab1bcd5aad780484e89b33b1c4bebf8d918a2a28cb7aa7426453d07997bf"
+    },
+    {
+      "path": "assets/mobile/examples/full-biz-cafe-m02/preview.mp4",
+      "bytes": 92607,
+      "sha256": "54590ab83eae4a56f4111f917cbc9b9a993e90ad1ce8f0c85ebb266cc27e35fc"
+    },
+    {
+      "path": "assets/mobile/examples/full-biz-cafe-m03/preview.mp4",
+      "bytes": 88181,
+      "sha256": "381dfc5267d31e1cf611599ea5f35211fcafb0b63d77b2463f8223e45a7d045c"
+    },
+    {
+      "path": "assets/mobile/examples/full-biz-cg-m02/preview.mp4",
+      "bytes": 82450,
+      "sha256": "92be3cc7ff1a648cb3f48dc19c3d2e2e94e0441bb9ea19cfc1e2a35c8813d63c"
+    },
+    {
+      "path": "assets/mobile/examples/full-biz-fonts-m03/preview.mp4",
+      "bytes": 82768,
+      "sha256": "0613ac4a27d712d0b408ca88d8bd583494e7b4b7b5b65cc96c3541ebc6ba1610"
+    },
+    {
+      "path": "assets/mobile/examples/full-biz-hr-m01/preview.mp4",
+      "bytes": 90674,
+      "sha256": "0fc9fec5fca6bc60db63ffd6675520afc5cb9ca27399bcf2e9270b0b6c54c0e4"
+    },
+    {
+      "path": "assets/mobile/examples/full-biz-hr-m02/preview.mp4",
+      "bytes": 85726,
+      "sha256": "e9b92159949eab2ee918b345bccecdb47a3ffa1b18c23c2052005ad98622dd60"
+    },
+    {
+      "path": "assets/mobile/examples/full-biz-hr-m03/preview.mp4",
+      "bytes": 95919,
+      "sha256": "a0d3ba6a58aa0d8f7a25c5ffa08d352e6b75afc8b86392ef0f2b055f470c63ba"
+    },
+    {
+      "path": "assets/mobile/examples/full-biz-marketing-m02/preview.mp4",
+      "bytes": 92003,
+      "sha256": "66f735322598681e3b21d0fc42a2405883d298aef77759a6b92aeff69f7e1e5b"
+    },
+    {
+      "path": "assets/mobile/examples/full-stream-02-m03/preview.mp4",
+      "bytes": 83978,
+      "sha256": "7c4e4de5dced3604dc5709d689c82f3e0687d20d6523931a0769ee7f914a668b"
     },
     {
       "path": "assets/pipeline/cafe.jpg",
@@ -188,9 +307,59 @@
       "sha256": "4ced952546b5cb5ad78554567c578162339933fe790113a13cc030becbecc0b6"
     },
     {
-      "path": "media/examples/anime-01-hook-demons/preview.mp4",
-      "bytes": 482684,
-      "sha256": "7e54fc020555420b23ebb46a630653348e999c05af50d7039ea3ca147271d522"
+      "path": "assets/weekly/examples/full-audience-02-m01/preview.mp4",
+      "bytes": 224514,
+      "sha256": "c91643a57b031a5241776f4fc7670e3c74bbad6c4c199005c11e14fde5748700"
+    },
+    {
+      "path": "assets/weekly/examples/full-audience-02-m02/preview.mp4",
+      "bytes": 179760,
+      "sha256": "776605b9754477155dddf0272f62aea9809cc1b52c59dc5d33161e237c90b4cd"
+    },
+    {
+      "path": "assets/weekly/examples/full-audience-02-m03/preview.mp4",
+      "bytes": 174238,
+      "sha256": "5191946bf7989bc7e5b10ce9f7919af47f7686db4bbd76dd41b263833fb8dbda"
+    },
+    {
+      "path": "assets/weekly/examples/full-audience-02-m04/preview.mp4",
+      "bytes": 187659,
+      "sha256": "ca5ee97354544c4c267ec3d8d12541bbf9f12c3c6fa3fffeea5757786c4880c2"
+    },
+    {
+      "path": "assets/weekly/examples/full-audience-02-m05/preview.mp4",
+      "bytes": 184940,
+      "sha256": "fe34ca1122294d33175d99409ff20f5587db27085480d97d9f55e14736c7b58b"
+    },
+    {
+      "path": "assets/weekly/examples/full-biz-cafe-m01/preview.mp4",
+      "bytes": 174823,
+      "sha256": "b52d7b451c45d524dc5f2b31b5f73eb44be4e54641e5562afe8ecd147a3b27a8"
+    },
+    {
+      "path": "assets/weekly/examples/full-biz-cafe-m02/preview.mp4",
+      "bytes": 169884,
+      "sha256": "9865132aaa9da8cf107d38857b06acdff8dc251c3a869f404c24aa63effcfbfb"
+    },
+    {
+      "path": "assets/weekly/examples/full-biz-cafe-m03/preview.mp4",
+      "bytes": 188107,
+      "sha256": "0982768213310b275954fc52dbfe107e349d0b2cfa47ca260b8981b1a4123b56"
+    },
+    {
+      "path": "assets/weekly/examples/full-biz-hr-m01/preview.mp4",
+      "bytes": 180499,
+      "sha256": "9048bde33ff63cdddada4cbefeb03afee9edf2a1658ccc6e8c741cf0fd139090"
+    },
+    {
+      "path": "assets/weekly/examples/full-biz-hr-m02/preview.mp4",
+      "bytes": 182892,
+      "sha256": "7eaede053fc97238e0679b416b7c803e6e0046028196dc1e2fa53dfa65ee47ac"
+    },
+    {
+      "path": "assets/weekly/examples/full-biz-hr-m03/preview.mp4",
+      "bytes": 177420,
+      "sha256": "3d093a282dec64244c1cd64db8199a993eec053e669ce5e965060d80cc5d6516"
     },
     {
       "path": "media/examples/anime-01-hook-demons/final.mp4",
@@ -203,9 +372,9 @@
       "sha256": "8036967a4e508a15faa856a11d0a6986cf57cad7ceae0e58d6f71a89cccb4664"
     },
     {
-      "path": "media/examples/auto-01-hook-mileage/preview.mp4",
-      "bytes": 884372,
-      "sha256": "378818405bc840c55f4d696f77fee51fa42a257dd588790a1609ddc3ad8f101c"
+      "path": "media/examples/anime-01-hook-demons/preview.mp4",
+      "bytes": 482684,
+      "sha256": "7e54fc020555420b23ebb46a630653348e999c05af50d7039ea3ca147271d522"
     },
     {
       "path": "media/examples/auto-01-hook-mileage/final.mp4",
@@ -218,9 +387,9 @@
       "sha256": "cf76961755f659a5782acff4d08ac017322104593db89f5c00557318569be9f4"
     },
     {
-      "path": "media/examples/full-audience-01-m01/preview.mp4",
-      "bytes": 1479049,
-      "sha256": "48d310b3da8b837f3bee3db83a9eb5ca8c8c38675d49b3b0c17a61dd080d1edf"
+      "path": "media/examples/auto-01-hook-mileage/preview.mp4",
+      "bytes": 884372,
+      "sha256": "378818405bc840c55f4d696f77fee51fa42a257dd588790a1609ddc3ad8f101c"
     },
     {
       "path": "media/examples/full-audience-01-m01/final.mp4",
@@ -233,14 +402,14 @@
       "sha256": "515022b7834c6e2d2c1de629b19efc41cb4aa2a070bad25c055edb1171bda9e3"
     },
     {
+      "path": "media/examples/full-audience-01-m01/preview.mp4",
+      "bytes": 1479049,
+      "sha256": "48d310b3da8b837f3bee3db83a9eb5ca8c8c38675d49b3b0c17a61dd080d1edf"
+    },
+    {
       "path": "media/examples/full-audience-01-m01/source-thumb.jpg",
       "bytes": 21333,
       "sha256": "fe525a309349cce8190f35deb995f49c654c3588a325971a87a6603f07ac24f0"
-    },
-    {
-      "path": "media/examples/full-audience-01-m02/preview.mp4",
-      "bytes": 1207210,
-      "sha256": "e9101737549f6500d5bab7747baaa5865f58626e8fafef4689eaa3fdc2e75037"
     },
     {
       "path": "media/examples/full-audience-01-m02/final.mp4",
@@ -253,14 +422,14 @@
       "sha256": "364d34c4f125afe69d9258b9abbf2be568da70d9a4deecccd28ff3df219e0650"
     },
     {
+      "path": "media/examples/full-audience-01-m02/preview.mp4",
+      "bytes": 1207210,
+      "sha256": "e9101737549f6500d5bab7747baaa5865f58626e8fafef4689eaa3fdc2e75037"
+    },
+    {
       "path": "media/examples/full-audience-01-m02/source-thumb.jpg",
       "bytes": 16367,
       "sha256": "da34fcb363f8314b5069516c2cfc1039620a385b2a20060af8824d7941cef798"
-    },
-    {
-      "path": "media/examples/full-audience-01-m03/preview.mp4",
-      "bytes": 456223,
-      "sha256": "8998320d0715a44b16e0077c7054344fb970f2a483158f9be53ba08f5fe7a577"
     },
     {
       "path": "media/examples/full-audience-01-m03/final.mp4",
@@ -273,14 +442,14 @@
       "sha256": "9c7e6352cfb4f7df9c75c191eb857b4c099a4d3cadb57f5bc9ca2a5eff5fd20d"
     },
     {
+      "path": "media/examples/full-audience-01-m03/preview.mp4",
+      "bytes": 456223,
+      "sha256": "8998320d0715a44b16e0077c7054344fb970f2a483158f9be53ba08f5fe7a577"
+    },
+    {
       "path": "media/examples/full-audience-01-m03/source-thumb.jpg",
       "bytes": 16340,
       "sha256": "cf097b09c1b0962e136cd37149c2c2296f1ee9275c01416ed1630fa5d1946ca2"
-    },
-    {
-      "path": "media/examples/full-audience-01-m04/preview.mp4",
-      "bytes": 542074,
-      "sha256": "2ddc30e2f33cab3ca4253b5d6a88b8aa446637635441501176e1242aa00a9eb5"
     },
     {
       "path": "media/examples/full-audience-01-m04/final.mp4",
@@ -293,14 +462,14 @@
       "sha256": "a8131fb6d008a9b1783b993f7e140a56a27663d703839a9367b6f1333e47cd20"
     },
     {
+      "path": "media/examples/full-audience-01-m04/preview.mp4",
+      "bytes": 542074,
+      "sha256": "2ddc30e2f33cab3ca4253b5d6a88b8aa446637635441501176e1242aa00a9eb5"
+    },
+    {
       "path": "media/examples/full-audience-01-m04/source-thumb.jpg",
       "bytes": 12915,
       "sha256": "82eefb2031c30e3a2b178d9e7549ec5b1a25ebe43a53a9f94592c84b3daecc33"
-    },
-    {
-      "path": "media/examples/full-audience-01-m05/preview.mp4",
-      "bytes": 1090392,
-      "sha256": "4f98cf890c3af2030fa3813d4be3cc0e25045d10b17a4c64e5b4966a17fdc6da"
     },
     {
       "path": "media/examples/full-audience-01-m05/final.mp4",
@@ -313,14 +482,14 @@
       "sha256": "45640597e1db7bcf54da70ef3735c220f362df65b3dd9de5d8b0094c3c3ec151"
     },
     {
+      "path": "media/examples/full-audience-01-m05/preview.mp4",
+      "bytes": 1090392,
+      "sha256": "4f98cf890c3af2030fa3813d4be3cc0e25045d10b17a4c64e5b4966a17fdc6da"
+    },
+    {
       "path": "media/examples/full-audience-01-m05/source-thumb.jpg",
       "bytes": 18354,
       "sha256": "9655572df36a18e06facb4d74d1e82bd151259e01fef10e27179c8964b1cea21"
-    },
-    {
-      "path": "media/examples/full-audience-02-m01/preview.mp4",
-      "bytes": 985624,
-      "sha256": "78372a797d74c6cec07198b62c175ec723a268a1605bd49b4d5e9b09d0f471af"
     },
     {
       "path": "media/examples/full-audience-02-m01/final.mp4",
@@ -333,9 +502,9 @@
       "sha256": "a8604105d5555ba5b47f934a1745dbc567c3f0fad6f0eeb1f0c0b21f294899df"
     },
     {
-      "path": "media/examples/full-audience-02-m02/preview.mp4",
-      "bytes": 1587840,
-      "sha256": "d36b71dffa53c0a6588220e07bb21992cd3fd8872fb3371e6dba294b3b743e91"
+      "path": "media/examples/full-audience-02-m01/preview.mp4",
+      "bytes": 985624,
+      "sha256": "78372a797d74c6cec07198b62c175ec723a268a1605bd49b4d5e9b09d0f471af"
     },
     {
       "path": "media/examples/full-audience-02-m02/final.mp4",
@@ -348,9 +517,9 @@
       "sha256": "661d8eb1bfe627bb2c30c7335fbdd6fd64e27f754fa4d4d4fefff4501bdd2fa0"
     },
     {
-      "path": "media/examples/full-audience-02-m04/preview.mp4",
-      "bytes": 1576624,
-      "sha256": "daca5d1acbeb157fc422b445c77d02b4a59a324750c4352180608c191c8bde45"
+      "path": "media/examples/full-audience-02-m02/preview.mp4",
+      "bytes": 1587840,
+      "sha256": "d36b71dffa53c0a6588220e07bb21992cd3fd8872fb3371e6dba294b3b743e91"
     },
     {
       "path": "media/examples/full-audience-02-m04/final.mp4",
@@ -363,9 +532,9 @@
       "sha256": "26549222a452a39454613564f76fad4ae3e926af28946af9fc53ccd8bdb618d3"
     },
     {
-      "path": "media/examples/full-audience-03-m01/preview.mp4",
-      "bytes": 1276747,
-      "sha256": "b2b40459c5f35bb37f533b89650bc48f68560992df834c2aec2038588a446249"
+      "path": "media/examples/full-audience-02-m04/preview.mp4",
+      "bytes": 1576624,
+      "sha256": "daca5d1acbeb157fc422b445c77d02b4a59a324750c4352180608c191c8bde45"
     },
     {
       "path": "media/examples/full-audience-03-m01/final.mp4",
@@ -378,9 +547,9 @@
       "sha256": "0ba11a7342aaa27b73394907e4dd1a931335775ed5fe1784b409ffdce1740e1e"
     },
     {
-      "path": "media/examples/full-biz-cafe-m01/preview.mp4",
-      "bytes": 787018,
-      "sha256": "7529eb561a2645ba1968bce8ab1a39c157fdf46c72167f80f18a8282f16cac85"
+      "path": "media/examples/full-audience-03-m01/preview.mp4",
+      "bytes": 1276747,
+      "sha256": "b2b40459c5f35bb37f533b89650bc48f68560992df834c2aec2038588a446249"
     },
     {
       "path": "media/examples/full-biz-cafe-m01/final.mp4",
@@ -393,9 +562,9 @@
       "sha256": "5165548e735c35868c6b999ee1f6de156528ebb328124b96aaaad1aad6ef8dd7"
     },
     {
-      "path": "media/examples/full-biz-cafe-m03/preview.mp4",
-      "bytes": 1152043,
-      "sha256": "983eec3d7e1d9faf01ac35dc2b35c5940e0ee94546c90a26afbf62c0560bab0f"
+      "path": "media/examples/full-biz-cafe-m01/preview.mp4",
+      "bytes": 787018,
+      "sha256": "7529eb561a2645ba1968bce8ab1a39c157fdf46c72167f80f18a8282f16cac85"
     },
     {
       "path": "media/examples/full-biz-cafe-m03/final.mp4",
@@ -408,9 +577,9 @@
       "sha256": "9124aaf7f5d8b9e76619b29795312be643c5095f31172c101ce3b865522a2184"
     },
     {
-      "path": "media/examples/full-biz-cg-m02/preview.mp4",
-      "bytes": 755742,
-      "sha256": "cd639f46a9939d4ef89ad6c6aa530544f3cf3521e7d42dbe26903dcc26df9ba8"
+      "path": "media/examples/full-biz-cafe-m03/preview.mp4",
+      "bytes": 1152043,
+      "sha256": "983eec3d7e1d9faf01ac35dc2b35c5940e0ee94546c90a26afbf62c0560bab0f"
     },
     {
       "path": "media/examples/full-biz-cg-m02/final.mp4",
@@ -423,9 +592,9 @@
       "sha256": "0d59adf9594c7fe1d1174c298be2fbbb22637b0b40d73c46839492e8c334e4d0"
     },
     {
-      "path": "media/examples/full-biz-fonts-m03/preview.mp4",
-      "bytes": 653582,
-      "sha256": "cd2e32bac229d93b761cb5c359c722c554f165a364213277db1a788c93b88017"
+      "path": "media/examples/full-biz-cg-m02/preview.mp4",
+      "bytes": 755742,
+      "sha256": "cd639f46a9939d4ef89ad6c6aa530544f3cf3521e7d42dbe26903dcc26df9ba8"
     },
     {
       "path": "media/examples/full-biz-fonts-m03/final.mp4",
@@ -438,9 +607,9 @@
       "sha256": "2bc29e802cb878672e3dc0d0b27cef71466b28d300148b5ceca409e32fc42c17"
     },
     {
-      "path": "media/examples/full-biz-hr-m01/preview.mp4",
-      "bytes": 1633357,
-      "sha256": "5ad31be55a0e620492d438bfdf699d9504ca9357ecae7841a5e43fd250dd95f9"
+      "path": "media/examples/full-biz-fonts-m03/preview.mp4",
+      "bytes": 653582,
+      "sha256": "cd2e32bac229d93b761cb5c359c722c554f165a364213277db1a788c93b88017"
     },
     {
       "path": "media/examples/full-biz-hr-m01/final.mp4",
@@ -453,9 +622,9 @@
       "sha256": "1de30fa2a60fa4a1271725b42f959d8068abef324c733cb1bb5a3e8ece3d5648"
     },
     {
-      "path": "media/examples/full-biz-hr-m03/preview.mp4",
-      "bytes": 841717,
-      "sha256": "4dc0a6a8ec407e7b49654407e13dedb32cb9ff07a1187aad876028011c590049"
+      "path": "media/examples/full-biz-hr-m01/preview.mp4",
+      "bytes": 1633357,
+      "sha256": "5ad31be55a0e620492d438bfdf699d9504ca9357ecae7841a5e43fd250dd95f9"
     },
     {
       "path": "media/examples/full-biz-hr-m03/final.mp4",
@@ -468,9 +637,9 @@
       "sha256": "3898a95aab8f135db4be091126cfca2d5cbc053cdbd884595cbd219fa957710f"
     },
     {
-      "path": "media/examples/full-biz-marketing-m02/preview.mp4",
-      "bytes": 1257573,
-      "sha256": "699edd55c14d1063c47e272a4bb38337971041509fa5742570ef663aa1489da4"
+      "path": "media/examples/full-biz-hr-m03/preview.mp4",
+      "bytes": 841717,
+      "sha256": "4dc0a6a8ec407e7b49654407e13dedb32cb9ff07a1187aad876028011c590049"
     },
     {
       "path": "media/examples/full-biz-marketing-m02/final.mp4",
@@ -483,9 +652,9 @@
       "sha256": "6770ea07cb0129d0aa9c3ca436b12513bd944b966529a4497b40036fe794c44b"
     },
     {
-      "path": "media/examples/full-biz-startup-m02/preview.mp4",
-      "bytes": 987843,
-      "sha256": "479b8e3b41f8e6c34f79a3a05c931c20fa01c1f415ce7375daba9e12b28ca6f8"
+      "path": "media/examples/full-biz-marketing-m02/preview.mp4",
+      "bytes": 1257573,
+      "sha256": "699edd55c14d1063c47e272a4bb38337971041509fa5742570ef663aa1489da4"
     },
     {
       "path": "media/examples/full-biz-startup-m02/final.mp4",
@@ -498,28 +667,9 @@
       "sha256": "65cc42d72d9f2b70d8f42454105645b1e4736dd6c2b133fc17562aa7ceded173"
     },
     {
-      "path": "assets/examples/full-audience-02-m03/preview.mp4",
-      "bytes": 1247388,
-      "sha256": "d0551ea7d1072e9d815bdcc6759247becb9b0dc2f8120b371a95b71acb59c2a1",
-      "origin": "reelsovar-drawio outputs/landing-examples/full-length-2026-11-02/full-audience-02-m03/preview.mp4"
-    },
-    {
-      "path": "assets/examples/full-audience-02-m03/poster.jpg",
-      "bytes": 46795,
-      "sha256": "fc17659e7cee8d7931c5e0943589e7b8570fb41e34209d7cab6042766979f104",
-      "origin": "reelsovar-drawio outputs/landing-examples/full-length-2026-11-02/full-audience-02-m03/poster.jpg"
-    },
-    {
-      "path": "assets/examples/full-audience-02-m05/preview.mp4",
-      "bytes": 1790968,
-      "sha256": "f839bffbe892b1cc9f839575a422d5eb5d3657d6dfbd20355056b79c5b8f3bdb",
-      "origin": "reelsovar-drawio outputs/landing-examples/full-length-2026-11-02/full-audience-02-m05/preview.mp4"
-    },
-    {
-      "path": "assets/examples/full-audience-02-m05/poster.jpg",
-      "bytes": 42711,
-      "sha256": "32d8e22490700b90716fa5652ae107f6e2590ae71aecd36fa2607fb978137031",
-      "origin": "reelsovar-drawio outputs/landing-examples/full-length-2026-11-02/full-audience-02-m05/poster.jpg"
+      "path": "media/examples/full-biz-startup-m02/preview.mp4",
+      "bytes": 987843,
+      "sha256": "479b8e3b41f8e6c34f79a3a05c931c20fa01c1f415ce7375daba9e12b28ca6f8"
     }
   ]
 }

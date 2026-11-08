@@ -67,16 +67,17 @@ video.v-wait{opacity:0}
 .drum-item::before{transform:none}.drum-item video{transform:none;backface-visibility:visible}
 /* A light, stable field exists from first paint; no dark cached background is swapped in. */
 #rf.pipeline-stage{height:650px;background:#e9ece3;background-image:none!important;color:var(--ink)}
-.pipe-queue,.pipe-results{position:absolute;inset:0;pointer-events:none}
+.pipe-queue,.pipe-results,.pipe-stack{position:absolute;inset:0;pointer-events:none}
 .pipe-origin{position:absolute;top:30px;left:50%;width:min(380px,42%);translate:-50% 0;background:#f9faf4;padding:7px;border-radius:24px;box-shadow:0 18px 40px #24301e20;will-change:transform;opacity:0}
-.pipe-source-frame{aspect-ratio:16/9;border-radius:18px;overflow:hidden;background:#e9ece3}
-.pipe-source{width:100%;height:100%;object-fit:cover}
+.pipe-source-frame{position:relative;aspect-ratio:16/9;border-radius:18px;overflow:hidden;background-color:#e9ece3}
+.pipe-source{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
 .pipe-meta{display:flex;justify-content:space-between;gap:12px;padding:9px 8px 3px;font-size:12px;color:#48543d}
 .pipe-action{position:absolute;left:50%;top:45%;translate:-50% 0;z-index:6}
 .pipe-button{position:relative;display:block;overflow:hidden;background:var(--yellow);padding:13px 30px;border-radius:999px;font-size:15px;font-weight:600;white-space:nowrap;box-shadow:0 0 26px #f9db534d}
 .pipe-meter{position:absolute;left:0;right:0;bottom:0;height:3px;background:#39432d;transform-origin:0 50%;transform:scaleX(0)}
+.pipe-stack-back{position:absolute;opacity:0;border-radius:20px;background:#cbd2bf;box-shadow:0 5px 12px #27332112;transform-origin:50% 50%}.pipe-stack-back:nth-child(even){background:#e0e5d7}
 .pipe-deck{position:absolute;inset:0;visibility:hidden}.pipe-deck.is-active{visibility:visible}
-.pipe-card{position:absolute;opacity:0;border-radius:20px;background:#d4dacb;box-shadow:0 0 0 1px #a8b59455,0 10px 30px #27332126;overflow:hidden}
+.pipe-card{position:absolute;opacity:0;border-radius:20px;background-color:#d4dacb;box-shadow:0 0 0 1px #a8b59455,0 10px 30px #27332126;overflow:hidden}
 .pipe-card video{width:100%;height:100%;object-fit:cover;border-radius:inherit}
 .pipe-switcher{position:absolute;bottom:18px;left:0;right:0;display:flex;justify-content:center;gap:8px;z-index:8}
 .pipe-switcher button{min-height:38px;padding:6px 17px;border-radius:999px;font-size:12px;background:#d9dfd0;color:#46513c}
@@ -84,7 +85,7 @@ video.v-wait{opacity:0}
 #cut[data-phase=buffering] .ci-progress,#rf[data-phase=buffering] .pipe-meter{animation:loading-sweep .75s ease-in-out infinite alternate}
 @keyframes loading-sweep{from{transform:scaleX(.35)}to{transform:scaleX(.95)}}
 @media(max-width:1100px) and (min-width:761px){.pipe-origin{width:48%}}
-@media(max-width:760px){#rf.pipeline-stage{height:570px}.pipe-origin{top:28px;width:72%;padding:5px;border-radius:20px}.pipe-source-frame{border-radius:15px}.pipe-meta{font-size:11px;padding:7px 6px 2px}.pipe-action{top:43%}.pipe-button{font-size:13px;padding:12px 24px}.pipe-card{border-radius:16px}.pipe-switcher{gap:6px;bottom:16px}.pipe-switcher button{padding:6px 13px;font-size:11px;min-height:38px}}
+@media(max-width:760px){#rf.pipeline-stage{height:570px}.pipe-origin{top:28px;width:72%;padding:5px;border-radius:20px}.pipe-source-frame{border-radius:15px}.pipe-meta{font-size:11px;padding:7px 6px 2px}.pipe-action{top:43%}.pipe-button{font-size:13px;padding:12px 24px}.pipe-card,.pipe-stack-back{border-radius:16px}.pipe-switcher{gap:6px;bottom:16px}.pipe-switcher button{padding:6px 13px;font-size:11px;min-height:38px}}
 @media(max-width:360px){#rf.pipeline-stage{height:530px}}
 @media(prefers-reduced-motion:reduce){#cut[data-phase=buffering] .ci-progress,#rf[data-phase=buffering] .pipe-meter{animation:none}}
 
@@ -122,11 +123,11 @@ video.v-wait{opacity:0}
 @media(max-width:760px){.examples-section .drum-stage{height:420px}.drum-ring{--w:150px}}
 @media(max-width:360px){.drum-ring{--w:136px}}
 
-/* Content for the week: deck size follows each real recording. */
+/* Content for the week: one circular fan replaces the former two mobile rows. */
 #rf.pipeline-stage{height:660px}
 .pipe-meta span:first-child{color:#6b7561}
-@media(max-width:760px){#rf.pipeline-stage{height:650px}}
-@media(max-width:360px){#rf.pipeline-stage{height:620px}}
+@media(max-width:760px){#rf.pipeline-stage{height:540px}}
+@media(max-width:360px){#rf.pipeline-stage{height:500px}}
 
 /* Benefits: the same yellow bar that struck out the pains now marks what is gained. */
 .benefit-copy{gap:0;padding-top:0}
@@ -146,3 +147,6 @@ video.v-wait{opacity:0}
 .mf-tall video{width:100%;height:100%;object-fit:cover;border-radius:inherit;display:block}
 .drum-stage{cursor:default}.drum-stage:active{cursor:default}
 .drum-item{pointer-events:none;transition:none!important}
+
+/* A network wait is visible; successful playback hides this local status. */
+.media-note{position:absolute;z-index:120;left:16px;bottom:8px;max-width:calc(100% - 32px);padding:3px 8px;border-radius:8px;background:#f4f4ef;color:#22251f;font-size:11px;line-height:1.35;pointer-events:none}.media-note[hidden]{display:none}

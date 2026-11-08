@@ -1,0 +1,57 @@
+# Local rejected candidates and generated evidence; keep files on disk.
+/assets/
+/DESIGN.md
+/OPUS-REPORT.md
+/index.html
+/opus.css
+/opus.js
+/robots.txt
+/soon.html
+/motion/
+/screenshots/
+/qa/
+
+# Third-party skill bundles are installed locally, not part of our release.
+/tools/skills/transitions-dev/
+/tools/skills/transitions-polish/
+
+# Retain concise experiment history, exclude implementations and captures.
+/explorations/*
+!/explorations/HISTORY.md
+!/explorations/2026-11-06/
+/explorations/2026-11-06/*
+!/explorations/2026-11-06/OUTCOME.md
+!/explorations/2026-11-08/
+/explorations/2026-11-08/*
+!/explorations/2026-11-08/REFERENCE-REVIEW.md
+!/explorations/2026-11-08/REFERENCE-REVIEW-ADDITIONAL.md
+
+# Keep selected project-owned findings and encoding recipes only.
+/refinements/*
+!/refinements/2026-11-08-motion/
+/refinements/2026-11-08-motion/*
+!/refinements/2026-11-08-motion/RESULT.md
+!/refinements/2026-11-08-motion/COMPOSITION-REFERENCES.md
+!/refinements/2026-11-08-weekly/
+/refinements/2026-11-08-weekly/*
+!/refinements/2026-11-08-weekly/RESULT.md
+!/refinements/2026-11-08-lifecycle/
+/refinements/2026-11-08-lifecycle/*
+!/refinements/2026-11-08-lifecycle/RESULT.md
+!/refinements/2026-11-08-lifecycle/encode.mjs
+!/refinements/2026-11-08-lifecycle/encode-report.json
+!/refinements/2026-11-08-recovery/
+/refinements/2026-11-08-recovery/*
+!/refinements/2026-11-08-recovery/RESULT.md
+!/refinements/2026-11-08-recovery/encode-gallery.mjs
+!/refinements/2026-11-08-recovery/gallery-input.json
+!/refinements/2026-11-08-recovery/encode-report.json
+!/refinements/2026-11-08-media-qa-rules/
+/refinements/2026-11-08-media-qa-rules/*
+!/refinements/2026-11-08-media-qa-rules/RESULT.md
+!/refinements/media-qa/
+/refinements/media-qa/*
+!/refinements/media-qa/.gitignore
+
+# Untracked local exploratory QA snapshots; scripts/tracked reports remain intact.
+/landing/qa/*.json

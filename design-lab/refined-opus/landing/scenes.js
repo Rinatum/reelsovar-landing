@@ -9,6 +9,8 @@
   const mobile = () => innerWidth < 760;
   const EXPO = 'expo.out';
   const TEMPO = { cut: 1.22, title: 1.12, rf: 1.25, layers: 1.25 };
+  // transitions-polish: stagger startup work; keep authored scene durations intact.
+  const MOTION = { stagger: .04 };
   // Only build distant scenes when they approach the viewport. Keep the first paint small.
   function deferScene(selector, init, margin = 240) {
     const el = $(selector);
@@ -18,51 +20,145 @@
     }, { rootMargin: `${margin}px 0px` }).observe(el);
   }
   const hms = s => { s = Math.round(s); const h = Math.floor(s / 3600), m = Math.floor(s % 3600 / 60), x = s % 60; return `${h}:${String(m).padStart(2, '0')}:${String(x).padStart(2, '0')}`; };
-  const mediaFrames = new WeakMap();
+  const mediaFrames = new WeakMap(), mediaPlayback = new WeakMap();
+  const recoveryDelays = [450, 1200, 2600];
+  function playback(v) {
+    if (!mediaPlayback.has(v)) mediaPlayback.set(v, { wanted:false, attempts:0, retry:null, stall:null, blocked:false, exhausted:false, readyAt:0, progress:performance.now(), at:v.currentTime, failedAt:0 });
+    return mediaPlayback.get(v);
+  }
+  function notifyMedia(v) { v.closest('.stage')?.dispatchEvent(new Event('media-state')); }
+  function wantsPlayback(v) { return playback(v).wanted && !document.hidden && !!v.closest('.stage.is-running'); }
+  function clearRecovery(m) { clearTimeout(m.retry); clearTimeout(m.stall); m.retry=null; m.stall=null; }
+  function pauseVideo(v) {
+    const m=playback(v),changed=m.wanted;m.wanted=false;clearRecovery(m);
+    if(!v.paused)v.pause();
+    if(changed)notifyMedia(v);
+  }
+  function reloadVideo(v) {
+    const f=mediaFrames.get(v);
+    if(f?.watching&&v.cancelVideoFrameCallback)v.cancelVideoFrameCallback(f.callback);
+    if(f)f.watching=false;
+    if(v.currentTime>0)resumePositions.set(v,v.currentTime);
+    v.classList.add('v-wait');v.removeAttribute('src');v.load();
+  }
+  function recoverVideo(v, reason) {
+    const m=playback(v);
+    if(!wantsPlayback(v))return;
+    if(reason==='NotAllowedError'){m.blocked=true;notifyMedia(v);return;}
+    if(m.retry||m.blocked)return;
+    if(m.attempts>=recoveryDelays.length){m.exhausted=true;notifyMedia(v);return;}
+    m.failedAt=performance.now();
+    m.retry=setTimeout(()=>{
+      m.retry=null;if(!wantsPlayback(v))return;
+      m.attempts++;m.progress=performance.now();reloadVideo(v);play(v);
+    },recoveryDelays[m.attempts]);
+  }
+  function watchStall(v) {
+    const m=playback(v);if(m.stall||!wantsPlayback(v))return;
+    const at=v.currentTime;
+    m.stall=setTimeout(()=>{
+      m.stall=null;if(!wantsPlayback(v))return;
+      if(v.currentTime<=at+.04&&performance.now()-m.progress>=7800)recoverVideo(v,'stalled');
+      else if(v.readyState<3)watchStall(v);
+    },8000);
+  }
+  function frameReady(v) {
+    const m=playback(v);if(v.paused||!m.wanted)return;v.classList.remove('v-wait');m.readyAt=performance.now();m.attempts=0;m.blocked=false;m.exhausted=false;
+    clearTimeout(m.retry);m.retry=null;notifyMedia(v);
+  }
   const underlay = v => {
     if (mediaFrames.has(v)) return;
     const poster = v.getAttribute('poster') || v.dataset.poster, box = v.parentElement;
     if (poster) { v.poster = poster; box.style.backgroundImage = `url("${poster}")`; box.classList.add('has-under'); v.classList.add('v-wait'); }
-    const frames = { count: 0, at: 0, media: -1, watching: false, callback: null };
+    const frames = { watching: false, callback: null };
     mediaFrames.set(v, frames);
     const monitor = () => {
-      if (frames.watching || !v.requestVideoFrameCallback) return;
+      if (frames.watching || !v.requestVideoFrameCallback || !v.classList.contains('v-wait')) return;
       frames.watching = true;
-      const presented = (now, info) => {
-        frames.watching = false; frames.count++; frames.at = now; frames.media = info.mediaTime;
-        if(v.classList.contains('v-wait'))v.classList.remove('v-wait');
-        if (!v.paused && !v.ended) monitor();
+      const presented = () => {
+        frames.watching = false;
+        frameReady(v);
       };
       frames.callback = v.requestVideoFrameCallback(presented);
     };
-    v.addEventListener('playing', monitor);
-    v.addEventListener('pause', () => { if (frames.watching && v.cancelVideoFrameCallback) v.cancelVideoFrameCallback(frames.callback); frames.watching = false; });
-    if (!v.requestVideoFrameCallback) v.addEventListener('timeupdate', () => { if (v.currentTime > 0) { frames.count++; frames.at = performance.now(); v.classList.remove('v-wait'); } });
+    v.addEventListener('playing',()=>{monitor();notifyMedia(v)});
+    v.addEventListener('pause', () => {
+      // A queued pause event may arrive after the user has already resumed.
+      if (!v.paused) return;
+      if (frames.watching && v.cancelVideoFrameCallback) v.cancelVideoFrameCallback(frames.callback);
+      frames.watching = false;
+      // Release an abandoned cold request so it cannot occupy the connection
+      // pool while the next visible scene waits. Keep decoded/cached videos.
+      if (v.readyState < 2 && v.getAttribute('src')) {
+        v.preload = 'none'; v.removeAttribute('src'); v.load();
+      }
+    });
+    v.addEventListener('error', () => {if(v.error){v.classList.add('v-wait');recoverVideo(v,'media-error')}});
+    v.addEventListener('waiting',()=>{watchStall(v);notifyMedia(v)});v.addEventListener('stalled',()=>{watchStall(v);notifyMedia(v)});
+    v.addEventListener('progress',()=>{playback(v).progress=performance.now()});
+    // Persistent fallback: eviction/reload may need another first-frame reveal.
+    v.addEventListener('timeupdate',()=>{
+      const m=playback(v);
+      if(v.currentTime>m.at+.01){clearTimeout(m.stall);m.stall=null;}
+      m.at=v.currentTime;
+      if(v.readyState>=2&&v.currentTime>0&&v.classList.contains('v-wait'))frameReady(v);
+    });
   };
   document.querySelectorAll('.cut-src,.slice video').forEach(underlay);
-  const load = v => { underlay(v); if (!v.getAttribute('src') && v.dataset.src) { v.src = v.dataset.src; v.preload = 'auto'; } };
-  const play = v => {
-    load(v); v.muted = true; v.defaultMuted = true; v.playsInline = true;
-    return v.play().then(() => true).catch(error => { v.dataset.playError = error.name; return false; });
-  };
-  async function liveTogether(videos, valid) {
-    const starts = videos.map(v => ({ time: v.currentTime, count: mediaFrames.get(v)?.count || 0, playing: !v.paused && v.readyState>=2 }));
-    await Promise.all(videos.map(play));
-    return new Promise(resolve => {
-      const check = () => {
-        if (!valid()) { resolve(false); return; }
-        if (videos.every((v, i) => {
-          const f = mediaFrames.get(v), advanced = v.currentTime - starts[i].time;
-          return !v.paused && v.readyState >= 2 && ((f && f.count > (starts[i].playing?0:starts[i].count+1) && performance.now() - f.at < 500) || advanced > .12);
-        })) { videos.forEach(v=>v.classList.remove('v-wait')); resolve(true); return; }
-        videos.forEach(v => { if (v.paused && !v.error) play(v); });
-        setTimeout(check, 60);
-      };
-      check();
-    });
+  const resumePositions = new WeakMap();
+  function discardVideo(v) {
+    if (!v.paused || !v.getAttribute('src')) return;
+    const m=playback(v);m.wanted=false;clearRecovery(m);
+    const f=mediaFrames.get(v);
+    if(f?.watching&&v.cancelVideoFrameCallback)v.cancelVideoFrameCallback(f.callback);
+    if(f)f.watching=false;
+    if(v.currentTime>0)resumePositions.set(v,v.currentTime);
+    if(!v.dataset.src)v.dataset.src=v.getAttribute('src');
+    v.classList.add('v-wait');v.removeAttribute('src');v.load();
   }
+  function releaseOffscreenMedia(el) {
+    const r=el.getBoundingClientRect();
+    if(r.bottom>0&&r.top<innerHeight)return;
+    // Paused decoded players still retain media resources on phones.
+    el.querySelectorAll('video').forEach(discardVideo);
+  }
+  // Offscreen files stay unrequested. Scenes attach only their visible posters;
+  // fetch video when it will actually play.
+  const load = (v, eager = false) => {
+    if (!eager) return;
+    underlay(v);
+    if(v.preload!=='auto')v.preload='auto';
+    const url=mobile()&&v.dataset.mobileSrc?v.dataset.mobileSrc:v.dataset.src;
+    if (!v.getAttribute('src') && url) {
+      v.src = url;
+      if (resumePositions.has(v)) {
+        const at = resumePositions.get(v); resumePositions.delete(v);
+        v.addEventListener('loadedmetadata', () => { v.currentTime = Math.min(at, Math.max(0, v.duration - .06)); }, { once: true });
+      }
+    }
+  };
+  const play = v => {
+    const m=playback(v),wasWanted=m.wanted;m.wanted=true;
+    if(m.blocked){notifyMedia(v);return Promise.resolve(false);}
+    if(m.exhausted&&performance.now()-m.failedAt>30000){m.attempts=0;m.exhausted=false;}
+    if(m.exhausted){notifyMedia(v);return Promise.resolve(false);}
+    if(!wasWanted)m.progress=performance.now();
+    load(v,true);if(!wasWanted)notifyMedia(v);if(!v.muted)v.muted=true;if(!v.defaultMuted)v.defaultMuted=true;if(!v.playsInline)v.playsInline=true;
+    if(v.error){recoverVideo(v,'media-error');return Promise.resolve(false);}
+    if(!v.paused&&!v.ended)return Promise.resolve(true);
+    return v.play().then(()=>{delete v.dataset.playError;return true}).catch(error=>{
+      v.dataset.playError=error.name;
+      if(error.name!=='AbortError')recoverVideo(v,error.name);
+      return false;
+    });
+  };
+  addEventListener('online',()=>document.querySelectorAll('video').forEach(v=>{
+    const m=playback(v);if(!wantsPlayback(v)||m.blocked)return;
+    m.attempts=0;m.exhausted=false;
+    if(v.paused||v.error||v.readyState<2)recoverVideo(v,'online');
+  }));
   const prepare = v => {
-    load(v);
+    load(v, true);
     if (v.readyState >= 2 || v.error) return Promise.resolve();
     return new Promise(resolve => {
       let timer;
@@ -88,7 +184,13 @@
     const st = { visible: false, paused: reduced, inView: false, area: 0, exclusive };
     let revision = 0;
     const btn = $(`[data-pause="${name}"]`);
-    const label = () => { if (!btn) return; btn.textContent = st.paused ? 'Смотреть' : 'Пауза'; btn.setAttribute('aria-pressed', String(st.paused)); };
+    let status=null;
+    if(name==='rf'||name==='drum'){status=document.createElement('p');status.className='media-note';status.hidden=true;status.setAttribute('role','status');status.setAttribute('aria-live','polite');el.appendChild(status);}
+    const issues=()=>[...el.querySelectorAll('video')].filter(v=>{const m=playback(v);return m.wanted&&(m.blocked||m.exhausted)});
+    const label = () => { if (!btn) return; const issue=issues(),text=st.paused?'Смотреть':issue.length?'Запустить видео':'Пауза';if(btn.textContent!==text)btn.textContent=text;const pressed=String(st.paused);if(btn.getAttribute('aria-pressed')!==pressed)btn.setAttribute('aria-pressed',pressed);
+      if(status){const loading=[...el.querySelectorAll('video')].some(v=>playback(v).wanted&&(v.readyState<3||v.classList.contains('v-wait')));const note=issue.length?(issue.some(v=>playback(v).blocked)?'Нажмите «Запустить видео»':'Не все примеры загрузились'):loading?'Загружаем примеры…':'';if(status.textContent!==note)status.textContent=note;const hidden=st.paused||!st.running()||!note;if(status.hidden!==hidden)status.hidden=hidden;}
+    };
+    el.addEventListener('media-state',label);
     st.running = () => st.visible && !st.paused && !document.hidden;
     const run = async () => {
       const rev = ++revision;
@@ -101,9 +203,17 @@
     };
     st.pause = () => { st.paused = true; label(); run(); };
     st.resume = () => { st.paused = false; label(); run(); };
-    btn?.addEventListener('click', () => { st.paused = !st.paused; label(); run(); });
+    btn?.addEventListener('click', () => {
+      const failed=issues();
+      if(failed.length&&!st.paused){
+        // These native play calls stay directly inside the user gesture.
+        failed.forEach(v=>{const m=playback(v);clearRecovery(m);m.attempts=0;m.blocked=false;m.exhausted=false;if(v.error)reloadVideo(v);play(v)});
+        label();run();return;
+      }
+      st.paused=!st.paused;label();run();
+    });
     st.run = run; scenes.push(st);
-    new IntersectionObserver(([e]) => { st.inView = e.isIntersecting && e.intersectionRatio >= .2; st.area = e.intersectionRect.height; arbitrate(); }, { threshold: THRESHOLDS }).observe(el);
+    new IntersectionObserver(([e]) => { st.inView = e.isIntersecting && e.intersectionRatio >= .2; st.area = e.intersectionRect.height; arbitrate(); if (!e.isIntersecting) releaseOffscreenMedia(el); }, { threshold: THRESHOLDS }).observe(el);
     new IntersectionObserver(([e], observer) => { if (e.isIntersecting) { settled.then(() => api.warm?.()); observer.disconnect(); } }, { rootMargin: '500px 0px' }).observe(el);
     document.addEventListener('visibilitychange', run);
     label();
@@ -140,18 +250,11 @@
     const modes = cards.map(() => 'source');
     const values = cards.map(() => ({ t: 0 }));
     const contexts = canvases.map(c => c.getContext('2d', {alpha:false,desynchronized:true}));
+    const setPose = cards.map(card => gsap.quickSetter(card, 'css'));
     let tl, state, geometry;
     const lerp = (a,b,t) => a+(b-a)*t;
     let resultsWarm = false;
-    const warmResults = () => { if (resultsWarm) return; resultsWarm = true; videos.forEach(load); };
-    let gateRevision = 0;
-    async function awaitResults() {
-      if (reduced || !state?.running()) return;
-      const revision = ++gateRevision;
-      tl.pause(); st.dataset.phase = 'buffering';
-      const ready = await liveTogether(videos, () => revision === gateRevision && state.running());
-      if (ready) { st.dataset.phase = 'input'; tl.resume(); }
-    }
+    const warmResults = () => { if (resultsWarm) return; resultsWarm = true; videos.forEach(v=>load(v)); };
 
     src.addEventListener('playing', () => {
       if (src.requestVideoFrameCallback) src.requestVideoFrameCallback(warmResults);
@@ -183,7 +286,7 @@
     function pose(i,t,back=false) {
       const g=geometry[i],u=back?1-t:t,wave=Math.sin(Math.PI*u);
       // Continuous curved flight: no stop at the image handover.
-      gsap.set(cards[i],{x:lerp(g.x,0,u)+(i-1)*wave*g.S.width*.045,y:lerp(g.y,0,u)-wave*g.S.height*.08,
+      setPose[i]({x:lerp(g.x,0,u)+(i-1)*wave*g.S.width*.045,y:lerp(g.y,0,u)-wave*g.S.height*.08,
         z:wave*75+(i===1?6:-6)*u,scaleX:lerp(g.sx,g.end,u),scaleY:lerp(g.sy,g.end,u),rotationY:wave*84*(i===1?-1:1),
         rotation:lerp(0,[-6,0,6][i],u)+(i-1)*wave*11});
       mode(i,u>=.5?'clip':'source');
@@ -206,12 +309,14 @@
       tl.call(()=>{label.textContent='Ищем моменты'},null,1.2)
         .to(progress,{scaleX:1,duration:.85,ease:'power2.inOut'},1.2).to(bar,{scaleX:1,duration:.85,ease:'power1.inOut'},1.2)
         .to(cursor,{opacity:0,duration:.2},1.4).to(pins,{scale:1,duration:.2,stagger:.16,ease:'power3.out'},1.45)
-        .call(awaitResults,null,1.8)
         .to(lines,{scaleY:1,duration:.16,stagger:.07,ease:'power2.in'},1.9)
-        .call(()=>{src.pause();snapshot();st.dataset.phase='cut'},null,2.12)
+        .call(()=>{pauseVideo(src);snapshot();st.dataset.phase='cut'},null,2.12)
         .set(cards,{opacity:1},2.13).set(frame,{opacity:0},2.13)
         .to([input,lineBox],{opacity:0,duration:.2},2.14)
         .to(portal,{opacity:.8,scale:1.6,duration:.45,ease:'sine.out'},2.2);
+      // Start decoders ahead of the flight, 40ms apart. Missing media keeps its
+      // own poster; it never pauses the source→results timeline.
+      videos.forEach((video, i) => tl.call(() => { if (state?.running()) play(video); }, null, 1.5 + i * MOTION.stagger));
       values.forEach((v,i)=>tl.fromTo(v,{t:0},{t:1,duration:1.05,ease:'power2.inOut',immediateRender:false,onUpdate(){pose(i,v.t)}},2.16+i*.065));
       tl.to(portal,{opacity:0,scale:2,duration:.55,ease:'sine.inOut'},2.8)
         .call(()=>{st.dataset.phase='clips'},null,3.35)
@@ -222,21 +327,21 @@
         .to(portal,{opacity:.65,scale:1.3,duration:.35},5.8);
       values.forEach((v,i)=>tl.fromTo(v,{t:0},{t:1,duration:.85,ease:'power2.inOut',immediateRender:false,onUpdate(){pose(i,v.t,true)}},5.65+i*.05));
       tl.set(frame,{opacity:1},6.64).set(cards,{opacity:0},6.64)
-        .call(()=>{videos.forEach(v=>v.pause());if(state?.running())play(src)},null,6.65)
+        .call(()=>{videos.forEach(v=>pauseVideo(v));if(state?.running())play(src)},null,6.65)
         .to(portal,{opacity:0,duration:.4},6.45)
         .set(lines,{scaleY:0},6.65).set(pins,{scale:0},6.65).set(progress,{scaleX:0},6.65)
         .to(input,{opacity:1,duration:.3},6.7).set(lineBox,{opacity:1},6.7)
         .to({}, {duration:.55},7);
       tl.timeScale(TEMPO.cut);
       reset();
-      if(reduced){tl.time(4).pause();cards.forEach((e,i)=>mode(i,'clip'));src.pause();videos.forEach(v=>v.pause())}
+      if(reduced){tl.time(4).pause();cards.forEach((e,i)=>mode(i,'clip'));pauseVideo(src);videos.forEach(v=>pauseVideo(v))}
     }
     state=loopScene(st,'cut',{
       warm(){if(src.readyState>=2)warmResults()},
       prime(){if(tl.time()<2.12||tl.time()>=6.65)play(src)},
       ready(){return prepare(src)},
-      play(){if(st.dataset.phase==='buffering'){awaitResults();return}if(tl.progress()===1)tl.restart();else tl.resume();if(tl.time()>=1.8&&tl.time()<6.65)videos.forEach(play);if(tl.time()<2.1||tl.time()>=6.65)play(src);},
-      pause(){gateRevision++;tl.pause();src.pause();videos.forEach(v=>v.pause())},
+      play(){if(tl.progress()===1)tl.restart();else tl.resume();if(tl.time()>=1.5&&tl.time()<6.65)videos.forEach(play);if(tl.time()<2.1||tl.time()>=6.65)play(src);},
+      pause(){tl.pause();pauseVideo(src);videos.forEach(v=>pauseVideo(v))},
     },true);
     build();
     let width=innerWidth;addEventListener('resize',()=>{if(Math.abs(innerWidth-width)>20){width=innerWidth;build();if(state.running())tl.play()}});
@@ -259,9 +364,12 @@
       const playhead=document.createElement('i');playhead.className='tt-play';line.appendChild(playhead);
       let x=0;const cuts=widths.slice(0,-1).map(w=>{x+=w;const e=document.createElement('i');e.className='tt-cut';e.style.left=x+'px';line.appendChild(e);return e});
       const states=pieces.map(()=>({v:0}));
+      const setters=pieces.map(e=>gsap.quickSetter(e,'css'));
+      const fronts=pieces.map(e=>$('.front',e)),backs=pieces.map(e=>$('.back',e));
+      const mixes=pieces.map(()=>-1);
       function pose(i,v){const e=pieces[i],mix=Math.max(0,Math.min(1,(v-.42)/.16));
-        gsap.set(e,{rotationY:Math.sin(v*Math.PI)*78,x:(i-1.5)*fs*.11*v,y:-Math.sin(v*Math.PI)*fs*.07});
-        gsap.set($('.front',e),{opacity:1-mix});gsap.set($('.back',e),{opacity:mix});
+        setters[i]({rotationY:Math.sin(v*Math.PI)*78,x:(i-1.5)*fs*.11*v,y:-Math.sin(v*Math.PI)*fs*.07});
+        if(mixes[i]!==mix){fronts[i].style.opacity=1-mix;backs[i].style.opacity=mix;mixes[i]=mix;}
       }
       tl=gsap.timeline({id:'title',paused:true,onComplete(){if(state?.running())tl.restart()}})
         .set(playhead,{x:0,opacity:0},0).set(cuts,{scaleY:0,opacity:1},0)
@@ -298,7 +406,7 @@
     const stepButtons = $$('[data-step]', st);
     const syncVideos = () => vids.forEach(v => {
       const on = state?.running() && (vertical() ? stationLive[vidStation(v)] : true);
-      if (on) play(v); else v.pause();
+      if (on) play(v); else pauseVideo(v);
     });
     const activate = i => {
       st.dataset.step = i;
@@ -376,12 +484,12 @@
     }), { threshold: [0, .25, .55, .8] });
     stations.forEach(s => watcher.observe(s));
     state = loopScene(st, 'how', {
-      warm() { vids.forEach(load); },
+      warm() { vids.forEach(v=>load(v)); },
       play() {
         if (vertical()) { segs.forEach((T, i) => { if (stationView[i] && T.progress() < 1) T.resume(); }); syncVideos(); return; }
         if (tl.progress() === 1) tl.restart(); else tl.resume(); activate(+st.dataset.step || 0);
       },
-      pause() { tl.pause(); segs.forEach(T => T.pause()); vids.forEach(v => v.pause()); },
+      pause() { tl.pause(); segs.forEach(T => T.pause()); vids.forEach(v => pauseVideo(v)); },
     }, true);
     build();
     stepButtons.forEach((b, i) => b.addEventListener('click', () => {
@@ -400,12 +508,31 @@
     const st=$('#rf'), origins=$$('.pipe-origin',st), sources=$$('.pipe-source',st), decks=$$('.pipe-deck',st);
     const cards=decks.map(d=>$$('.pipe-card',d)), videos=cards.map(group=>group.map(c=>$('video',c)));
     const button=$('.pipe-button',st), label=$('.pipe-button>span',st), meter=$('.pipe-meter',st), cursor=$('.cursor',st);
-    const all=[...sources,...videos.flat()], N=origins.length;
-    const clipsWord=n=>{const a=n%10,b=n%100;return a===1&&b!==11?'готовый клип':a>=2&&a<=4&&(b<12||b>14)?'готовых клипа':'готовых клипов'};
-    let current=0, tl, state, revision=0;
-    function warm(i){load(sources[i]);videos[i].forEach(load)}
-    // Следующая запись и её клипы грузятся заранее, ещё во время текущей: смена без ожиданий и рывков.
-    function pauseAll(){all.forEach(v=>v.pause())}
+    const backs=$$('.pipe-stack-back',st), all=[...sources,...videos.flat()], N=origins.length;
+    let current=0, tl, state, revision=0, hold=null, holdTimer=null;
+    function warm(i){load(sources[i]);videos[i].forEach(v=>load(v))}
+    const currentPlayers=()=>[sources[current],...videos[current]];
+    const playersReady=()=>currentPlayers().every(v=>!v.paused&&v.readyState>=2&&!v.classList.contains('v-wait'));
+    function stopHold(){clearTimeout(holdTimer);holdTimer=null;hold=null;}
+    function pollHold(){
+      clearTimeout(holdTimer);holdTimer=null;
+      if(!hold||!state?.running())return;
+      const now=performance.now(),dt=hold.last?now-hold.last:0;hold.last=now;hold.remaining-=dt;
+      hold.readyFor=playersReady()?hold.readyFor+dt:0;
+      if(hold.readyFor>=1600||hold.remaining<=0){hold=null;tl.resume();return;}
+      holdTimer=setTimeout(pollHold,150);
+    }
+    function holdForMedia(){
+      if(!state?.running())return;
+      const now=performance.now(),ready=playersReady();
+      const shown=ready?now-Math.max(...currentPlayers().map(v=>playback(v).readyAt||now)):0;
+      if(ready&&shown>=1600)return;
+      // Keep the current live set on screen while slow/retried files finish;
+      // do not discard and replace it before the viewer has seen the results.
+      hold={remaining:12000,last:0,readyFor:shown};tl.pause();pollHold();
+    }
+    // Невидимые записи не занимают сеть; текущий набор получает время на загрузку и показ.
+    function pauseAll(){all.forEach(v=>pauseVideo(v))}
     function paintQueue(){
       // Видна только текущая запись; соседние в очереди не показываются.
       origins.forEach((e,i)=>{const active=i===current;
@@ -414,59 +541,71 @@
       decks.forEach((e,i)=>e.classList.toggle('is-active',i===current));
       st.dataset.group=current; st.dataset.source=origins[current].dataset.sourceId; st.dataset.count=cards[current].length;
     }
-    // Веер под фактическое число клипов: на desktop один ряд, на телефоне по три в ряд.
+    // A shallow circular stack: only the existing real clips have video surfaces.
+    // Backing sheets supply depth, with no new decoders or invented clip counts.
     function layout(){
-      const W=st.clientWidth,H=st.clientHeight,small=W<600;
+      const W=st.clientWidth,H=st.clientHeight,small=W<600,top=H*(small?.58:.56);
       cards.forEach(group=>{
-        const n=group.length,perRow=small?Math.min(3,n):n,rows=Math.ceil(n/perRow),gap=small?8:18;
-        const w=small?Math.min(rows>1?80:100,(W-40-(perRow-1)*gap)/perRow):Math.min(n>3?112:118,(W-80-(n-1)*gap)/n),h=w*16/9;
-        const top=H*(small?.52:.575),avail=H-top-(small?14:22),block=rows*h+(rows-1)*gap,y0=top+Math.max(0,(avail-block)/2);
+        const n=group.length,half=(n-1)/2,w=Math.min(n>3?124:136,W*(n>3?.25:.285)),h=w*16/9;
+        const angle=small?(n>3?8:11):8,rad=half*angle*Math.PI/180;
+        const envelope=w*Math.cos(rad)+h*Math.sin(rad);
+        const step=Math.min(w*(small?.83:1.03),(W-36-envelope)/(n-1));
         group.forEach((e,i)=>{
-          const row=Math.floor(i/perRow),inRow=Math.min(perRow,n-row*perRow),col=i-row*perRow,off=col-(inRow-1)/2;
-          const x=(W-inRow*w-(inRow-1)*gap)/2+col*(w+gap),y=y0+row*(h+gap)+Math.abs(off)*(small?3:9);
-          Object.assign(e.style,{left:x+'px',top:y+'px',width:w+'px',height:h+'px'});e.dataset.fan=String(off*(small?1.5:2.5));
+          const off=i-half,x=(W-w)/2+off*step,y=top+off*off*(small?4:5);
+          Object.assign(e.style,{left:x+'px',top:y+'px',width:w+'px',height:h+'px',zIndex:String(20+Math.round((half-Math.abs(off))*2))});
+          e.dataset.fan=String(off*angle);e.dataset.stackX=String(-off*step);
         });
+      });
+      const w=Math.min(116,W*.23),h=w*16/9,rad=34*Math.PI/180;
+      const spread=Math.min(290,(W-28-w*Math.cos(rad)-h*Math.sin(rad))/2);
+      backs.forEach((e,i)=>{
+        const t=(i/(backs.length-1)-.5)*2,x=t*spread;
+        Object.assign(e.style,{left:((W-w)/2+x)+'px',top:(top-18+t*t*14)+'px',width:w+'px',height:h+'px',zIndex:String(i)});
+        e.dataset.fan=String(t*34);e.dataset.stackX=String(-x);
       });
       paintQueue();
     }
     function build(){
-      tl?.kill();layout();gsap.set(cards.flat(),{opacity:0,y:0,scale:1,rotation:0});
-      gsap.set(cursor,{opacity:0});gsap.set(meter,{scaleX:0});label.textContent='Нарезать запись';
+      stopHold();tl?.kill();layout();gsap.set([...cards.flat(),...backs],{opacity:0,x:0,y:0,scale:1,rotation:0});
+      gsap.set(cursor,{opacity:0});gsap.set(meter,{scaleX:0});label.textContent='Ловите момент';
       const active=cards[current],n=active.length;
       gsap.set(origins[current],{y:-135,opacity:0,scale:.88});
       tl=gsap.timeline({id:'rf',paused:true,onComplete(){if(state?.running())select((current+1)%N)}})
-        .call(()=>{st.dataset.phase='input';label.textContent='Нарезать запись'},null,0)
+        .call(()=>{st.dataset.phase='input';label.textContent='Ловите момент'},null,0)
         .fromTo(origins[current],{y:-135,opacity:0,scale:.88},{y:0,opacity:1,scale:1,duration:.55,ease:'power3.out',immediateRender:false},0);
       cursorTo(tl,cursor,st,button,.1,{x:st.clientWidth*.8,y:st.clientHeight*.53});
-      tl.call(()=>{label.textContent='Находим моменты';if(state?.running())videos[current].forEach(play)},null,.95)
+      tl.call(()=>{if(state?.running())videos[current].forEach(play)},null,.95)
         .to(meter,{scaleX:1,duration:.65,ease:'power2.inOut'},.95)
         .to(cursor,{opacity:0,duration:.16},1.05)
-        .call(()=>{st.dataset.phase='results';label.textContent=`${n} ${clipsWord(n)}`;sources[current].pause()},null,1.55)
-        .fromTo(active,{y:-60,scale:.72,opacity:0,rotation:0},{y:0,scale:1,opacity:1,rotation:(i,e)=>+e.dataset.fan,duration:.6,stagger:.045,ease:'power3.out',immediateRender:false},1.55)
+        .call(()=>{st.dataset.phase='results'},null,1.55)
+        .fromTo(backs,{x:(i,e)=>+e.dataset.stackX,y:-28,scale:.76,opacity:0,rotation:0},{x:0,y:0,scale:1,opacity:1,rotation:(i,e)=>+e.dataset.fan,duration:.65,stagger:.015,ease:'power3.out',immediateRender:false},1.5)
+        .fromTo(active,{x:(i,e)=>+e.dataset.stackX,y:-48,scale:.72,opacity:0,rotation:0},{x:0,y:0,scale:1,opacity:1,rotation:(i,e)=>+e.dataset.fan,duration:.65,stagger:.045,ease:'power3.out',immediateRender:false},1.55)
         .call(()=>{if(!reduced)warm((current+1)%N)},null,.6)
         .to({}, {duration:2.15+(n-3)*.25},2.2);
       const out=4.35+(n-3)*.25;
-      tl.call(()=>{st.dataset.phase='return'},null,out)
-        .to(active,{y:50,opacity:0,scale:.94,duration:.4,stagger:.03,ease:'power2.in'},out)
+      tl.call(holdForMedia,null,out-.08)
+        .call(()=>{st.dataset.phase='return'},null,out)
+        .to(active,{x:(i,e)=>+e.dataset.stackX,y:28,rotation:0,opacity:0,scale:.9,duration:.4,stagger:.03,ease:'power2.in'},out)
+        .to(backs,{x:(i,e)=>+e.dataset.stackX,y:28,rotation:0,opacity:0,scale:.9,duration:.35,stagger:.012,ease:'power2.in'},out+.08)
         .to(origins[current],{y:-100,opacity:0,duration:.4,ease:'power2.in'},out+.3)
-        .call(()=>videos[current].forEach(v=>v.pause()),null,out+.45)
+        .call(()=>videos[current].forEach(v=>pauseVideo(v)),null,out+.45)
         .to({}, {duration:.2},out+.6).timeScale(TEMPO.rf);
       st.dataset.out=out+.45;
       if(reduced){tl.time(3).pause();pauseAll()}
     }
     function select(i){
-      revision++;pauseAll();current=(i+N)%N;st.dataset.phase='input';
-      sources.forEach(underlay);videos[current].forEach(underlay);warm(current);build();
+      revision++;stopHold();pauseAll();all.forEach(discardVideo);current=(i+N)%N;st.dataset.phase='input';
+      underlay(sources[current]);videos[current].forEach(underlay);warm(current);build();
       if(state?.running()){play(sources[current]);tl.play()}
       else if(state?.paused){tl.time(3).pause();pauseAll()}
     }
     state=loopScene(st,'rf',{
-      warm(){warm(current)},prime(){if(tl.time()<1.55)play(sources[current])},
-      play(){if(tl.progress()===1){select((current+1)%N);return}tl.resume();if(tl.time()<1.55)play(sources[current]);if(tl.time()>.95&&tl.time()<+st.dataset.out)videos[current].forEach(play)},
-      pause(){revision++;tl.pause();pauseAll()}
+      warm(){warm(current)},prime(){play(sources[current])},
+      play(){if(tl.progress()===1){select((current+1)%N);return}play(sources[current]);if(tl.time()>.95&&tl.time()<+st.dataset.out)videos[current].forEach(play);if(hold)pollHold();else tl.resume()},
+      pause(){revision++;clearTimeout(holdTimer);holdTimer=null;if(hold)hold.last=0;tl.pause();pauseAll()}
     },true);
     select(0);
-    let width=innerWidth;addEventListener('resize',()=>{if(Math.abs(innerWidth-width)>20){width=innerWidth;const t=tl.time();build();tl.time(t);if(state.running())tl.resume()}});
+    let width=innerWidth;addEventListener('resize',()=>{if(Math.abs(innerWidth-width)>20){width=innerWidth;const t=tl.time();build();tl.time(t);if(state.running()){if(hold)pollHold();else tl.resume()}}});
   });
 
   /* ── 14. Слои клипа: плавно, без рывков ── */
@@ -505,22 +644,23 @@
     const st = $('#drum'), ring = $('.drum-ring', st), cap = $('.drum-caption', st);
     const N = CLIPS.length, TURN = .85, DWELL = 1.45;
     const pos = { k: 0 };              // непрерывная позиция барабана; целые значения — остановки
-    let state, timer, tween, cardWidth = 190;
+    let state, timer, tween, cardWidth = 190, radius = 0, videoBand = -1;
     const items = CLIPS.map(([id, title, genre, base = 'media/examples']) => {
       const d = document.createElement('div'); d.className = 'drum-item'; d.setAttribute('aria-hidden', 'true');
-      d.innerHTML = `<video muted loop playsinline preload="none" poster="${base}/${id}/poster.jpg" data-src="${base}/${id}/preview.mp4"></video>`;
+      d.innerHTML = `<video muted loop playsinline preload="none" data-poster="${base}/${id}/poster.jpg" data-src="${base}/${id}/preview.mp4" data-mobile-src="assets/mobile/examples/${id}/preview.mp4"></video>`;
       ring.appendChild(d); return d;
     });
-    const vids = items.map(d => $('video', d)); vids.forEach(underlay);
+    const vids = items.map(d => $('video', d));
     const rel = i => ((i - pos.k) % N + N * 1.5) % N - N / 2;           // −N/2 … N/2
     const reach = () => mobile() ? { play: 1.6, show: 2.6 } : { play: 2.6, show: 3.6 };
     // Каждую позицию считаем по углу цилиндра: x = sin, глубина = cos. Края плавно гаснут, ничего не «выскакивает».
     function paint() {
-      const span = st.clientWidth, R = mobile() ? Math.min(cardWidth * 1.75, span * .62) : Math.min(cardWidth * 2.45, span * .36);
+      const R = radius;
       const { show } = reach();
       items.forEach((d, i) => {
         const r = rel(i), a = Math.abs(r);
         if (a > show) { if (d.style.visibility !== 'hidden') d.style.visibility = 'hidden'; return; }
+        underlay(vids[i]);
         const angle = r * .47, depth = Math.cos(angle), scale = .72 + .28 * Math.max(0, depth);
         const fade = Math.min(1, Math.max(0, show - a)) * Math.max(.18, 1 - a * .1);
         d.style.transform = `translate3d(${(Math.sin(angle) * R).toFixed(1)}px,${((1 - depth) * 22).toFixed(1)}px,0) scale(${(Math.max(.2, depth) * scale).toFixed(4)},${scale.toFixed(4)})`;
@@ -528,13 +668,17 @@
         d.classList.toggle('is-front', a < .5);
         d.classList.toggle('is-edge', a > reach().play);
       });
+      // Update playback as an incoming card joins the visible arc, rather than
+      // waiting until the turn has already finished. No media/network gate.
+      const band = Math.floor(pos.k * 10);
+      if (band !== videoBand) { videoBand = band; syncVideos(); }
     }
     function syncVideos() {
       const { play: near, show } = reach();
       vids.forEach((v, i) => {
         const a = Math.abs(rel(i));
         if (a <= show + 1) load(v);                                   // заранее, до появления на дуге
-        if (state?.running() && a <= near) play(v); else if (!v.paused) v.pause();
+        if (state?.running() && a <= near) play(v); else { pauseVideo(v); if(a>show)discardVideo(v); }
       });
     }
     function front() { return ((Math.round(pos.k) % N) + N) % N; }
@@ -551,9 +695,9 @@
     state = loopScene(st, 'drum', {
       warm() { syncVideos(); },
       play() { tween?.resume(); syncVideos(); if (!tween?.isActive()) schedule(); },
-      pause() { clearTimeout(timer); tween?.pause(); vids.forEach(v => v.pause()); },
+      pause() { clearTimeout(timer); tween?.pause(); vids.forEach(v => pauseVideo(v)); },
     }, true);
-    function layout() { cardWidth = ring.getBoundingClientRect().width || 190; paint(); }
+    function layout() { cardWidth = ring.getBoundingClientRect().width || 190; const span = st.clientWidth; radius = mobile() ? Math.min(cardWidth * 1.75, span * .62) : Math.min(cardWidth * 2.45, span * .36); paint(); }
     let width = innerWidth;
     addEventListener('resize', () => { if (innerWidth !== width) { width = innerWidth; layout(); } });
     layout(); caption(); syncVideos();
@@ -635,4 +779,33 @@
     addEventListener('load', place);
     place();
   })();
+  // Opt-in, local-only phone diagnostics. Nothing is uploaded automatically.
+  if(new URLSearchParams(location.search).has('media-debug')){
+    const panel=document.createElement('details');panel.style.cssText='position:fixed;z-index:10000;bottom:10px;left:10px;max-width:calc(100vw - 20px);width:390px;padding:12px;background:#f4f4ef;color:#22251f;border:1px solid #aeb6a5;border-radius:14px;font:13px/1.4 sans-serif;box-shadow:0 6px 24px #0002';
+    panel.innerHTML='<summary>Проверка видео</summary><button type="button" style="margin:12px 0;padding:10px 14px;background:#f9db53;color:#22251f;border:0;border-radius:12px">Скопировать отчёт</button><pre style="max-height:35vh;overflow:auto;white-space:pre-wrap;font:11px/1.4 monospace"></pre><small>Отчёт остаётся на устройстве. Автоматической отправки нет.</small>';
+    const pre=panel.querySelector('pre'),button=panel.querySelector('button');let probe=null;
+    const report=()=>{
+      const c=navigator.connection;
+      return{version:'8.1',probe,browser:navigator.userAgent,online:navigator.onLine,visibility:document.visibilityState,connection:c?{effectiveType:c.effectiveType,downlink:c.downlink,rtt:c.rtt,saveData:c.saveData}:null,
+        retained:[...document.querySelectorAll('video')].filter(v=>v.getAttribute('src')).length,
+        videos:[...document.querySelectorAll('video')].filter(v=>playback(v).wanted).map(v=>{
+          const m=playback(v),q=v.getVideoPlaybackQuality?.();
+          const url=new URL(v.currentSrc||v.dataset.src,location.href);
+          return{scene:v.closest('.stage')?.id,file:url.pathname,paused:v.paused,ready:v.readyState,network:v.networkState,time:+v.currentTime.toFixed(2),frames:q?.totalVideoFrames,dropped:q?.droppedVideoFrames,poster:v.classList.contains('v-wait'),error:v.error?{code:v.error.code,message:v.error.message}:null,playError:v.dataset.playError||null,retries:m.attempts,blocked:m.blocked,exhausted:m.exhausted};
+        })};
+    };
+    const refresh=()=>{if(panel.open&&!document.hidden)pre.textContent=JSON.stringify(report(),null,2)};
+    panel.addEventListener('toggle',refresh);
+    button.addEventListener('click',async()=>{
+      const start=performance.now(),abort=new AbortController(),timeout=setTimeout(()=>abort.abort(),5000);
+      button.disabled=true;button.textContent='Проверяем соединение…';
+      try{const r=await fetch('index.html?media-probe='+Date.now(),{method:'HEAD',cache:'no-store',signal:abort.signal});probe={status:r.status,ms:Math.round(performance.now()-start)}}
+      catch(e){probe={error:e.name,ms:Math.round(performance.now()-start)}}finally{clearTimeout(timeout);button.disabled=false}
+      const text=JSON.stringify(report(),null,2);pre.textContent=text;
+      try{await navigator.clipboard.writeText(text);button.textContent='Скопировано'}
+      catch{const selection=getSelection(),range=document.createRange();range.selectNodeContents(pre);selection.removeAllRanges();selection.addRange(range);button.textContent='Выделено — скопируйте текст'}
+    });
+    document.body.appendChild(panel);const timer=setInterval(refresh,1500);addEventListener('pagehide',()=>clearInterval(timer),{once:true});
+  }
+
 })();

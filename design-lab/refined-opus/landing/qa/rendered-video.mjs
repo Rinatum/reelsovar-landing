@@ -35,8 +35,9 @@ try{
  for(let group=0;group<3;group++){
   await p.waitForFunction(g=>{const s=document.querySelector('#rf');return s.dataset.group===String(g)&&s.dataset.phase==='results'},group,{timeout:40000});await p.waitForTimeout(500);await p.evaluate(()=>{gsap.getById('rf').pause()});
   const pair=await p.evaluate(()=>{const d=document.querySelector('.pipe-deck.is-active');return{source:document.querySelector('#rf').dataset.source,deck:d.dataset.sourceId,count:+d.dataset.count,label:document.querySelector('.pipe-button>span').textContent,ids:[...d.querySelectorAll('video')].map(v=>(v.currentSrc||v.dataset.src).match(/examples\/([^/]+)/)[1]),bg:getComputedStyle(document.querySelector('#rf')).backgroundColor}});
-  check('Pipeline '+group+' shows exactly its real results',pair.source===pair.deck&&JSON.stringify(pair.ids)===JSON.stringify(expect[pair.source])&&pair.count===pair.ids.length&&pair.label.startsWith(pair.count+' ')&&pair.bg==='rgb(233, 236, 227)',pair);
+  check('Pipeline '+group+' shows exactly its real results',pair.source===pair.deck&&JSON.stringify(pair.ids)===JSON.stringify(expect[pair.source])&&pair.count===pair.ids.length&&pair.label==='Ловите момент'&&pair.bg==='rgb(233, 236, 227)',pair);
   await sample('pipeline-'+pair.source,'.pipe-deck.is-active video',pair.count);
+  await sample('pipeline-source-'+pair.source,`.pipe-origin[data-source-id="${pair.source}"] video`,1);
   await p.evaluate(()=>{gsap.getById('rf').resume()});
  }
  await p.setViewportSize({width:390,height:844});await p.goto(root,{waitUntil:'domcontentloaded'});await p.evaluate(()=>window.__qaOwner='rendered-video-v6');await p.locator('#rf').scrollIntoViewIfNeeded();await p.waitForFunction(()=>document.querySelector('#rf').dataset.phase==='results');await p.waitForTimeout(500);await p.evaluate(()=>{gsap.getById('rf').pause()});await sample('pipeline-mobile','.pipe-deck.is-active video',+(await p.locator('.pipe-deck.is-active').getAttribute('data-count')));

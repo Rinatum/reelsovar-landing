@@ -1,8 +1,8 @@
 {
   "repository": "https://github.com/Rinatum/reelsovar-landing",
   "visibility": "public",
-  "mediaCount": 75,
-  "mediaBytes": 34047393,
+  "mediaCount": 97,
+  "mediaBytes": 27278783,
   "files": [
     {
       "path": "assets/backdrops/cut-desktop.png",
@@ -92,22 +92,14 @@
     {
       "path": "assets/examples/full-audience-02-m03/poster.jpg",
       "bytes": 46795,
-      "sha256": "fc17659e7cee8d7931c5e0943589e7b8570fb41e34209d7cab6042766979f104"
-    },
-    {
-      "path": "assets/examples/full-audience-02-m03/preview.mp4",
-      "bytes": 1247388,
-      "sha256": "d0551ea7d1072e9d815bdcc6759247becb9b0dc2f8120b371a95b71acb59c2a1"
+      "sha256": "fc17659e7cee8d7931c5e0943589e7b8570fb41e34209d7cab6042766979f104",
+      "origin": "reelsovar-drawio outputs/landing-examples/full-length-2026-11-02/full-audience-02-m03/poster.jpg"
     },
     {
       "path": "assets/examples/full-audience-02-m05/poster.jpg",
       "bytes": 42711,
-      "sha256": "32d8e22490700b90716fa5652ae107f6e2590ae71aecd36fa2607fb978137031"
-    },
-    {
-      "path": "assets/examples/full-audience-02-m05/preview.mp4",
-      "bytes": 1790968,
-      "sha256": "f839bffbe892b1cc9f839575a422d5eb5d3657d6dfbd20355056b79c5b8f3bdb"
+      "sha256": "32d8e22490700b90716fa5652ae107f6e2590ae71aecd36fa2607fb978137031",
+      "origin": "reelsovar-drawio outputs/landing-examples/full-length-2026-11-02/full-audience-02-m05/poster.jpg"
     },
     {
       "path": "assets/examples/full-biz-cafe-m02/poster.jpg",
@@ -115,19 +107,9 @@
       "sha256": "6b91df269413ea2eb6db564ba01c9572fe74e1d4ffff1441da5103a730226a5d"
     },
     {
-      "path": "assets/examples/full-biz-cafe-m02/preview.mp4",
-      "bytes": 895416,
-      "sha256": "01a15412a9a52bd89cb1b5c07c027a402b5aa89f4353ea6920aa478460472ced"
-    },
-    {
       "path": "assets/examples/full-biz-hr-m02/poster.jpg",
       "bytes": 40389,
       "sha256": "4e79093068ac7e897b969f04a8b6998a55ba2989273086e78cc830af64fdf86b"
-    },
-    {
-      "path": "assets/examples/full-biz-hr-m02/preview.mp4",
-      "bytes": 1356010,
-      "sha256": "b4571cddc9b082eb8f430a8068fa55262e6f2e0eb2fe56154e753277dda616cf"
     },
     {
       "path": "assets/examples/full-stream-02-m03/poster.jpg",
@@ -143,6 +125,101 @@
       "path": "assets/fonts-poster.jpg",
       "bytes": 52117,
       "sha256": "a20d95fbba87f5635193cb0d6ce4af48554bb5277f7ce9d3a06abaca411d3297"
+    },
+    {
+      "path": "assets/mobile/examples/anime-01-hook-demons/preview.mp4",
+      "bytes": 48138,
+      "sha256": "2686bd3d7f24cceca4545e4a6479173e4dba21f94db5e1c5d2d0228db4104020"
+    },
+    {
+      "path": "assets/mobile/examples/auto-01-hook-mileage/preview.mp4",
+      "bytes": 97665,
+      "sha256": "4a1cad5576197e586a6e897588f791f83787e3436cd8f83c060f033c3b7b8f70"
+    },
+    {
+      "path": "assets/mobile/examples/full-audience-01-m05/preview.mp4",
+      "bytes": 88509,
+      "sha256": "97e6e37a8de8bc87866f9fa9ebf747f0033b070f900fb9e39d5f0db977070dbe"
+    },
+    {
+      "path": "assets/mobile/examples/full-audience-02-m01/preview.mp4",
+      "bytes": 88545,
+      "sha256": "98ab31c9f8e6e2191d7f6925355f48c678d51048e7f603ccd2412b5f95ff5456"
+    },
+    {
+      "path": "assets/mobile/examples/full-audience-02-m02/preview.mp4",
+      "bytes": 83241,
+      "sha256": "3567c083c2277c91a599311479065404aaebeb22b098a36fa0d8abb4947724d4"
+    },
+    {
+      "path": "assets/mobile/examples/full-audience-02-m03/preview.mp4",
+      "bytes": 89796,
+      "sha256": "5e2c917d17c034b9c478c77de0d370a7259197238aeb95e908697f73eac10e95"
+    },
+    {
+      "path": "assets/mobile/examples/full-audience-02-m04/preview.mp4",
+      "bytes": 88269,
+      "sha256": "d3182d049d501f17cd9d495a85d3f9987d104ed2165b7cc190dfde82f150192b"
+    },
+    {
+      "path": "assets/mobile/examples/full-audience-02-m05/preview.mp4",
+      "bytes": 88722,
+      "sha256": "2cd8563d6b96c7f13cd962a4bd0e70a72f015e2b277529b5a074c98743521492"
+    },
+    {
+      "path": "assets/mobile/examples/full-audience-03-m01/preview.mp4",
+      "bytes": 93653,
+      "sha256": "71e2ab11fc82350d41047c55dabe350586ecd4fb216970b7ef5b516d022e171f"
+    },
+    {
+      "path": "assets/mobile/examples/full-biz-cafe-m01/preview.mp4",
+      "bytes": 93816,
+      "sha256": "d4c4ab1bcd5aad780484e89b33b1c4bebf8d918a2a28cb7aa7426453d07997bf"
+    },
+    {
+      "path": "assets/mobile/examples/full-biz-cafe-m02/preview.mp4",
+      "bytes": 92607,
+      "sha256": "54590ab83eae4a56f4111f917cbc9b9a993e90ad1ce8f0c85ebb266cc27e35fc"
+    },
+    {
+      "path": "assets/mobile/examples/full-biz-cafe-m03/preview.mp4",
+      "bytes": 88181,
+      "sha256": "381dfc5267d31e1cf611599ea5f35211fcafb0b63d77b2463f8223e45a7d045c"
+    },
+    {
+      "path": "assets/mobile/examples/full-biz-cg-m02/preview.mp4",
+      "bytes": 82450,
+      "sha256": "92be3cc7ff1a648cb3f48dc19c3d2e2e94e0441bb9ea19cfc1e2a35c8813d63c"
+    },
+    {
+      "path": "assets/mobile/examples/full-biz-fonts-m03/preview.mp4",
+      "bytes": 82768,
+      "sha256": "0613ac4a27d712d0b408ca88d8bd583494e7b4b7b5b65cc96c3541ebc6ba1610"
+    },
+    {
+      "path": "assets/mobile/examples/full-biz-hr-m01/preview.mp4",
+      "bytes": 90674,
+      "sha256": "0fc9fec5fca6bc60db63ffd6675520afc5cb9ca27399bcf2e9270b0b6c54c0e4"
+    },
+    {
+      "path": "assets/mobile/examples/full-biz-hr-m02/preview.mp4",
+      "bytes": 85726,
+      "sha256": "e9b92159949eab2ee918b345bccecdb47a3ffa1b18c23c2052005ad98622dd60"
+    },
+    {
+      "path": "assets/mobile/examples/full-biz-hr-m03/preview.mp4",
+      "bytes": 95919,
+      "sha256": "a0d3ba6a58aa0d8f7a25c5ffa08d352e6b75afc8b86392ef0f2b055f470c63ba"
+    },
+    {
+      "path": "assets/mobile/examples/full-biz-marketing-m02/preview.mp4",
+      "bytes": 92003,
+      "sha256": "66f735322598681e3b21d0fc42a2405883d298aef77759a6b92aeff69f7e1e5b"
+    },
+    {
+      "path": "assets/mobile/examples/full-stream-02-m03/preview.mp4",
+      "bytes": 83978,
+      "sha256": "7c4e4de5dced3604dc5709d689c82f3e0687d20d6523931a0769ee7f914a668b"
     },
     {
       "path": "assets/pipeline/cafe.jpg",
@@ -183,6 +260,61 @@
       "path": "assets/pipeline/hr.mp4",
       "bytes": 154651,
       "sha256": "f95a049e3f67e40d1eed439ded3e947c675c48e6452cd5d0bf9423ac6e7ed419"
+    },
+    {
+      "path": "assets/weekly/examples/full-audience-02-m01/preview.mp4",
+      "bytes": 224514,
+      "sha256": "c91643a57b031a5241776f4fc7670e3c74bbad6c4c199005c11e14fde5748700"
+    },
+    {
+      "path": "assets/weekly/examples/full-audience-02-m02/preview.mp4",
+      "bytes": 179760,
+      "sha256": "776605b9754477155dddf0272f62aea9809cc1b52c59dc5d33161e237c90b4cd"
+    },
+    {
+      "path": "assets/weekly/examples/full-audience-02-m03/preview.mp4",
+      "bytes": 174238,
+      "sha256": "5191946bf7989bc7e5b10ce9f7919af47f7686db4bbd76dd41b263833fb8dbda"
+    },
+    {
+      "path": "assets/weekly/examples/full-audience-02-m04/preview.mp4",
+      "bytes": 187659,
+      "sha256": "ca5ee97354544c4c267ec3d8d12541bbf9f12c3c6fa3fffeea5757786c4880c2"
+    },
+    {
+      "path": "assets/weekly/examples/full-audience-02-m05/preview.mp4",
+      "bytes": 184940,
+      "sha256": "fe34ca1122294d33175d99409ff20f5587db27085480d97d9f55e14736c7b58b"
+    },
+    {
+      "path": "assets/weekly/examples/full-biz-cafe-m01/preview.mp4",
+      "bytes": 174823,
+      "sha256": "b52d7b451c45d524dc5f2b31b5f73eb44be4e54641e5562afe8ecd147a3b27a8"
+    },
+    {
+      "path": "assets/weekly/examples/full-biz-cafe-m02/preview.mp4",
+      "bytes": 169884,
+      "sha256": "9865132aaa9da8cf107d38857b06acdff8dc251c3a869f404c24aa63effcfbfb"
+    },
+    {
+      "path": "assets/weekly/examples/full-biz-cafe-m03/preview.mp4",
+      "bytes": 188107,
+      "sha256": "0982768213310b275954fc52dbfe107e349d0b2cfa47ca260b8981b1a4123b56"
+    },
+    {
+      "path": "assets/weekly/examples/full-biz-hr-m01/preview.mp4",
+      "bytes": 180499,
+      "sha256": "9048bde33ff63cdddada4cbefeb03afee9edf2a1658ccc6e8c741cf0fd139090"
+    },
+    {
+      "path": "assets/weekly/examples/full-biz-hr-m02/preview.mp4",
+      "bytes": 182892,
+      "sha256": "7eaede053fc97238e0679b416b7c803e6e0046028196dc1e2fa53dfa65ee47ac"
+    },
+    {
+      "path": "assets/weekly/examples/full-biz-hr-m03/preview.mp4",
+      "bytes": 177420,
+      "sha256": "3d093a282dec64244c1cd64db8199a993eec053e669ce5e965060d80cc5d6516"
     },
     {
       "path": "media/examples/anime-01-hook-demons/poster.jpg",
@@ -280,19 +412,9 @@
       "sha256": "661d8eb1bfe627bb2c30c7335fbdd6fd64e27f754fa4d4d4fefff4501bdd2fa0"
     },
     {
-      "path": "media/examples/full-audience-02-m02/preview.mp4",
-      "bytes": 1587840,
-      "sha256": "d36b71dffa53c0a6588220e07bb21992cd3fd8872fb3371e6dba294b3b743e91"
-    },
-    {
       "path": "media/examples/full-audience-02-m04/poster.jpg",
       "bytes": 42274,
       "sha256": "26549222a452a39454613564f76fad4ae3e926af28946af9fc53ccd8bdb618d3"
-    },
-    {
-      "path": "media/examples/full-audience-02-m04/preview.mp4",
-      "bytes": 1576624,
-      "sha256": "daca5d1acbeb157fc422b445c77d02b4a59a324750c4352180608c191c8bde45"
     },
     {
       "path": "media/examples/full-audience-03-m01/poster.jpg",
@@ -318,11 +440,6 @@
       "path": "media/examples/full-biz-cafe-m03/poster.jpg",
       "bytes": 36974,
       "sha256": "9124aaf7f5d8b9e76619b29795312be643c5095f31172c101ce3b865522a2184"
-    },
-    {
-      "path": "media/examples/full-biz-cafe-m03/preview.mp4",
-      "bytes": 1152043,
-      "sha256": "983eec3d7e1d9faf01ac35dc2b35c5940e0ee94546c90a26afbf62c0560bab0f"
     },
     {
       "path": "media/examples/full-biz-cg-m02/poster.jpg",
@@ -365,11 +482,6 @@
       "sha256": "3898a95aab8f135db4be091126cfca2d5cbc053cdbd884595cbd219fa957710f"
     },
     {
-      "path": "media/examples/full-biz-hr-m03/preview.mp4",
-      "bytes": 841717,
-      "sha256": "4dc0a6a8ec407e7b49654407e13dedb32cb9ff07a1187aad876028011c590049"
-    },
-    {
       "path": "media/examples/full-biz-marketing-m02/poster.jpg",
       "bytes": 71898,
       "sha256": "6770ea07cb0129d0aa9c3ca436b12513bd944b966529a4497b40036fe794c44b"
@@ -398,5 +510,49 @@
     "media/examples/full-biz-startup-m02/final.mp4",
     "media/examples/full-biz-startup-m02/poster.jpg",
     "media/examples/full-biz-startup-m02/preview.mp4"
+  ],
+  "v7_6Added": [
+    "assets/weekly/examples/full-audience-02-m01/preview.mp4",
+    "assets/weekly/examples/full-audience-02-m02/preview.mp4",
+    "assets/weekly/examples/full-audience-02-m03/preview.mp4",
+    "assets/weekly/examples/full-audience-02-m04/preview.mp4",
+    "assets/weekly/examples/full-audience-02-m05/preview.mp4",
+    "assets/weekly/examples/full-biz-cafe-m01/preview.mp4",
+    "assets/weekly/examples/full-biz-cafe-m02/preview.mp4",
+    "assets/weekly/examples/full-biz-cafe-m03/preview.mp4",
+    "assets/weekly/examples/full-biz-hr-m01/preview.mp4",
+    "assets/weekly/examples/full-biz-hr-m02/preview.mp4",
+    "assets/weekly/examples/full-biz-hr-m03/preview.mp4"
+  ],
+  "v7_6ExcludedLongPreviews": [
+    "assets/examples/full-audience-02-m03/preview.mp4",
+    "assets/examples/full-audience-02-m05/preview.mp4",
+    "assets/examples/full-biz-cafe-m02/preview.mp4",
+    "assets/examples/full-biz-hr-m02/preview.mp4",
+    "media/examples/full-audience-02-m02/preview.mp4",
+    "media/examples/full-audience-02-m04/preview.mp4",
+    "media/examples/full-biz-cafe-m03/preview.mp4",
+    "media/examples/full-biz-hr-m03/preview.mp4"
+  ],
+  "v8_1AddedMobile": [
+    "assets/mobile/examples/anime-01-hook-demons/preview.mp4",
+    "assets/mobile/examples/auto-01-hook-mileage/preview.mp4",
+    "assets/mobile/examples/full-audience-01-m05/preview.mp4",
+    "assets/mobile/examples/full-audience-02-m01/preview.mp4",
+    "assets/mobile/examples/full-audience-02-m02/preview.mp4",
+    "assets/mobile/examples/full-audience-02-m03/preview.mp4",
+    "assets/mobile/examples/full-audience-02-m04/preview.mp4",
+    "assets/mobile/examples/full-audience-02-m05/preview.mp4",
+    "assets/mobile/examples/full-audience-03-m01/preview.mp4",
+    "assets/mobile/examples/full-biz-cafe-m01/preview.mp4",
+    "assets/mobile/examples/full-biz-cafe-m02/preview.mp4",
+    "assets/mobile/examples/full-biz-cafe-m03/preview.mp4",
+    "assets/mobile/examples/full-biz-cg-m02/preview.mp4",
+    "assets/mobile/examples/full-biz-fonts-m03/preview.mp4",
+    "assets/mobile/examples/full-biz-hr-m01/preview.mp4",
+    "assets/mobile/examples/full-biz-hr-m02/preview.mp4",
+    "assets/mobile/examples/full-biz-hr-m03/preview.mp4",
+    "assets/mobile/examples/full-biz-marketing-m02/preview.mp4",
+    "assets/mobile/examples/full-stream-02-m03/preview.mp4"
   ]
 }

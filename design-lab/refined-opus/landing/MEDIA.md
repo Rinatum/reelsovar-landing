@@ -57,3 +57,11 @@ full-biz-hr-m02/preview.mp4 и poster.jpg скопированы локальн�
 ## v6: все результаты фитнес-подкаста
 
 Для очереди «Контент на неделю» добавлены два существующих готовых результата того же выпуска audience-02 (m1T37LErJws): `assets/examples/full-audience-02-m03/{preview.mp4,poster.jpg}` и `assets/examples/full-audience-02-m05/{preview.mp4,poster.jpg}`, скопированы из `reelsovar-drawio/outputs/landing-examples/full-length-2026-11-02/` без перекодирования. Каталог этого прогона содержит ровно пять результатов (m01–m05); у кафе и HR в готовых прогонах по три результата, поэтому они показывают по три. Связь «исходник → клипы» не придумывалась. media-manifest.json дополнен четырьмя файлами с SHA-256.
+
+## v7.7 — локальные короткие weekly-превью
+
+assets/weekly/examples/*/preview.mp4 —11 файлов,2 024 736байт, прежние360×640, H.264, первые примерно8секунд тех же принятых клипов вместо загрузки полных технических preview по30–50секунд. Получены штатным Chrome MediaRecorder без новых пакетов/сервисов. Метод и хеши оригиналов: assets/weekly/provenance.json; воспроизводимый скрипт: ../refinements/2026-11-08-lifecycle/encode.mjs. Все прежние файлы и shared symlink targets сохранены. Сайт78 медиафайлов/25 624 123байта. site/ обновлена только локально.
+
+## v8.1 — mobile drum/weekly
+
+assets/mobile/examples/*/preview.mp4:19 коротких~8сек версий тех же записей,240×426, H.264 baseline,1 654 660байт. Выбираются только при мобильной ширине; desktop URLs и оригиналы сохранены. Точный метод/хеши — assets/mobile/provenance.json, скрипт ../refinements/2026-11-08-recovery/encode-gallery.mjs. Локальная site/:97 медиафайлов/27 278 783байта, включая обе версии. Это размер артефакта, а не объём загрузки на телефоне.
