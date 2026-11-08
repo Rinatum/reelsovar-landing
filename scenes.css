@@ -130,8 +130,9 @@ section{padding-inline:var(--edge)}
 .st-frame{background:#1d2119}
 .mf-wide{position:absolute;left:12px;right:12px;top:50%;aspect-ratio:16/9;translate:0 -50%;border-radius:6px;overflow:hidden}
 .mf-wide img{width:100%;height:100%;object-fit:cover}
-.mf-crop{position:absolute;top:0;bottom:0;left:34.2%;width:31.6%;border:2px solid var(--yellow);box-shadow:0 0 0 999px #11140f00;transition:box-shadow .6s} /* taste-skill-ignore: затемнение вокруг рамки */
-.st-frame.dimmed .mf-crop{box-shadow:0 0 0 999px #11140fb3} /* taste-skill-ignore: затемнение вокруг рамки */
+.mf-crop{position:absolute;top:0;bottom:0;left:34.2%;width:31.6%;border:2px solid var(--yellow);z-index:1}
+.mf-wide::after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(to right,#11140fb3 0 34.2%,transparent 34.2% 65.8%,#11140fb3 65.8%);opacity:0;transition:opacity var(--motion-reveal) var(--motion-in-out)}
+.st-frame.dimmed .mf-wide::after{opacity:1}
 .mf-tall{position:absolute;top:14px;bottom:14px;left:50%;aspect-ratio:9/16;translate:-50% 0;border-radius:8px;overflow:hidden;outline:2px solid var(--yellow);opacity:0}
 .mf-tall img{width:100%;height:100%;object-fit:cover}
 .st-done{display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:center}
@@ -515,3 +516,14 @@ a{text-underline-offset:3px}
 .drum-item::before{content:'';position:absolute;inset:0;border-radius:inherit;box-shadow:0 0 30px #f9db533d;opacity:0;transform:translateZ(0);pointer-events:none}
 .drum-item.is-front::before{opacity:1}
 .stage.dark,.stage.paper{background-image:var(--cached-scene);background-size:100% 100%;background-repeat:no-repeat}
+
+/* transitions-polish: shared tokens for routine controls, not the authored
+   video choreography. Bound the crop dimmer to its actual image footprint. */
+:root{--motion-quick:150ms;--motion-fast:250ms;--motion-reveal:400ms;--motion-out:cubic-bezier(.22,1,.36,1);--motion-in-out:ease-in-out}
+.btn{transition:transform var(--motion-quick) var(--motion-out)}
+.btn svg{transition:transform var(--motion-fast) var(--motion-out)}
+.station{transition:opacity var(--motion-fast) var(--motion-in-out)}
+.st-vis{transition:transform var(--motion-fast) var(--motion-out)}
+.mrow{transition:background-color var(--motion-quick) var(--motion-in-out)}
+.mrow .tick{transition:background-color var(--motion-quick) var(--motion-in-out)}
+@media(prefers-reduced-motion:reduce){.btn,.btn svg,.station,.st-vis,.mrow,.mrow .tick,.mf-wide::after{transition:none}}
